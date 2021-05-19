@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5b51f34b315cd7eafe4c2206e5e0db58",
+    "content-hash": "e0d06c406f649e2321b049a025733317",
     "packages": [
         {
             "name": "composer/installers",
@@ -916,24 +916,6 @@
                 }
             ],
             "time": "2021-01-20T15:23:13+00:00"
-        },
-        {
-            "name": "wpackagist-plugin/elementor",
-            "version": "3.2.3",
-            "source": {
-                "type": "svn",
-                "url": "https://plugins.svn.wordpress.org/elementor/",
-                "reference": "tags/3.2.3"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://downloads.wordpress.org/plugin/elementor.3.2.3.zip"
-            },
-            "require": {
-                "composer/installers": "~1.0"
-            },
-            "type": "wordpress-plugin",
-            "homepage": "https://wordpress.org/plugins/elementor/"
         }
     ],
     "packages-dev": [
