@@ -26,9 +26,11 @@ function _add_slideshow_image( string $key ) {
     <?php if( get_theme_mod( 'sf_slider_text' ) ): ?>
         <div id='slideshow-text-container' class='container'>
             <div class='lg:w-1/2'>
-                <span id='slideshow-text'>
-                    <?= get_theme_mod( 'sf_slider_text' ) ?>
-                </span>
+                <div id='slideshow-text-box'>
+                    <span id='slideshow-text'>
+                        <?= get_theme_mod( 'sf_slider_text' ) ?>
+                    </span>
+                </div>
             </div>
         </div>
     <?php endif ?>

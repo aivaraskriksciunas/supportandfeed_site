@@ -22,18 +22,37 @@
     src: url( '../../fonts/DrukTextWide-Medium.otf' );
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
 
 // Styles 
 
 body {
     padding: 0;
     margin: 0;
-    font-family: 'Noto Sans JP', sans-serif;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
 }
 
 .text-druk-bold {
     font-family: 'Druk';
+}
+
+h1 {
+    @apply text-6xl;
+    font-family: 'Druk';
+}
+
+button {
+    @apply py-3 px-6 bg-black text-white text-sm;
+}
+
+button:hover {
+    @apply bg-gray-700;
+}
+
+button:active {
+    @apply bg-gray-600;
 }
 
 // Top horizontal avbar
@@ -60,36 +79,17 @@ body {
 }
 
 
-// Home page slideshow
+.text-image-section {
 
-#main-slideshow {
-    height: 90vh;
-    min-height: 500px;
-    position: relative;
+    min-height: 600px;
 
-    #image-container{
-        .slideshow-image {
-            position: absolute;
-            display: inline-block;
-            background-size: cover;
-            
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
+    .section-header {
+        @apply text-7xl;
+
     }
 
-    #slideshow-text-container {
-        @apply text-white;
-        z-index: 2;
-
-        #slideshow-text {
-            background-color: black;
-            font-family: 'Druk';
-            font-size: 100px;
-        }
+    .section-image {
+        background-size: cover;
+        background-position: 50% 50%;
     }
-
 }

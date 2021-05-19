@@ -3,7 +3,7 @@
 const HOMEPAGE_SLIDER_ID = 'sf_homepage_slider';
 
 // Register options used for customizing
-function sf_register_customizer_options( WP_Customize_Manager $wp_customizer  ) {
+function sf_register_front_page_slideshow_options( WP_Customize_Manager $wp_customizer  ) {
 
     // Register slider section
     $wp_customizer->add_section( HOMEPAGE_SLIDER_ID, [
@@ -70,4 +70,7 @@ function sf_register_customizer_options( WP_Customize_Manager $wp_customizer  ) 
     ) );
 }
 
-add_action( 'customize_register', 'sf_register_customizer_options' );
+// Register front page specific options
+if ( is_front_page() ) {
+    add_action( 'customize_register', 'sf_register_front_page_slideshow_options' );
+}

@@ -28,7 +28,10 @@ module.exports = {
         ...colors.yellow,
         500: '#F9F01E'
       },
-      'light-blue': colors.lightBlue,
+      'light-blue': {
+        ...colors.lightBlue,
+        500: '#26BEFF',
+      },
       fuschia: colors.fuchsia,
       lime: colors.lime,
 

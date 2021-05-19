@@ -1,1 +1,42 @@
+#main-slideshow {
+  height: 90vh;
+  min-height: 500px;
+  position: relative;
+}
 
+#main-slideshow #image-container .slideshow-image {
+  position: absolute;
+  display: inline-block;
+  background-size: cover;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+#main-slideshow #slideshow-text-container {
+  --tw-text-opacity: 1;
+  color: rgba(255, 255, 255, var(--tw-text-opacity));
+  z-index: 2;
+}
+
+#main-slideshow #slideshow-text-container #slideshow-text-box {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+#main-slideshow #slideshow-text-container #slideshow-text {
+  font-family: "Druk";
+  font-size: 100px;
+  line-height: 1.2em;
+}
+
+#contacts-section {
+  min-height: 500px;
+}
+
+#contacts-section #email-field-container input {
+  border: 4px solid black;
+  background-color: white;
+  padding: 8px 12px;
+}
