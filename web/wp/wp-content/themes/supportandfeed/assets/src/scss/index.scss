@@ -1,0 +1,95 @@
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* 
+    Font definitions
+*/
+@font-face {
+    font-family: 'Druk';
+    src: url( '../../fonts/Druk-Bold.otf' );
+}
+
+@font-face {
+    font-family: 'Druk';
+    font-style: italic;
+    src: url( '../../fonts/Druk-BoldItalic.otf' );
+}
+
+@font-face {
+    font-family: 'Druk Wide';
+    src: url( '../../fonts/DrukTextWide-Medium.otf' );
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;500;700&display=swap');
+
+// Styles 
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+}
+
+.text-druk-bold {
+    font-family: 'Druk';
+}
+
+// Top horizontal avbar
+
+#main-navbar {
+    #navbar-logo-img {
+        height: 50px;
+    }
+    
+    .menu-item {
+        @apply px-5 py-2 uppercase;
+        
+        font-family: 'Druk';
+        font-size: 1.8rem;
+        letter-spacing: 1px;
+        font-style: italic;
+    }
+
+    .menu-item:hover {
+        @apply bg-green-darkened;
+
+        cursor: pointer;
+    }
+}
+
+
+// Home page slideshow
+
+#main-slideshow {
+    height: 90vh;
+    min-height: 500px;
+    position: relative;
+
+    #image-container{
+        .slideshow-image {
+            position: absolute;
+            display: inline-block;
+            background-size: cover;
+            
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+    }
+
+    #slideshow-text-container {
+        @apply text-white;
+        z-index: 2;
+
+        #slideshow-text {
+            background-color: black;
+            font-family: 'Druk';
+            font-size: 100px;
+        }
+    }
+
+}
