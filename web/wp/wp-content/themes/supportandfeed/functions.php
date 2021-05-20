@@ -36,3 +36,4 @@ add_action( 'wp_enqueue_scripts', 'load_assets' );
 
 require_once 'inc/customizer.php';
 require_once 'inc/register-blocks.php';
+require_once 'inc/create-admin-options.php';

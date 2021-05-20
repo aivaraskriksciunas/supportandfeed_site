@@ -8,7 +8,7 @@
 <div class='w-full bg-orange flex' id='our-mission-section'>
     <div class='px-32 py-20 w-2/3'>
         <p class='text-4xl leading-normal'>
-            <span class='font-bold'>SUPPORT+FEED</span> positively impacts the climate crisis and combats food insecurity by providing plant based meals prepared by local restaurants and education on its benefits to underserved communities.
+            <?= get_option( 'our_mission_text' ) ?>
         </p>
     </div>
 </div>
