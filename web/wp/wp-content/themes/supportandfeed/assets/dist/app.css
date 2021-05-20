@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Lato:wght@300;700;900&display=swap);
 /*! tailwindcss v2.1.2 | MIT License | https://tailwindcss.com */
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
@@ -27166,8 +27166,12 @@ body {
   padding: 0;
   margin: 0;
   font-family: "Open Sans", sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 1.3rem;
+}
+
+b {
+  font-weight: 900;
 }
 
 .text-druk-bold {
@@ -27178,6 +27182,8 @@ h1 {
   font-size: 3.75rem;
   line-height: 1;
   font-family: "Druk";
+  letter-spacing: 1px;
+  font-weight: bold;
 }
 
 button {

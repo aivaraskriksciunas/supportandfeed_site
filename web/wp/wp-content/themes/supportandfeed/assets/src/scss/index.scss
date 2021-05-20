@@ -22,16 +22,20 @@
     src: url( '../../fonts/DrukTextWide-Medium.otf' );
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
-
+// @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;700;900&display=swap');
 // Styles 
 
 body {
     padding: 0;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 400;
+    font-weight: 700;
     font-size: 1.3rem;
+}
+
+b {
+    font-weight: 900;
 }
 
 .text-druk-bold {
@@ -41,6 +45,8 @@ body {
 h1 {
     @apply text-6xl;
     font-family: 'Druk';
+    letter-spacing: 1px;
+    font-weight: bold;
 }
 
 button {

@@ -2,10 +2,21 @@
 
 <?php 
     // Include main slideshow
-    require_once "template-parts/front-page/slideshow.php" 
+    require_once "template-parts/front-page/slideshow.php";
+
+    function display_social_link( string $id, string $link_text, string $icon )
+    {
+        if ( !get_option( $id ) ) return;
+        ?>
+            <a href='<?= get_option( $id ) ?>' target='_blank' class='flex items-center mb-4 font-semibold hover:text-light-blue-900'>
+                <span class="dashicons <?= $icon ?> mr-5"></span>
+                <span class=''><?= $link_text ?></span>
+            </a>
+        <?php
+    }
 ?>
 
-<div class='w-full bg-orange flex' id='our-mission-section'>
+<div class='w-full bg-yellow-500 flex' id='our-mission-section'>
     <div class='px-32 py-20 w-2/3'>
         <p class='text-4xl leading-normal'>
             <?= get_option( 'our_mission_text' ) ?>
@@ -69,7 +80,13 @@
         </div>
 
         <div class='md:w-1/2 pl-24'>
-            <h1>Contact Us</h1>
+            <h1 class='mb-12'>Contact Us</h1>
+
+            <?php display_social_link( 'facebook_link', 'Facebook', 'dashicons-facebook-alt' ) ?>
+            <?php display_social_link( 'instagram_link', 'Instagram', 'dashicons-instagram' ) ?>
+            <?php display_social_link( 'linkedin_link', 'Linkedin', 'dashicons-linkedin' ) ?>
+            <?php display_social_link( 'twitter_link', 'Twitter', 'dashicons-twitter' ) ?>
+
         </div>
     </div>
 </div>
