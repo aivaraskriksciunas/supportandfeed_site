@@ -25,7 +25,7 @@
 </div>
 
 <div class='text-image-section w-full bg-black flex'>
-    <div class='section-image md:w-1/2' style="background-image: url('http://localhost:8000/app/uploads/2021/05/152305734_125543042800832_4870344912468312982_n.jpg')">
+    <div id='donateNowImg' class='section-image md:w-1/2' style="background-image: url('<?= get_theme_mod( 'sf_donate_now_img' ) ?>')">
     </div>
 
     <div class='md:w-1/2 px-24 text-white py-16 flex flex-col justify-items-start'>
@@ -63,7 +63,8 @@
         </div>
     </div>
 
-    <div class='section-image md:w-1/2' style="background-image: url('http://localhost:8000/app/uploads/2021/05/152855292_248621810153237_4891032650318186239_n.jpg')">
+    <div id='plantBasedImg' class='section-image md:w-1/2' 
+        style="background-image: url('<?= get_theme_mod( 'sf_plant_based_img' ) ?>')">
     </div>
 </div>
 

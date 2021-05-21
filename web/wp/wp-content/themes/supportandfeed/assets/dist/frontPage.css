@@ -40,3 +40,7 @@
   background-color: white;
   padding: 8px 12px;
 }
+
+.customize-partial-edit-shortcut button {
+  left: 0;
+}

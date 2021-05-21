@@ -1,10 +1,12 @@
 <?php 
 
 const HOMEPAGE_SLIDER_ID = 'sf_homepage_slider';
+const HOMEPAGE_IMAGES_ID = 'sf_images_section';
+
 
 // Register options used for customizing
-function sf_register_front_page_slideshow_options( WP_Customize_Manager $wp_customizer  ) {
-
+function sf_register_front_page_slideshow_options( WP_Customize_Manager $wp_customizer ) {
+    
     // Register slider section
     $wp_customizer->add_section( HOMEPAGE_SLIDER_ID, [
         'title' => 'Homepage Slider',
@@ -70,7 +72,49 @@ function sf_register_front_page_slideshow_options( WP_Customize_Manager $wp_cust
     ) );
 }
 
-// Register front page specific options
-if ( is_front_page() ) {
-    add_action( 'customize_register', 'sf_register_front_page_slideshow_options' );
+function sf_register_front_page_image_options( WP_Customize_Manager $wp_customizer ) {
+    
+    $wp_customizer->add_section( HOMEPAGE_IMAGES_ID, [
+        'title' => 'Homepage Images',
+        'description' => 'Customize images shown on the front page',
+        'active_callback' => 'is_front_page'
+    ] );
+
+    // Add photo field
+    $wp_customizer->add_setting( 'sf_donate_now_img' );
+    $wp_customizer->add_control( new WP_Customize_Image_Control(
+        $wp_customizer,
+        'sf_donate_now_img', 
+        [
+            'label' => 'Donate now image',
+            'setting' => 'sf_donate_now_img',
+            'section' => HOMEPAGE_IMAGES_ID,
+        ]
+    ) );
+
+    $wp_customizer->selective_refresh->add_partial( 'sf_donate_now_img', [
+        'selector' => '#donateNowImg',
+        'container_inclusive' => true,
+    ]);
+
+    // Add photo field
+    $wp_customizer->add_setting( 'sf_plant_based_img' );
+    $wp_customizer->add_control( new WP_Customize_Image_Control(
+        $wp_customizer,
+        'sf_plant_based_img', 
+        [
+            'label' => '"Plant based matters" image',
+            'setting' => 'sf_plant_based_img',
+            'section' => HOMEPAGE_IMAGES_ID,
+        ]
+    ) );
+
+    $wp_customizer->selective_refresh->add_partial( 'sf_plant_based_img', [
+        'selector' => '#plantBasedImg',
+        'container_inclusive' => true
+    ]);
 }
+
+// Register front page specific options
+add_action( 'customize_register', 'sf_register_front_page_slideshow_options' );
+add_action( 'customize_register', 'sf_register_front_page_image_options' );
