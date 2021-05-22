@@ -41,6 +41,14 @@
   padding: 8px 12px;
 }
 
+#sponsors-section .sponsor-container {
+  display: inline-block;
+}
+
+#sponsors-section .sponsor-container img {
+  max-height: 100px;
+}
+
 .customize-partial-edit-shortcut button {
   left: 0;
 }

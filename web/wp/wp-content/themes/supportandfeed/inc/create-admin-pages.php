@@ -5,6 +5,7 @@ class SF_AdminOptions {
     const SETTINGS_GROUP = 'sf_options';
     const PAGE_ID = 'sf-options';
     const FRONT_PAGE_ID = 'sf-options';
+    const SPONSORS_PAGE_ID = 'sf-sponsors';
 
     public function register() {
         add_action( 'admin_menu', [ $this, 'create_menu' ] );
@@ -40,6 +41,11 @@ class SF_AdminOptions {
 
         $this->register_setting( 'twitter_link', [ 'type' => 'string' ] );
 
+        // Register sponsor related fields
+        $this->register_setting( 'sponsors_names', [ 'type' => 'array' ] );
+        $this->register_setting( 'sponsors_urls', [ 'type' => 'array' ] );
+        $this->register_setting( 'sponsors_logos', [ 'type' => 'array' ] );
+
         $this->add_settings_fields();
     }
 
@@ -52,6 +58,7 @@ class SF_AdminOptions {
 
         $front_page_section_id = 'sf-front-page-settings';
         $social_section_id     = 'sf-social';
+        $sponsors_section_id   = 'sf-sponsors';
 
         // Register settings sections
         add_settings_section(
@@ -78,7 +85,6 @@ class SF_AdminOptions {
             ] );
         }, self::FRONT_PAGE_ID, $front_page_section_id );
 
-
         // Add settings fields for social links section
         // Register all social links with our helper
         $this->add_social_link( 'social-facebook-link', 'Facebook link', 'facebook_link', $social_section_id );
@@ -86,6 +92,13 @@ class SF_AdminOptions {
         $this->add_social_link( 'social-linkedin-link', 'Linkedin link', 'linkedin_link', $social_section_id );
         $this->add_social_link( 'social-twitter-link', 'Twitter link', 'twitter_link', $social_section_id );
 
+
+        add_settings_section(
+            $sponsors_section_id,
+            'Social links',
+            [ $this, 'render_social_links_section' ],
+            self::FRONT_PAGE_ID
+        );
     }
 
     /**
@@ -113,10 +126,23 @@ class SF_AdminOptions {
             self::FRONT_PAGE_ID,
             [ $this, 'render_front_page' ],
         );
+
+        add_submenu_page(
+            self::PAGE_ID,
+            'Sponsors',
+            'Sponsors',
+            'manage_options',
+            self::SPONSORS_PAGE_ID,
+            [ $this, 'render_sponsors_page' ]
+        );
     }
 
     public function render_front_page() {
         require 'admin/front-page.php';
+    }
+
+    public function render_sponsors_page() {
+        require 'admin/sponsors.php';
     }
     
     public function render_front_page_options_section() {
@@ -162,7 +188,6 @@ class SF_AdminOptions {
         // Register setting
         register_setting( self::SETTINGS_GROUP, $id, $args );
     }
-
 }
 
 $admin_option = new SF_AdminOptions();

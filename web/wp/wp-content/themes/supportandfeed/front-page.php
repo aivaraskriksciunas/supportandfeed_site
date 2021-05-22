@@ -92,6 +92,35 @@
     </div>
 </div>
 
-<!-- <?php the_content() ?> -->
+<div id='sponsors-section' class='bg-black text-white text-center py-20'>
+    <div class='container'>
+        <h1 class='mb-16'>Our sponsors</h1>
+
+        <?php 
+            $loop = new WP_Query([
+                'post_type' => 'sf-sponsors'
+            ]);
+
+            while ( $loop->have_posts() ) 
+            {
+                $loop->the_post();
+                $logo = get_the_post_thumbnail_url();
+                $url  = get_post_meta( get_the_ID(), 'url', single:true );
+
+                // Do not show posts without thumbnail
+                if ( !$logo ) continue;
+
+                ?>
+                    <a href='<?= $url ?>' class='sponsor-container px-8 py-4'>
+                        <img src='<?= $logo ?>'>
+                    </a>
+                <?php
+            }   
+        ?>
+
+    </div>
+</div>
+
+<?php the_content() ?>
 
 <?php get_footer() ?>

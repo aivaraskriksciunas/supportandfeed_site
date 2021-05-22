@@ -24,6 +24,7 @@ function theme_supports() {
     add_theme_support( 'custom-logo', [
         'height' => 100
     ] );
+    add_theme_support( 'post-thumbnails' );
 
     // Register nav menus
     register_nav_menus([
@@ -36,4 +37,5 @@ add_action( 'wp_enqueue_scripts', 'load_assets' );
 
 require_once 'inc/customizer.php';
 require_once 'inc/register-blocks.php';
-require_once 'inc/create-admin-options.php';
+require_once 'inc/create-admin-pages.php';
+require_once 'inc/sponsors-post-type.php';
