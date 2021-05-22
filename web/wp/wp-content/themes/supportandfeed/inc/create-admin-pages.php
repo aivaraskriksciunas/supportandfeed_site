@@ -23,6 +23,16 @@ class SF_AdminOptions {
             'default' => '<b>SUPPORT+FEED</b> positively impacts the climate crisis and combats food insecurity by providing plant based meals prepared by local restaurants and education on its benefits to underserved communities.' 
         ] );
 
+        $this->register_setting( 'donate_now_text', [ 
+            'type' => 'string',
+            'default' => 'Donations help support free meal deliveries to organizations in need by allocating resources among participating restaurants and with our operating expenses.' 
+        ] );
+
+        $this->register_setting( 'plant_based_text', [ 
+            'type' => 'string',
+            'default' => 'Why plant based matters' 
+        ] );
+
         $this->register_setting( 'facebook_link', [ 
             'type' => 'string',
             'default' => 'https://www.facebook.com/Support-Feed-111164157271588/' 
@@ -52,7 +62,6 @@ class SF_AdminOptions {
 
         $front_page_section_id = 'sf-front-page-settings';
         $social_section_id     = 'sf-social';
-        $sponsors_section_id   = 'sf-sponsors';
 
         // Register settings sections
         add_settings_section(
@@ -74,6 +83,22 @@ class SF_AdminOptions {
         add_settings_field( 'front-page-our-mission-text', 'Our Mission Text', function() {
             wp_editor( get_option( 'our_mission_text' ), 'our_mission_text', [
                 'textarea_name' => 'our_mission_text',
+                'textarea_rows' => 5,
+                'media_buttons' => false
+            ] );
+        }, self::FRONT_PAGE_ID, $front_page_section_id );
+
+        add_settings_field( 'front-page-donate-now-text', '"Donate Now!" Paragraph', function() {
+            wp_editor( get_option( 'donate_now_text' ), 'donate_now_text', [
+                'textarea_name' => 'donate_now_text',
+                'textarea_rows' => 5,
+                'media_buttons' => false
+            ] );
+        }, self::FRONT_PAGE_ID, $front_page_section_id );
+
+        add_settings_field( 'front-page-plant-based-text', '"Why Plant Based Matters" Paragraph', function() {
+            wp_editor( get_option( 'plant_based_text' ), 'plant_based_text', [
+                'textarea_name' => 'plant_based_text',
                 'textarea_rows' => 5,
                 'media_buttons' => false
             ] );

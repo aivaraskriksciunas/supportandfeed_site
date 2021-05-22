@@ -34,7 +34,7 @@
         </h1>
 
         <div class='section-content mb-16 text-justify flex-1'>
-            Donations help support free meal deliveries to organizations in need  by allocating resources among participating restaurants and with our operating expenses. 
+            <?= get_option( 'donate_now_text' ) ?>
         </div>
         <div class='section-content font-light mb-2 text-xs text-gray-400'>
             All donations to our Covid-19 Crisis Response General Fund are tax deductible to the extent of the law.
@@ -59,7 +59,7 @@
         </h1>
 
         <div class='section-content mb-16 text-justify'>
-            Description here
+            <?= get_option( 'plant_based_text' ) ?>
         </div>
     </div>
 
