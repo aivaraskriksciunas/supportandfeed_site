@@ -3,7 +3,6 @@ const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' )
 const DependencyExtractionWebpackPlugin = require( '@wordpress/dependency-extraction-webpack-plugin' )
 
 module.exports = {
-    mode: "development",
     context: path.resolve( __dirname, "assets/src" ),
     entry: {
         app: './app.js',
@@ -15,8 +14,6 @@ module.exports = {
         filename: "[name].bundle.js",
         path: path.resolve( __dirname, "assets/dist" ),
     },
-
-    watch: true,
 
     plugins: [
         new MiniCssExtractPlugin(),
@@ -45,6 +42,7 @@ module.exports = {
                         options: {
                             postcssOptions: {
                                 plugins: [
+                                    process.env.NODE_ENV === "production" ? require( 'cssnano' ) : null,
                                     require( 'tailwindcss' ),
                                     require( 'autoprefixer' ),
                                 ]
