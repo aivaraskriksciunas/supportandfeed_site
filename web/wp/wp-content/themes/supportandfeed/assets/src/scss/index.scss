@@ -30,7 +30,6 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
-    font-weight: 700;
     font-size: 1.3rem;
 }
 
@@ -63,8 +62,8 @@ button:active {
 
 // Top horizontal avbar
 
-#main-navbar {
-    #navbar-logo-img {
+.main-navbar {
+    .navbar-logo-img {
         height: 50px;
     }
     
@@ -81,6 +80,20 @@ button:active {
         @apply bg-green-darkened;
 
         cursor: pointer;
+    }
+
+    #menu-expand-btn {
+        svg {
+            fill: white;
+        }
+    }
+
+    #menu-expand-btn:hover {
+        cursor: pointer;
+
+        svg {
+            fill: black;
+        }
     }
 }
 

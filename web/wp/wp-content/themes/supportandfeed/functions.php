@@ -1,5 +1,7 @@
 <?php 
 
+// TODO: customize title 
+
 function load_assets() {
 
     $assets_dir = get_stylesheet_directory_uri() . '/assets/dist/';
