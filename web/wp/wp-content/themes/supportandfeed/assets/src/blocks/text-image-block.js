@@ -10,7 +10,8 @@ import {
 } from '@wordpress/block-editor'
 
 import {
-    Button 
+    Button,
+    ToggleControl,
 } from '@wordpress/components'
 
 import SF_ColorPalette from './color-palette'
@@ -18,7 +19,7 @@ import SF_ColorPalette from './color-palette'
 
 // Default items that are placed in the nested block
 const DEFAULT_BLOCK_CONTENTS = [
-    [ 'core/heading', { placeholder: 'Title' } ],
+    [ 'core/heading', { placeholder: 'Title', level: 1 } ],
     [ 'core/paragraph', { placeholder: 'Type text here or add new blocks' } ],
 ];
 
@@ -29,13 +30,9 @@ registerBlockType( 'sf/text-image-block', {
     category: 'design',
 
     attributes: {
-        img: {
-            type: 'string',
-            source: 'attribute',
-            selector: 'img',
-            attribute: 'src'
-        },
+        img: { type: 'string' },
         bgColor: { type: 'string' },
+        reverse: { type: 'boolean' },
     },
 
     edit({ attributes, setAttributes }) {
@@ -48,6 +45,7 @@ registerBlockType( 'sf/text-image-block', {
         }
 
         const onChangeImgUrl = ( media ) => setAttributes({ img: media.url })
+        const onChangeReverse = ( val ) => setAttributes({ reverse: val })
 
         // Construct the block
         return ([
@@ -83,13 +81,27 @@ registerBlockType( 'sf/text-image-block', {
                             />
                         </MediaUploadCheck>
                     </fieldset>
+                    
+                    <fieldset>
+                        <ToggleControl
+                            label="Reverse layout"
+                            help={
+                                attributes.reverse
+                                    ? 'Image is on the left.'
+                                    : 'Image is on the right.'
+                            }
+                            checked={ attributes.reverse }
+                            onChange={ onChangeReverse }
+                        />
+                    </fieldset>
+                    
                 </div>
             </InspectorControls>,
 
             <div  { ...blockProps } key='block'>
 
                 {/* Block itself */}
-                <div className='w-full flex bg-orange'>
+                <div className={`w-full flex ${ attributes.reverse ? 'flex-row-reverse':''}`} style={{ backgroundColor: attributes.bgColor }}>
                     {/* Text panel */}
                     <div className='w-1/2 border-r-2'>
                         <InnerBlocks template={ DEFAULT_BLOCK_CONTENTS }/>
@@ -105,16 +117,26 @@ registerBlockType( 'sf/text-image-block', {
     },
     save({ attributes }) {        
         const blockProps = useBlockProps.save();
-
+        console.log( attributes );
         return (
-            <div  { ...blockProps }>
-                <div className='w-full flex bg-orange'>
-                    <div className='w-1/2'>
-                        <InnerBlocks.Content/>
-                    </div>
-                    <div className='w-1/2'>
-                        <img src={ attributes.img }></img>
-                    </div>
+            // <div  { ...blockProps }>
+            //     <div className='w-full flex bg-orange'>
+            //         <div className='w-1/2'>
+            //             <InnerBlocks.Content/>
+            //         </div>
+            //         <div className='w-1/2'>
+            //             <img src={ attributes.img }></img>
+            //         </div>
+            //     </div>
+            // </div>
+            <div {...blockProps} className={`text-image-section w-full flex ${ attributes.reverse ? 'flex-row-reverse':''}`} 
+                style={"background-color: " + attributes.bgColor }>
+                <div className='md:w-1/2 px-24 py-16'>            
+                    <InnerBlocks.Content/>
+                </div>
+            
+                <div id='plantBasedImg' className='section-image md:w-1/2' 
+                    style={{ backgroundImage: "url('" + attributes.img + "')" }}>
                 </div>
             </div>
         )

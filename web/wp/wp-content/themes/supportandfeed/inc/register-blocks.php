@@ -9,7 +9,7 @@ function sf_load_block_scripts() {
     $file_info = $assets_file['blocks.bundle.js'];
 
     // Load main styles (tailwind)
-    wp_enqueue_style( 'main', $blocks_dir . '/app.css', ver:'1.0.0' );
+    wp_enqueue_style( 'main', $blocks_dir . '/gutenbergBase.css', ver:'1.0.0' );
     wp_enqueue_style( 'wp-components' );
 
     wp_enqueue_script(

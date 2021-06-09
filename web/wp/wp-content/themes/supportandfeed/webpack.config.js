@@ -8,6 +8,7 @@ module.exports = {
         app: './app.js',
         frontPage: './front-page.js', 
         blocks: './blocks.js',
+        gutenbergBase: './scss/gutenberg-base.scss',
     },
 
     output: {

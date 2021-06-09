@@ -26,7 +26,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scs
   \***********************/
 /***/ (() => {
 
-eval("const expandBtn = jQuery('#menu-expand-btn');\nconst closeBtn = jQuery('#menu-close-btn');\nconst mobileMenu = jQuery('#menu-mobile-full');\nexpandBtn.click(() => {\n  mobileMenu.slideDown(200);\n});\ncloseBtn.click(() => {\n  mobileMenu.slideUp(200);\n});\n\n//# sourceURL=webpack:///./js/navmenu.js?");
+eval("const expandBtn = jQuery('#menu-expand-btn');\nconst closeBtn = jQuery('#menu-close-btn');\nconst mobileMenu = jQuery('#menu-mobile-full');\nexpandBtn.click(() => {\n  mobileMenu.slideDown(200);\n});\ncloseBtn.click(() => {\n  mobileMenu.slideUp(200);\n});\nmobileMenu.click(() => {\n  mobileMenu.slideUp(200);\n});\n\n//# sourceURL=webpack:///./js/navmenu.js?");
 
 /***/ }),
 

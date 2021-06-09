@@ -10,3 +10,7 @@ expandBtn.click( () => {
 closeBtn.click( () => {
     mobileMenu.slideUp( 200 )
 } ) 
+
+mobileMenu.click( () => {
+    mobileMenu.slideUp( 200 );
+} )
