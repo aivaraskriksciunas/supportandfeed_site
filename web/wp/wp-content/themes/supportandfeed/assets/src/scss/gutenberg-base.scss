@@ -1,0 +1,10 @@
+// ---------------------------
+// The following file includes basic tailwind styles required to make custom 
+// editor blocks in the Gutenberg editor show up while we're editing the file
+// 
+// This file should not be used in the public sites
+// ---------------------------
+
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
