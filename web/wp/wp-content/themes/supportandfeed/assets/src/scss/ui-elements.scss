@@ -25,3 +25,9 @@ button:hover {
 button:active {
     @apply bg-gray-600;
 }
+
+p {
+    @apply text-base mb-8;
+    font-family: 'Noto Sans JP';
+    font-weight: 300;
+}

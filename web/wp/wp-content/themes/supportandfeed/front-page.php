@@ -16,8 +16,8 @@
 ?>
 
 <div class='w-full bg-yellow-500 md:flex px-12 md:px-32 py-20 items-center' id='our-mission-section'>
-    <div class='md:w-2/3 mb-6 md:mb-0 text-justify md:text-left md:pr-8 text-2xl lg:text-4xl '>
-        <p class='leading-snug'>
+    <div class='md:w-2/3 mb-6 md:mb-0 text-justify md:text-left md:pr-8'>
+        <p class='leading-snug text-2xl lg:text-4xl font-medium'>
             <?= get_option( 'our_mission_text' ) ?>
         </p>
     </div>
