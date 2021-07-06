@@ -1,0 +1,27 @@
+
+b {
+    font-weight: 700;
+}
+
+.text-druk-bold {
+    font-family: 'Druk';
+}
+
+h1 {
+    @apply text-6xl;
+    font-family: 'Druk';
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+button {
+    @apply py-3 px-6 bg-black text-white text-lg;
+}
+
+button:hover {
+    @apply bg-gray-700;
+}
+
+button:active {
+    @apply bg-gray-600;
+}

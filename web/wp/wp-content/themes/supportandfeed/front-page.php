@@ -8,52 +8,28 @@
     {
         if ( !get_option( $id ) ) return;
         ?>
-            <a href='<?= get_option( $id ) ?>' target='_blank' class='flex items-center mb-4 font-semibold hover:text-light-blue-900'>
-                <span class="dashicons <?= $icon ?> mr-5"></span>
-                <span class=''><?= $link_text ?></span>
+            <a href='<?= get_option( $id ) ?>' target='_blank' class='items-center mb-4 font-semibold hover:text-light-blue-900'>
+                <span class="text-4xl <?= $icon ?> mr-10"></span>
             </a>
         <?php
     }
 ?>
 
-<div class='w-full bg-yellow-500 flex' id='our-mission-section'>
-    <div class='px-32 py-20 w-2/3'>
-        <p class='text-4xl leading-normal'>
+<div class='w-full bg-yellow-500 md:flex px-12 md:px-32 py-20 items-center' id='our-mission-section'>
+    <div class='md:w-2/3 mb-6 md:mb-0 text-justify md:text-left md:pr-8 text-2xl lg:text-4xl '>
+        <p class='leading-snug'>
             <?= get_option( 'our_mission_text' ) ?>
         </p>
     </div>
+    <div class='md:w-1/3' id='ourMissionImg'>
+        <img src="<?= get_theme_mod( 'sf_our_mission_img' ) ?>">
+    </div>
 </div>
+
 
 <div class='text-image-section w-full bg-black flex'>
-    <div id='donateNowImg' class='section-image md:w-1/2' style="background-image: url('<?= get_theme_mod( 'sf_donate_now_img' ) ?>')">
-    </div>
-
-    <div class='md:w-1/2 px-24 text-white py-16 flex flex-col justify-items-start'>
-        <h1 class='section-header uppercase text-druk-bold mb-16'>
-            DONATE NOW!
-        </h1>
-
-        <div class='section-content mb-16 text-justify flex-1'>
-            <?= get_option( 'donate_now_text' ) ?>
-        </div>
-        <div class='section-content font-light mb-2 text-xs text-gray-400'>
-            All donations to our Covid-19 Crisis Response General Fund are tax deductible to the extent of the law.
-        </div>
-        <div class='section-content font-light mb-4 text-xs text-gray-400'>
-            Fiscal sponsorship is provided by In the Family Way, a 501(c)(3) public charity.
-        </div>
-        
-        <div>
-            <div class='button bg-white text-black py-3 px-8 inline-block text-sm'>
-                Donate
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class='text-image-section w-full bg-primary flex'>
     
-    <div class='md:w-1/2 px-24 py-16'>
+    <div class='md:w-1/2 px-24 py-16 text-white'>
         <h1 class='section-header text-druk-bold mb-16'>
             Why Plant Based Matters
         </h1>
@@ -65,6 +41,33 @@
 
     <div id='plantBasedImg' class='section-image md:w-1/2' 
         style="background-image: url('<?= get_theme_mod( 'sf_plant_based_img' ) ?>')">
+    </div>
+</div>
+
+<div class='text-image-section w-full bg-green flex'>
+    <div id='donateNowImg' class='section-image md:w-1/2' style="background-image: url('<?= get_theme_mod( 'sf_donate_now_img' ) ?>')">
+    </div>
+
+    <div class='md:w-1/2 px-24 py-16 flex flex-col justify-items-start'>
+        <h1 class='section-header uppercase text-druk-bold mb-16'>
+            DONATE NOW!
+        </h1>
+
+        <div class='section-content mb-16 text-justify flex-1'>
+            <?= get_option( 'donate_now_text' ) ?>
+        </div>
+        <div class='section-content font-light mb-2 text-xs text-gray-800'>
+            All donations to our Covid-19 Crisis Response General Fund are tax deductible to the extent of the law.
+        </div>
+        <div class='section-content font-light mb-4 text-xs text-gray-800'>
+            Fiscal sponsorship is provided by In the Family Way, a 501(c)(3) public charity.
+        </div>
+        
+        <div>
+            <div class='button bg-black text-white py-3 px-8 inline-block text-sm'>
+                Donate
+            </div>
+        </div>
     </div>
 </div>
 
@@ -83,10 +86,10 @@
         <div class='md:w-1/2 pl-24'>
             <h1 class='mb-12'>Contact Us</h1>
 
-            <?php display_social_link( 'facebook_link', 'Facebook', 'dashicons-facebook-alt' ) ?>
-            <?php display_social_link( 'instagram_link', 'Instagram', 'dashicons-instagram' ) ?>
-            <?php display_social_link( 'linkedin_link', 'Linkedin', 'dashicons-linkedin' ) ?>
-            <?php display_social_link( 'twitter_link', 'Twitter', 'dashicons-twitter' ) ?>
+            <?php display_social_link( 'facebook_link', 'Facebook', 'icon-facebook' ) ?>
+            <?php display_social_link( 'instagram_link', 'Instagram', 'icon-instagram' ) ?>
+            <?php display_social_link( 'linkedin_link', 'Linkedin', 'icon-linkedin2' ) ?>
+            <?php display_social_link( 'twitter_link', 'Twitter', 'icon-twitter' ) ?>
 
         </div>
     </div>
@@ -111,7 +114,7 @@
                 if ( !$logo ) continue;
 
                 ?>
-                    <a href='<?= $url ?>' class='sponsor-container px-8 py-4'>
+                    <a href='<?= $url ?>' class='sponsor-container px-8 py-4 mb-6'>
                         <img src='<?= $logo ?>'>
                     </a>
                 <?php

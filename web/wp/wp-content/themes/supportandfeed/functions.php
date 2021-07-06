@@ -24,13 +24,16 @@ function theme_supports() {
     add_theme_support( 'title-tag' );    
     add_theme_support( 'menus' );
     add_theme_support( 'custom-logo', [
-        'height' => 100
+        'flex-height' => true,
+        'flex-width' => true,
     ] );
     add_theme_support( 'post-thumbnails' );
+    add_theme_support( 'widgets' );
 
     // Register nav menus
     register_nav_menus([
-        'navbar' => 'Navbar'
+        'navbar' => 'Navbar',
+        'footer' => 'Footer menu',
     ]);
 }
 

@@ -1,4 +1,55 @@
 @import url(https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;500;700&display=swap);
+@font-face {
+  font-family: 'sf-iconset';
+
+  src:  url(fonts/sf-iconset.eot);
+
+  src:  url(fonts/sf-iconset.eot#iefix) format('embedded-opentype'),
+    url(fonts/sf-iconset.ttf) format('truetype'),
+    url(fonts/sf-iconset.woff) format('woff'),
+    url(fonts/sf-iconset.svg#sf-iconset) format('svg');
+
+  font-weight: normal;
+
+  font-style: normal;
+
+  font-display: block;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'sf-iconset' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-bars:before {
+  content: "\e900";
+}
+
+.icon-facebook:before {
+  content: "\ea90";
+}
+
+.icon-instagram:before {
+  content: "\ea92";
+}
+
+.icon-twitter:before {
+  content: "\ea96";
+}
+
+.icon-linkedin2:before {
+  content: "\eaca";
+}
+
 /*! tailwindcss v2.1.2 | MIT License | https://tailwindcss.com */
 
 /*! modern-normalize v1.1.0 | MIT License | https://github.com/sindresorhus/modern-normalize */
@@ -27188,8 +27239,8 @@ h1 {
 button {
   --tw-bg-opacity: 1;
   background-color: rgba(0, 0, 0, var(--tw-bg-opacity));
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
   padding-left: 1.5rem;
@@ -27333,6 +27384,17 @@ button:active {
 .text-image-section .section-image {
   background-size: cover;
   background-position: 50% 50%;
+}
+
+#footer #footer-menus-container .menu-item {
+  font-weight: 300;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+#footer #footer-menus-container .menu-item:hover {
+  text-decoration: underline;
 }
 
 @media (min-width: 640px){

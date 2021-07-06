@@ -6,6 +6,10 @@
 /* 
     Font definitions
 */
+
+// Import custom icon font
+@import '../../sf-iconset.css';
+
 @font-face {
     font-family: 'Druk';
     src: url( '../../fonts/Druk-Bold.otf' );
@@ -33,32 +37,7 @@ body {
     font-size: 1.3rem;
 }
 
-b {
-    font-weight: 700;
-}
-
-.text-druk-bold {
-    font-family: 'Druk';
-}
-
-h1 {
-    @apply text-6xl;
-    font-family: 'Druk';
-    letter-spacing: 1px;
-    font-weight: bold;
-}
-
-button {
-    @apply py-3 px-6 bg-black text-white text-sm;
-}
-
-button:hover {
-    @apply bg-gray-700;
-}
-
-button:active {
-    @apply bg-gray-600;
-}
+@import './ui-elements.scss';
 
 // Top horizontal avbar
 
@@ -181,4 +160,18 @@ button:active {
         background-size: cover;
         background-position: 50% 50%;
     }
+}
+
+#footer {
+
+    #footer-menus-container {
+        .menu-item {
+            @apply text-base pb-2 font-light;
+        }
+
+        .menu-item:hover {
+            @apply underline;
+        }
+    }
+
 }

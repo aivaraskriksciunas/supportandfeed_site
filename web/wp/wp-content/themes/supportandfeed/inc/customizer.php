@@ -80,6 +80,22 @@ function sf_register_front_page_image_options( WP_Customize_Manager $wp_customiz
         'active_callback' => 'is_front_page'
     ] );
 
+     // Add photo field
+    $wp_customizer->add_setting( 'sf_our_mission_img' );
+    $wp_customizer->add_control( new WP_Customize_Image_Control(
+        $wp_customizer,
+        'sf_our_mission_img', 
+        [
+            'label' => 'Our mission image',
+            'setting' => 'sf_our_mission_img',
+            'section' => HOMEPAGE_IMAGES_ID,
+        ]
+    ) );
+
+    $wp_customizer->selective_refresh->add_partial( 'sf_our_mission_img', [
+        'selector' => '#ourMissionImg',
+    ]);
+
     // Add photo field
     $wp_customizer->add_setting( 'sf_donate_now_img' );
     $wp_customizer->add_control( new WP_Customize_Image_Control(
