@@ -1,6 +1,5 @@
 <?php 
     // Enqueue files specific to this page
-
     function load_our_founder_page_assets() {
         $assets_dir = get_stylesheet_directory_uri() . '/assets/dist/';
 

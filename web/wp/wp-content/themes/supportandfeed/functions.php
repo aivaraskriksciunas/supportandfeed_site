@@ -37,8 +37,19 @@ function theme_supports() {
     ]);
 }
 
+// Register custom meta info for posts
+function create_metadata_for_posts() {
+
+    register_post_meta( 'page', 'page_subtitle', [
+        'single' => true,
+        'type' => 'string',
+        'show_in_rest' => true
+    ]);
+}
+
 add_action( 'after_setup_theme', 'theme_supports' );
 add_action( 'wp_enqueue_scripts', 'load_assets' );
+add_action( 'init', 'create_metadata_for_posts' );
 
 require_once 'inc/customizer.php';
 require_once 'inc/register-blocks.php';

@@ -37,7 +37,13 @@
                 ''
             ]); ?>
         </div>
+
+        <div class='text-xs font-light text-gray-600 italic mt-8'>
+            <?= join( ' | ', apply_filters( 'sf_footer_credits', [ '© Support and Feed, ' . date( 'Y' ) ])); ?>
+        </div>
     </div>
+
+    
 </div>
 
 <?php wp_footer(); ?>

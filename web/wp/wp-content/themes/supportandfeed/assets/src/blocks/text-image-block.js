@@ -117,7 +117,7 @@ registerBlockType( 'sf/text-image-block', {
     },
     save({ attributes }) {        
         const blockProps = useBlockProps.save();
-        console.log( attributes );
+        
         return (
             // <div  { ...blockProps }>
             //     <div className='w-full flex bg-orange'>

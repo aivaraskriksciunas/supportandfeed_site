@@ -1,0 +1,19 @@
+.partnership-feature {
+    display: flex;
+    flex-direction: column;
+
+    img {
+        width: 64px;
+        height: 64px;
+        margin-left: auto;
+        margin-right: auto;
+        opacity: 0.8;
+        margin-bottom: 20px;
+    }
+}
+
+.wpcf7-form {
+    @apply mt-16 md:w-1/2 mx-auto;
+
+    text-align: left;
+}
