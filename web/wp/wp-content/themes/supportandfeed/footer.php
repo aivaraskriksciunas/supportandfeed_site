@@ -20,7 +20,7 @@
             if ( $logo_id ):
         ?>
             <div id='footer-top-section' class='md:flex items-center'>
-                <img id='footer-logo' class='md:w-64 md:mr-8' src='<?= wp_get_attachment_image_src( $logo_id )[0] ?>'>
+                <img id='footer-logo' class='md:w-64 md:mr-8' src='<?= wp_get_attachment_image_src( $logo_id, 'full' )[0] ?>'>
                 <div class='flex'>
                     <?php display_footer_social_link( 'facebook_link', 'icon-facebook' ) ?>
                     <?php display_footer_social_link( 'instagram_link','icon-instagram' ) ?>

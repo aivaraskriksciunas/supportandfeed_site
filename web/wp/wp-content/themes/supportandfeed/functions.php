@@ -1,6 +1,7 @@
 <?php 
 
 // TODO: customize title 
+// TODO: load stylesheets depending on the environment
 
 function load_assets() {
 
