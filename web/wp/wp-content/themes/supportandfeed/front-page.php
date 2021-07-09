@@ -1,5 +1,7 @@
 <?php get_header() ?>
 
+<div id='front-page'>
+
 <?php 
     // Include main slideshow
     require_once "template-parts/front-page/slideshow.php";
@@ -14,8 +16,6 @@
         <?php
     }
 ?>
-
-<div id='front-page'>
 
 <div class='w-full bg-yellow-500 md:flex px-12 md:px-32 py-20 items-center' id='our-mission-section'>
     <div class='md:w-2/3 mb-6 md:mb-0 text-justify md:text-left md:pr-8'>

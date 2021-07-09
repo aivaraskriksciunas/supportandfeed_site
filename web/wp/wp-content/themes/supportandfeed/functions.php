@@ -11,6 +11,11 @@ function load_assets() {
     wp_enqueue_script( 'main', $assets_dir . 'app.bundle.js', deps:[ 'jquery' ], ver:'1.0.0', in_footer:true );
     wp_enqueue_style( 'main', $assets_dir . 'app.css', ver:'1.0.0' );
 
+    // Load front page specific files 
+    if ( is_front_page() )
+    {
+        wp_enqueue_script( 'front-page', $assets_dir . 'frontPage.bundle.js', deps:[ 'jquery' ], ver:'1.0.0', in_footer:true );
+    }
 }
 
 function theme_supports() {
