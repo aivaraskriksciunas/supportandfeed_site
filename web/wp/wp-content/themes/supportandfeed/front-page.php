@@ -15,6 +15,8 @@
     }
 ?>
 
+<div id='front-page'>
+
 <div class='w-full bg-yellow-500 md:flex px-12 md:px-32 py-20 items-center' id='our-mission-section'>
     <div class='md:w-2/3 mb-6 md:mb-0 text-justify md:text-left md:pr-8'>
         <p class='leading-snug text-2xl lg:text-4xl font-medium'>
@@ -95,7 +97,7 @@
     </div>
 </div>
 
-<div id='sponsors-section' class='bg-black text-white text-center py-20'>
+<div id='sponsors-section' class='bg-white text-black text-center py-20'>
     <div class='container'>
         <h1 class='mb-16'>Our sponsors</h1>
 
@@ -115,13 +117,15 @@
 
                 ?>
                     <a href='<?= $url ?>' class='sponsor-container px-8 py-4 mb-6'>
-                        <img src='<?= $logo ?>'>
+                        <img alt='<?= get_the_title() ?>' src='<?= $logo ?>'>
                     </a>
                 <?php
             }   
         ?>
 
     </div>
+</div>
+
 </div>
 
 <?php get_footer() ?>

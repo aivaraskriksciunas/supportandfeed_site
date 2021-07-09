@@ -1,0 +1,31 @@
+#p-our-impact {
+
+    @apply bg-gray-100;
+
+    .statistic {
+        .number {
+            @apply text-6xl;
+
+            font-weight: 700;
+        }
+
+        .number-subtitle {
+            font-size: 2rem;
+            font-weight: 300;
+        }
+
+        .colored-container {
+            @apply inline-block w-full lg:w-2/3 text-center py-10 bg-white;
+            border: 1px solid #111;
+            box-shadow: 6px 6px 0 #aaa;
+        }
+
+        #cc1 {
+        }
+
+        #cc2 {
+            @apply bg-yellow-500;
+        }
+    }
+
+}

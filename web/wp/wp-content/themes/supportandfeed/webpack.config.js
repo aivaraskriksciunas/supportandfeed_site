@@ -6,11 +6,8 @@ module.exports = {
     context: path.resolve( __dirname, "assets/src" ),
     entry: {
         app: './app.js',
-        frontPage: './front-page.js', 
         blocks: './blocks.js',
         gutenbergBase: './scss/gutenberg-base.scss',
-        'page-our-founder': './scss/page-our-founder.scss',
-        'page-brand-partnerships': './scss/page-brand-partnerships.scss',
     },
 
     output: {

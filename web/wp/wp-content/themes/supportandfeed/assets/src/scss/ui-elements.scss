@@ -14,6 +14,16 @@ h1 {
     font-weight: bold;
 }
 
+h2 {
+    @apply text-4xl;
+    font-family: 'Druk Wide';
+}
+
+h3 {
+    @apply text-3xl;
+    font-family: 'Druk Wide';
+}
+
 button, input[type=submit] {
     @apply py-3 px-6 bg-black text-white text-lg cursor-pointer;
 }

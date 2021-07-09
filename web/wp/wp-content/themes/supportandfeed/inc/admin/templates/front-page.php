@@ -5,7 +5,7 @@
 
     <?php settings_fields( self::SETTINGS_GROUP ) ?>
 
-    <?php do_settings_sections( self::FRONT_PAGE_ID ) ?>
+    <?php do_settings_sections( $this->PAGE_ID ) ?>
 
     <?php submit_button( 'Save changes' ) ?>
 </form>

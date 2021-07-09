@@ -1,1 +1,29 @@
-.partnership-feature{display:flex;flex-direction:column}.partnership-feature img{height:64px;margin-bottom:20px;margin-left:auto;margin-right:auto;opacity:.8;width:64px}.wpcf7-form{margin-left:auto;margin-right:auto;margin-top:4rem}@media (min-width:768px){.wpcf7-form{width:50%}}.wpcf7-form{text-align:left}
+.partnership-feature {
+  display: flex;
+  flex-direction: column;
+}
+
+.partnership-feature img {
+  width: 64px;
+  height: 64px;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.8;
+  margin-bottom: 20px;
+}
+
+.wpcf7-form {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+}
+
+@media (min-width: 768px) {
+  .wpcf7-form {
+    width: 50%;
+  }
+}
+
+.wpcf7-form {
+  text-align: left;
+}

@@ -2,7 +2,7 @@
 
 const HOMEPAGE_SLIDER_ID = 'sf_homepage_slider';
 const HOMEPAGE_IMAGES_ID = 'sf_images_section';
-
+const OUR_IMPACT_IMAGES_ID = 'sf_our_impact_section';
 
 // Register options used for customizing
 function sf_register_front_page_slideshow_options( WP_Customize_Manager $wp_customizer ) {
@@ -80,7 +80,7 @@ function sf_register_front_page_image_options( WP_Customize_Manager $wp_customiz
         'active_callback' => 'is_front_page'
     ] );
 
-     // Add photo field
+    // Add photo field
     $wp_customizer->add_setting( 'sf_our_mission_img' );
     $wp_customizer->add_control( new WP_Customize_Image_Control(
         $wp_customizer,
@@ -131,6 +131,35 @@ function sf_register_front_page_image_options( WP_Customize_Manager $wp_customiz
     ]);
 }
 
+function sf_register_our_impact_page_options( WP_Customize_Manager $wp_customizer ) 
+{
+    // Register slider section
+    $wp_customizer->add_section( OUR_IMPACT_IMAGES_ID, [
+        'title' => 'Page options',
+        'description' => 'Customize how the main slideshow will look like',
+        'active_callback' => function () {
+            return is_page( 'our-impact' );
+        }
+    ] );
+
+    // Add photo field
+    $wp_customizer->add_setting( 'sf_our_impact_community_photo' );
+    $wp_customizer->add_control( new WP_Customize_Image_Control(
+        $wp_customizer,
+        'sf_our_impact_community_photo', 
+        [
+            'label' => 'Community photo',
+            'setting' => 'sf_our_impact_community_photo',
+            'section' => OUR_IMPACT_IMAGES_ID,
+        ]
+    ) );
+
+    $wp_customizer->selective_refresh->add_partial( 'sf_our_impact_community_photo', [
+        'selector' => '#ourCommunityImg',
+    ]);
+}
+
 // Register front page specific options
 add_action( 'customize_register', 'sf_register_front_page_slideshow_options' );
 add_action( 'customize_register', 'sf_register_front_page_image_options' );
+add_action( 'customize_register', 'sf_register_our_impact_page_options' );
