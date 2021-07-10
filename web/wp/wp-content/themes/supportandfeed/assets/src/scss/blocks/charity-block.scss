@@ -1,0 +1,14 @@
+.charity-block {
+    @apply my-8;
+
+    .charity-block-logo {
+        @apply p-12;
+    }
+
+    .charity-block-content {
+        h1 {
+            @apply mb-5;
+            text-transform: uppercase;
+        }
+    }
+}

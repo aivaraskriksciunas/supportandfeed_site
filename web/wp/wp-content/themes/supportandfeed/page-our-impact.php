@@ -52,6 +52,10 @@
 
 <img id='ourCommunityImg' src='<?= get_theme_mod( 'sf_our_impact_community_photo' )?>'>
 
+<div class='container my-20'>
+    <?php the_content() ?>
+</div>
+
 </div>
 
 <?php get_footer() ?>

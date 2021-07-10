@@ -22,11 +22,11 @@ function sf_load_block_scripts() {
     // register_block_type( 'sf/text-block', [
     //     'editor_script' => 'blocks-script'
     // ] );
-    register_block_type( 'sf/text-block', array(
-        'style' => 'main',
-        'editor_style' => 'main',
-        'editor_script' => 'blocks-script',
-    ) );
+    // register_block_type( 'sf/text-block', array(
+    //     'style' => 'main',
+    //     'editor_style' => 'main',
+    //     'editor_script' => 'blocks-script',
+    // ) );
 }
 
 add_action( 'enqueue_block_editor_assets', 'sf_load_block_scripts' );

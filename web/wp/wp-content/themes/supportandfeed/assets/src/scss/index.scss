@@ -46,6 +46,9 @@ body {
 @import './pages/page-our-founder.scss';
 @import './pages/page-our-impact.scss';
 
+// Import styles specific to blocks
+@import './blocks/charity-block.scss';
+
 ::selection {
     @apply bg-primary;
     color: black;
