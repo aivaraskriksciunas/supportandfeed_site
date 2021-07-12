@@ -27,7 +27,7 @@ const DEFAULT_BLOCK_CONTENTS = [
 registerBlockType( 'sf/text-image-block', {
     title: 'SF Text block',
     icon: 'smiley',
-    category: 'design',
+    category: 'sf_blocks',
 
     attributes: {
         img: { type: 'string' },
@@ -119,16 +119,6 @@ registerBlockType( 'sf/text-image-block', {
         const blockProps = useBlockProps.save();
         
         return (
-            // <div  { ...blockProps }>
-            //     <div className='w-full flex bg-orange'>
-            //         <div className='w-1/2'>
-            //             <InnerBlocks.Content/>
-            //         </div>
-            //         <div className='w-1/2'>
-            //             <img src={ attributes.img }></img>
-            //         </div>
-            //     </div>
-            // </div>
             <div {...blockProps} className={`text-image-section w-full flex ${ attributes.reverse ? 'flex-row-reverse':''}`} 
                 style={"background-color: " + attributes.bgColor }>
                 <div className='md:w-1/2 px-24 py-16'>            

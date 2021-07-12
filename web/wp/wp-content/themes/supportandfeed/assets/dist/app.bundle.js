@@ -16,7 +16,17 @@
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scss/index.scss */ \"./scss/index.scss\");\n/* harmony import */ var _js_navmenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/navmenu */ \"./js/navmenu.js\");\n/* harmony import */ var _js_navmenu__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_js_navmenu__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\n//# sourceURL=webpack:///./app.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _scss_index_scss__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./scss/index.scss */ \"./scss/index.scss\");\n/* harmony import */ var _js_navmenu__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/navmenu */ \"./js/navmenu.js\");\n/* harmony import */ var _js_navmenu__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_js_navmenu__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _js_modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./js/modal */ \"./js/modal.js\");\n/* harmony import */ var _js_modal__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_js_modal__WEBPACK_IMPORTED_MODULE_2__);\n\n\n\n\n//# sourceURL=webpack:///./app.js?");
+
+/***/ }),
+
+/***/ "./js/modal.js":
+/*!*********************!*\
+  !*** ./js/modal.js ***!
+  \*********************/
+/***/ (() => {
+
+eval("// By default, hide all staff blocks\njQuery('.staff-block-modal').hide(); // Open staff block modal\n\njQuery('.staff-block-name, .staff-block-profile').click(item => {\n  const parent = jQuery(item.target).parents('.staff-block');\n  const modal = jQuery(parent).children('.staff-block-modal');\n  show_modal(modal);\n}); // Close modal when clicking on the backdrop\n\njQuery('.staff-block-modal').click(item => {\n  hide_modal(jQuery(item.target));\n});\njQuery('.modal-close-btn').click(item => {\n  const parentModal = jQuery(item.target).parents('.staff-block-modal');\n  hide_modal(jQuery(parentModal));\n}); // Prevent closing of the modal when clicking inside of it\n\njQuery('.modal-container').click(ev => {\n  ev.stopPropagation();\n});\n\nfunction show_modal(modal) {\n  modal.fadeIn(200);\n  jQuery('body').css('overflow', 'hidden');\n}\n\nfunction hide_modal(modal) {\n  modal.fadeOut(200);\n  jQuery('body').css('overflow', 'scroll');\n}\n\n//# sourceURL=webpack:///./js/modal.js?");
 
 /***/ }),
 

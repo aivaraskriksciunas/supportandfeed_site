@@ -48,7 +48,7 @@ body {
 @import './pages/page-donate.scss';
 
 // Import styles specific to blocks
-@import './blocks/charity-block.scss';
+@import './blocks/blocks.scss';
 
 ::selection {
     @apply bg-primary;

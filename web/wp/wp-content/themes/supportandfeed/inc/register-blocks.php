@@ -19,14 +19,23 @@ function sf_load_block_scripts() {
         ver:$file_info['version'], in_footer:true
     );
 
-    // register_block_type( 'sf/text-block', [
-    //     'editor_script' => 'blocks-script'
-    // ] );
-    // register_block_type( 'sf/text-block', array(
-    //     'style' => 'main',
-    //     'editor_style' => 'main',
-    //     'editor_script' => 'blocks-script',
-    // ) );
 }
 
+function sf_register_block_category( $categories ) {
+    $category_slugs = wp_list_pluck( $categories, 'slug' );
+
+    $slug = 'sf_blocks';
+    if ( in_array( $slug, $category_slugs ) ) return $categories;
+
+    return [
+        [
+            'slug' => $slug,
+            'title' => 'S+F Blocks',
+        ],
+        ...$categories,
+    ];
+}
+
+
+add_filter( 'block_categories', 'sf_register_block_category' );
 add_action( 'enqueue_block_editor_assets', 'sf_load_block_scripts' );

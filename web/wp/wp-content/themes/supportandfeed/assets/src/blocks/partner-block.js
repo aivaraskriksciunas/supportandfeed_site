@@ -18,7 +18,7 @@ const DEFAULT_BLOCK_CONTENTS = [
 registerBlockType( 'sf/partner-block', {
     title: 'SF Partner Block',
     icon: 'smiley',
-    category: 'design',
+    category: 'sf_blocks',
 
     attributes: {
         imageUrl: { type: 'string' }

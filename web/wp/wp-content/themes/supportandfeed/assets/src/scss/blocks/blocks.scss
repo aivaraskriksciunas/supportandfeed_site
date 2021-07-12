@@ -1,0 +1,113 @@
+.charity-block {
+    @apply my-8 text-left;
+
+    .charity-block-logo {
+        @apply p-12;
+
+        img {
+            max-height: 256px;
+        }
+    }
+
+    .charity-block-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h1, h2 {
+            @apply mb-5;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.staff-block-container {
+    @apply bg-white mb-8;
+
+    .staff-block-head {
+        .staff-block-profile {
+            overflow: hidden;
+            cursor: pointer;
+
+            img {
+                transition: transform .5s ease;
+            }
+        }
+
+        .staff-block-name {
+            @apply px-4 pt-4 text-druk-bold text-5xl mb-2 cursor-pointer underline;
+            line-height: 1.2;
+        }
+
+        .staff-block-name:hover {
+            @apply text-green-darkened;
+        }
+
+        .staff-block-position {
+            @apply px-4 text-base;
+        }
+    }
+
+    .staff-block-content, .staff-block-content p {
+        @apply px-4 pb-4 text-justify text-base;
+        
+        .staff-block-description {
+            @apply my-5 font-light;
+        }
+    
+    }
+
+    border-width: 0 5px 5px 0;
+    border-color: black;
+}
+
+.staff-block-container:hover {
+    // Image zoom in animation
+    img {
+        transform: scale( 1.05 );
+    }
+}
+
+.staff-block-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+
+    background-color: rgba( 40, 40, 40, 0.8 );
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+
+    .modal-container {
+        @apply my-20 w-full md:w-2/3 lg:w-1/2;
+
+        overflow-y: auto;
+        background-color: white;
+        box-shadow: 0 10px 50px rgba( 0, 0, 0, 0.5 );
+
+        .modal-header-infos {
+            @apply pb-2 pt-12 px-8;
+
+            h1 {
+                @apply mb-2;
+            }
+        }
+
+        .modal-content {
+            @apply p-10 text-justify font-light;
+        }
+
+        .modal-close-btn {
+            position: fixed;
+            margin-top: -30px;
+        }
+
+        .modal-close-btn:hover {
+            cursor: pointer;
+            fill: rgb( 80, 80, 80 );
+            background-color: #eee;
+        }
+    }
+}

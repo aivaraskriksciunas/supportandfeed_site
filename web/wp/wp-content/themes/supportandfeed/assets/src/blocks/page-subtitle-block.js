@@ -10,7 +10,7 @@ import { useEntityProp } from '@wordpress/core-data';
 registerBlockType( 'sf/page-subtitle-block', {
     title: 'SF Page Subtitle',
     icon: 'smiley',
-    category: 'design',
+    category: 'sf_blocks',
  
     edit( { setAttributes, attributes } ) {
         const blockProps = useBlockProps();
