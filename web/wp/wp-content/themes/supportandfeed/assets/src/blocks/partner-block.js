@@ -11,12 +11,12 @@ import {
 } from '@wordpress/components';
 
 const DEFAULT_BLOCK_CONTENTS = [
-    [ 'core/heading', { placeholder: 'Title', level: 1 } ],
+    [ 'core/heading', { placeholder: 'Title', level: 2 } ],
     [ 'core/paragraph', { placeholder: 'Type text here or add new blocks' } ],
 ];
  
-registerBlockType( 'sf/charity-block', {
-    title: 'SF Partner Charity Block',
+registerBlockType( 'sf/partner-block', {
+    title: 'SF Partner Block',
     icon: 'smiley',
     category: 'design',
 
