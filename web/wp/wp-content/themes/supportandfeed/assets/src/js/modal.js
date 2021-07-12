@@ -4,7 +4,7 @@ jQuery( '.staff-block-modal' ).hide()
 
 // Open staff block modal
 jQuery( '.staff-block-name, .staff-block-profile' ).click( ( item ) => {
-    const parent = jQuery( item.target ).parents( '.staff-block' )
+    const parent = jQuery( item.target ).parents( '.wp-block-sf-staff-block' )
     const modal = jQuery( parent ).children( '.staff-block-modal' )
     show_modal( modal )
 } )
