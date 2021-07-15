@@ -2,7 +2,6 @@
 
 abstract class SF_SettingsPageBase {
 
-    const SETTINGS_GROUP = 'sf_options';
     protected string $PAGE_ID;
 
     /**
@@ -35,7 +34,7 @@ abstract class SF_SettingsPageBase {
             add_option( $id, $args['default'] ?? '' );
 
         // Register setting
-        register_setting( self::SETTINGS_GROUP, $id, $args );
+        register_setting( $this->PAGE_ID, $id, $args );
     }
 
     /**

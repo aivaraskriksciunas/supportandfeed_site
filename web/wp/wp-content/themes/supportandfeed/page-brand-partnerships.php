@@ -29,25 +29,46 @@
 <div class='py-32 text-center container'>
 
     <h1 class='mb-8 text-7xl'>Get your brand involved!</h1>
-    <p class='mb-32'>We work closely with our Brand Partners to develop mutually-beneficial fundraising campaigns, co-branded merchandise, media, and experiences that have an incredible impact on the world.  </p>
+    <p class='mb-32 lg:w-1/2 mx-auto'>We work cooperatively with our Brand Partners to grow mutually-beneficial fundraising campaigns, media, and experiences that positively impact underserved communities. </p>
 
-    <div class='flex justify-center md:w-2/3 mb-40 justify-self-center mx-auto'>
+    <div class='md:flex justify-center w-3/4 md:w-full lg:w-2/3 mb-40 justify-self-center mx-auto'>
 
         <?php 
             $icon_url = get_stylesheet_directory_uri() . '/assets/icons';
         ?>
 
-        <div class='w-1/3 partnership-feature'>
+        <div class='md:w-1/3 partnership-feature'>
             <img src='<?= $icon_url . '/sandwich-with-fried-egg.png'?>'>
-            Give
+            <div class='partnership-title'>Donate</div>
+            <p>Your gift helps provide planet forward meals and empowering resources to underserved communities.</p>
+
+            <ul class='partnership-list'>
+                <li>Corporate Gift</li>
+                <li>Percentage of sales</li>
+                <li>Matching</li>
+                <li>Round up</li>
+            </ul>
         </div>
-        <div class='w-1/3 partnership-feature'>
+        <div class='md:w-1/3 partnership-feature'>
             <img src='<?= $icon_url . '/handshake.png'?>'>
-            Engage
+            <div class='partnership-title'>Mobilize</div>
+            <p>Activate  your staff and clients to fundraise and voice the mission. </p>
+
+            <ul class='partnership-list'>
+                <li>Staff Volunteer Program</li>
+                <li>Staff fundraising</li>
+            </ul>
         </div>
-        <div class='w-1/3 partnership-feature'>
+        <div class='md:w-1/3 partnership-feature'>
             <img src='<?= $icon_url . '/microphone.png'?>'>
-            Amplify
+            <div class='partnership-title'>Amplify</div>
+            <p>Help us amplify the world issues of climate crisis, food insecurity and the impact of our work.</p>
+
+            <ul class='partnership-list'>
+                <li>Gifted social media</li>
+                <li>Gifted content</li>
+                <li>Activation integration</li>
+            </ul>
         </div>
     
     </div>

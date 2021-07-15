@@ -3,7 +3,7 @@
 
 <form method='post' action='options.php'>
 
-    <?php settings_fields( self::SETTINGS_GROUP ) ?>
+    <?php settings_fields( $this->PAGE_ID ) ?>
 
     <?php do_settings_sections( $this->PAGE_ID ) ?>
 
