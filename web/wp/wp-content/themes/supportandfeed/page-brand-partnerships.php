@@ -8,7 +8,7 @@
 
 <?php get_header() ?>
 
-<div id='p-brand-partnerships'>
+<div id='p-brand-partnerships' class='w-full bg-gray-100'>
 
 <div id='pageCover' class='flex items-center container' style='background-image: url(<?= $coverUrl ?>)'>
     <div class='my-20 flex flex-col items-right'>
@@ -26,12 +26,13 @@
     </div>
 </div>
 
-<div class='py-32 text-center container'>
+<div class='py-16 text-center container bg-gray-100'>
 
+    <div class='bg-white py-16 px-8'>
     <h1 class='mb-8 text-7xl'>Get your brand involved!</h1>
     <p class='mb-32 lg:w-1/2 mx-auto'>We work cooperatively with our Brand Partners to grow mutually-beneficial fundraising campaigns, media, and experiences that positively impact underserved communities. </p>
 
-    <div class='md:flex justify-center w-3/4 md:w-full lg:w-2/3 mb-40 justify-self-center mx-auto'>
+    <div class='md:flex justify-center w-3/4 md:w-full lg:w-3/4 mb-40 justify-self-center mx-auto'>
 
         <?php 
             $icon_url = get_stylesheet_directory_uri() . '/assets/icons';
@@ -74,7 +75,7 @@
     </div>
 
     <?php the_content() ?>
-
+    </div>
 </div>
 </div>
 

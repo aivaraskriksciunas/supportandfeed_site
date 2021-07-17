@@ -72,10 +72,10 @@ function sf_page_cover()
     $pageSubtitle = get_post_meta( get_the_ID(), 'page_subtitle', true );
 
     ?>
-    <div id='pageCover' class='flex items-center container' style='background-image: url(<?= $coverUrl ?>)'>
+    <div id='pageCover' class='flex items-center container bg-yellow-200' style='background-image: url(<?= $coverUrl ?>)'>
         <div class='my-20 flex flex-col items-center'>
             <div>
-                <h1 class='bg-black text-white inline-block p-1 mb-8 text-8xl'>
+                <h1 class='text-black inline-block p-1 mb-8 text-8xl'>
                     <?php the_title() ?>
                 </h1>
             </div>

@@ -10,7 +10,7 @@
         <img src='<?= $image_url ?>'>
     </div>
 
-    <div id='founderLetter' class='bg-white w-full md:w-2/3 lg:w-1/2 px-12 md:px-20 pt-14 pb-7 md:my-20 ml-auto text-justify'>
+    <div id='founderLetter' class='bg-white w-full md:w-2/3 lg:w-1/2 px-12 md:px-20 pt-14 pb-7 md:my-10 ml-auto text-justify'>
         <h1 class='mb-8'><?php the_title() ?></h1>
 
         <?php the_content() ?>

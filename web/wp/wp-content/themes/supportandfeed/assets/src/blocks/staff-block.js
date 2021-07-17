@@ -23,7 +23,6 @@ registerBlockType( 'sf/staff-block', {
         profileUrl: { type: 'string' },
         position: { type: 'string' },
         name: { type: 'string' },
-        shortDescription: { type: 'string' },
         fullDescription: { type: 'string' },
         linkedInUrl: { type: 'string' },
         twitterUrl: { type: 'string' },
@@ -119,16 +118,6 @@ registerBlockType( 'sf/staff-block', {
                     </TextControl>
                 </div>
 
-                <div className='my-4'>
-                    <div>Short description:</div>
-                    <RichText
-                        className='border border-gray-300 text-sm'
-                        value={attributes.shortDescription}
-                        onChange={( val ) => setAttributes({ shortDescription: val })}
-                    >
-                    </RichText>
-                </div>
-
                 <div className='mb-4'>
                     <div>Full description:</div>
                     <RichText
@@ -148,7 +137,7 @@ registerBlockType( 'sf/staff-block', {
         const socialIcon = ( url, iconName ) => {
             if ( !url ) return;
 
-            return <a href={url} target='_blank' className='font-semibold rounded-full flex items-center justify-center w-12 h-12 mr-5 text-black hover:bg-black hover:text-white'>
+            return <a href={url} target='_blank' className='font-semibold text-gray-700 hover:text-gray-400 mr-4'>
                 <span className={'text-xl ' + iconName}></span>
             </a>
         }
@@ -164,27 +153,18 @@ registerBlockType( 'sf/staff-block', {
         return (
         <div {...useBlockProps.save()}>
             
-            <div className='staff-block-container'>
-                <div className='flex sm:block lg:flex staff-block-head'>
-                    <div className='w-1/2 sm:w-full lg:w-1/2 staff-block-profile'>
-                        <img src={attributes.profileUrl}></img>
-                    </div>
-                    <div className='w-1/2 sm:w-full lg:w-1/2'>
-                        <div className='staff-block-name'>
-                            {attributes.name}
-                        </div>
-                        <div className='staff-block-position'>
-                            {attributes.position}
-                        </div>
-                    </div>
+            <div className='staff-block-container flex sm:block lg:flex'>
+                <div className='w-1/2 sm:w-full lg:w-1/2 staff-block-profile'>
+                    <img src={attributes.profileUrl}></img>
                 </div>
-
-                <div className='staff-block-content'>
-                    <div class='staff-block-description'>
-                        <RichText.Content value={attributes.shortDescription}></RichText.Content>
+                <div className='w-1/2 sm:w-full lg:w-1/2 flex flex-col'>
+                    <div className='staff-block-name'>
+                        {attributes.name}
                     </div>
-
-                    <div className='staff-block-social-links flex mt-6'>
+                    <div className='staff-block-position flex-1'>
+                        {attributes.position}
+                    </div>
+                    <div className='staff-block-social-links flex'>
                         {socialIcon( attributes.linkedInUrl, 'icon-linkedin2' )}
                         {socialIcon( attributes.facebookUrl, 'icon-facebook' )}
                         {socialIcon( attributes.instagramUrl, 'icon-instagram' )}
@@ -219,7 +199,7 @@ registerBlockType( 'sf/staff-block', {
 
                     <div class='modal-content'>
                         <div class='modal-content-text'>
-                            <RichText.Content value={attributes.fullDescription || attributes.shortDescription}/>
+                            <RichText.Content value={attributes.fullDescription}/>
                         </div>
                     </div>
                 </div>

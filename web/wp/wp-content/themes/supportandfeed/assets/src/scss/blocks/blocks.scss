@@ -24,38 +24,31 @@
 .staff-block-container {
     @apply bg-white mb-8;
 
-    .staff-block-head {
-        .staff-block-profile {
-            overflow: hidden;
-            cursor: pointer;
+    .staff-block-profile {
+        overflow: hidden;
+        cursor: pointer;
 
-            img {
-                transition: transform .5s ease;
-            }
-        }
-
-        .staff-block-name {
-            @apply px-4 pt-4 text-druk-bold mb-2 cursor-pointer underline;
-            font-size: 2.6rem;
-            line-height: 1.2;
-        }
-
-        .staff-block-name:hover {
-            @apply text-green-darkened;
-        }
-
-        .staff-block-position {
-            @apply px-4 text-base;
+        img {
+            transition: transform .5s ease;
         }
     }
 
-    .staff-block-content, .staff-block-content p {
-        @apply px-4 pb-4 text-justify text-base;
-        
-        .staff-block-description {
-            @apply my-5 font-light;
-        }
-    
+    .staff-block-name {
+        @apply px-4 pt-4 mb-2 cursor-pointer underline font-light;
+        font-size: 1.4em;
+        line-height: 1.2;
+    }
+
+    .staff-block-name:hover {
+        @apply font-bold;
+    }
+
+    .staff-block-position {
+        @apply px-4 text-base;
+    }
+
+    .staff-block-social-links {
+        @apply px-4 mb-4 mt-2;
     }
 
     border-width: 0 5px 5px 0;
