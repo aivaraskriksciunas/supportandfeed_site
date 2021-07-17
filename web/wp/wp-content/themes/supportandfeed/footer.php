@@ -62,7 +62,7 @@
             <?= join( ' | ', apply_filters( 'sf_footer_credits', [ '© Support and Feed, ' . date( 'Y' ) ])); ?>
         </div>
 
-        <div class='text-xs font-light text-gray-500 text-justify'>Our platform and service (collectively, the “Service”) facilitates your purchase of food from third party restaurants and vendors (“Vendors”), which will then be distributed by third party partners (“Distributors”) as donations to nonprofit organizations and other entities (“NPOs”) for ultimate distribution (“Distribution”) to needy individuals. Your transaction for the purchase of food (the “Transaction”) will be made directly with the Vendors, who will then distribute the food you purchased to the Distributors. By using our Service, you agree that we are not responsible for the actions or omissions of third parties (including, without limitation, those of the Vendors, Distributors and NPOs), that we are not liable for any loss of money or any other damages in connection with the Transaction, Distribution, the use or inability to use the Service, and/or that are the result of factors outside of our control (e.g., natural hazards, disasters, and other “acts of God”), that all risk arising out of your use of our Services is assumed by you, and that you waive and release us of all claims resulting from and/or pertaining to any and all of the foregoing, to the maximum extent permitted under the law.</div>
+        <div class='text-xs font-light text-gray-500 text-justify'><?= get_option( 'disclaimer_text' ) ?></div>
     </div>
 
     
