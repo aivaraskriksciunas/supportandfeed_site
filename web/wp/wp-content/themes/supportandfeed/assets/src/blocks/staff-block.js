@@ -35,7 +35,11 @@ registerBlockType( 'sf/staff-block', {
         const props = useBlockProps();
 
         const onChangeProfile = ( media ) => {
-            setAttributes({ profileUrl: media.sizes.medium.url })
+            try {
+                setAttributes({ profileUrl: media.sizes.medium.url })
+            } catch {
+                setAttributes({ profileUrl: media.url })
+            } 
         }
 
         return [

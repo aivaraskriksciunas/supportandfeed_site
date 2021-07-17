@@ -78,11 +78,11 @@ registerBlockType( 'sf/partner-block', {
         return (
             <div { ...blockProps }>
                 <div className='charity-block md:flex bg-white'>
-                    <div className='charity-block-logo md:w-1/3 flex items-center'>
+                    <div className='charity-block-logo md:w-1/3 flex justify-center items-center'>
                         <img src={attributes.imageUrl}></img>
                     </div>
 
-                    <div className='charity-block-content md:w-2/3 p-12'>
+                    <div className='charity-block-content md:w-2/3 p-12 text-justify'>
                         <InnerBlocks.Content/>
                     </div>
                 </div>

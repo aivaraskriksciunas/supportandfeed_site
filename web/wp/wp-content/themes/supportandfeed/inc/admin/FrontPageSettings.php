@@ -38,6 +38,8 @@ class SF_AdminFrontPage extends SF_SettingsPageBase {
             'default' => 'https://www.linkedin.com/company/supportandfeed/' 
         ]);
 
+        $this->register_setting( 'tiktok_link', []);
+
         $this->register_setting( 'twitter_link', [ 'type' => 'string' ] );
 
         $this->add_settings_fields();
@@ -96,6 +98,7 @@ class SF_AdminFrontPage extends SF_SettingsPageBase {
         $this->add_social_link( 'social-instagram-link', 'Instagram link', 'instagram_link', $social_section_id );
         $this->add_social_link( 'social-linkedin-link', 'Linkedin link', 'linkedin_link', $social_section_id );
         $this->add_social_link( 'social-twitter-link', 'Twitter link', 'twitter_link', $social_section_id );
+        $this->add_social_link( 'social-tiktok-link', 'Tiktok link', 'tiktok_link', $social_section_id );
     }
 
     public function register_menu_item( string $base_page_id )

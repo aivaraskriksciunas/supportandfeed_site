@@ -5,7 +5,7 @@
     {
         if ( !get_option( $id ) ) return;
         ?>
-            <a href='<?= get_option( $id ) ?>' target='_blank' class='font-semibold rounded-full flex items-center justify-center w-12 h-12 mr-10 text-white hover:bg-white hover:text-black'>
+            <a href='<?= get_option( $id ) ?>' target='_blank' class='font-semibold rounded-full flex items-center justify-center w-12 h-12 mr-6 text-white hover:bg-white hover:text-black'>
                 <span class="text-2xl <?= $icon ?>"></span>
             </a>
         <?php
@@ -37,6 +37,7 @@
                     <?php display_footer_social_link( 'instagram_link','icon-instagram' ) ?>
                     <?php display_footer_social_link( 'linkedin_link', 'icon-linkedin2' ) ?>
                     <?php display_footer_social_link( 'twitter_link', 'icon-twitter' ) ?>
+                    <?php display_footer_social_link( 'tiktok_link', 'icon-tiktok' ) ?>
                 </div>
             </div>
 
@@ -45,6 +46,7 @@
                 <?php display_footer_social_link( 'instagram_link','icon-instagram' ) ?>
                 <?php display_footer_social_link( 'linkedin_link', 'icon-linkedin2' ) ?>
                 <?php display_footer_social_link( 'twitter_link', 'icon-twitter' ) ?>
+                <?php display_footer_social_link( 'tiktok_link', 'icon-tiktok' ) ?>
             </div>
         <?php endif ?>
     </div>

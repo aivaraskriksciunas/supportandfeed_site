@@ -23,6 +23,7 @@
 
 .staff-block-container {
     @apply bg-white mb-8;
+    min-height: 200px;
 
     .staff-block-profile {
         overflow: hidden;

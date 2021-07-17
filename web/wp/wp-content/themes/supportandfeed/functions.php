@@ -82,7 +82,7 @@ function sf_page_cover()
 
             <div class='md:w-2/3'>
                 <?php if ( $pageSubtitle ): ?>
-                    <div class='text-center bg-white font-light text-lg py-2 px-4'>
+                    <div class='text-center <?php if ( $coverUrl ): ?> bg-white <?php endif ?> font-light text-lg py-2 px-4'>
                         <?= $pageSubtitle ?>
                     </div>
                 <?php endif ?>
