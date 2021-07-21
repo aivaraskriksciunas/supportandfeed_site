@@ -1,7 +1,5 @@
 <?php get_header(); ?>
 
-<div id='p-donate'>
-
 <div class='flex min-h-screen'>
 
     <div class='w-1/2' id='donateImg' style="background-image: url(<?= get_theme_mod( 'sf_donate_cover_photo' ) ?>)">
@@ -18,5 +16,4 @@
 
 </div>
 
-</div>
 <?php get_footer(); ?>

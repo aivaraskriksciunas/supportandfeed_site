@@ -8,7 +8,7 @@
 
 <?php get_header() ?>
 
-<div id='p-brand-partnerships' class='w-full bg-gray-100'>
+<div class='w-full bg-gray-100'>
 
 <div id='pageCover' class='flex items-center container' style='background-image: url(<?= $coverUrl ?>)'>
     <div class='my-20 flex flex-col items-right'>

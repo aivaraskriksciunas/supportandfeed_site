@@ -12,6 +12,9 @@
     }
 ?>
 
+<!-- Close page identifying div -->
+</div>
+
 <div id='footer' class='bg-black text-white py-16'>
     <div class='container'>
         <?php 
@@ -24,7 +27,7 @@
 
                 <div id='footer-signup' class='mt-8 md:mt-0 flex-1 flex justify-center'>
                     <div id='footer-signup-constraint' class='md:px-4'>
-                        <div class='text-sm text-gray-400'>A newsletter with impact, sign up:</div>
+                        <div class=' text-white'>A newsletter with impact, sign up:</div>
                         <div class='flex mt-2' id='signup-field-container'>
                             <input type='email' class='flex-1 mr-4 p-2 w-full text-sm text-black' placeholder='Enter your email here'/>
                             <button type='button' class='text-sm py-3'>Subscribe</button>

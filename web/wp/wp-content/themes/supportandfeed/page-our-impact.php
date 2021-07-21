@@ -10,8 +10,6 @@
 
 <?php sf_page_cover() ?>
 
-<div id='p-our-impact'>
-
 <div class='container py-20 md:flex'>
 
     <div class='md:w-1/2'>
@@ -54,8 +52,6 @@
 
 <div class='container my-20'>
     <?php the_content() ?>
-</div>
-
 </div>
 
 <?php get_footer() ?>

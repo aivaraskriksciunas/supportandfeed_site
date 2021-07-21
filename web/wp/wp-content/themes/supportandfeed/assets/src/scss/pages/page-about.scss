@@ -1,0 +1,16 @@
+#p-about {
+
+    #cover {
+
+        #cover-title {
+            z-index: 10;
+        }
+
+        img {
+            @apply py-10;
+            max-height: 100%;
+            z-index: 0;
+        }   
+    }
+
+}

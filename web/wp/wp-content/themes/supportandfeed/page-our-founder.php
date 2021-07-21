@@ -3,8 +3,6 @@
 
 <?php $image_url = wp_get_attachment_image_url( get_post_thumbnail_id(), 'full' ); ?>
 
-<div id='p-our-founder'>
-
 <div class='md:flex bg-gray-200'>
     <div id='founderImage' class='md:absolute md:w-2/3 w-full overflow-hidden z-0'>
         <img src='<?= $image_url ?>'>
@@ -16,8 +14,6 @@
         <?php the_content() ?>
     </div>
     
-</div>
-
 </div>
 
 <?php get_footer() ?>

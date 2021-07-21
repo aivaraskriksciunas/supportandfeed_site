@@ -10,5 +10,9 @@
 </head>
 <body>
 
+<?php 
+    $slug = get_post_field( 'post_name', get_post() );
+?>
+
+<div id='p-<?= $slug ?>'>
     <?php get_template_part( 'template-parts/navbar/navbar' ) ?>
-    
