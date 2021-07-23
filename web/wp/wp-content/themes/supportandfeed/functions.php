@@ -56,6 +56,7 @@ require_once 'inc/customizer.php';
 require_once 'inc/register-blocks.php';
 require_once 'inc/create-admin-pages.php';
 require_once 'inc/sponsors-post-type.php';
+require_once 'inc/faq-post-type.php';
 
 /*
  * Helper functions
@@ -72,8 +73,8 @@ function sf_page_cover()
     $pageSubtitle = get_post_meta( get_the_ID(), 'page_subtitle', true );
 
     ?>
-    <div id='pageCover' class='flex items-center container bg-yellow-200' style='background-image: url(<?= $coverUrl ?>)'>
-        <div class='my-20 flex flex-col items-center'>
+    <div id='pageCover' class='flex items-center bg-yellow-200' style='background-image: url(<?= $coverUrl ?>)'>
+        <div class='my-20 flex flex-col container'>
             <div>
                 <h1 class='text-black inline-block p-1 mb-8 text-8xl'>
                     <?php the_title() ?>
@@ -82,7 +83,7 @@ function sf_page_cover()
 
             <div class='md:w-2/3'>
                 <?php if ( $pageSubtitle ): ?>
-                    <div class='text-center <?php if ( $coverUrl ): ?> bg-white <?php endif ?> font-light text-lg py-2 px-4'>
+                    <div class='<?php if ( $coverUrl ): ?> bg-white px-4 <?php endif ?> font-light text-lg py-2 '>
                         <?= $pageSubtitle ?>
                     </div>
                 <?php endif ?>

@@ -119,13 +119,13 @@ registerBlockType( 'sf/text-image-block', {
         const blockProps = useBlockProps.save();
         
         return (
-            <div {...blockProps} className={`text-image-section w-full flex ${ attributes.reverse ? 'flex-row-reverse':''}`} 
+            <div {...blockProps} className={`text-image-section w-full lg:flex ${ attributes.reverse ? 'flex-row-reverse':''}`} 
                 style={"background-color: " + attributes.bgColor }>
-                <div className='md:w-1/2 px-24 py-16 text-justify font-light'>            
+                <div className='lg:w-1/2 px-16 py-16 text-justify font-light'>            
                     <InnerBlocks.Content/>
                 </div>
             
-                <div id='plantBasedImg' className='section-image md:w-1/2'>
+                <div id='plantBasedImg' className='section-image lg:w-1/2'>
                     <img src={attributes.img}></img>
                 </div>
             </div>
