@@ -144,6 +144,18 @@ function sf_register_our_impact_page_options( WP_Customize_Manager $wp_customize
     ] );
 
     // Add photo field
+    $wp_customizer->add_setting( 'sf_our_impact_numbers_slide' );
+    $wp_customizer->add_control( new WP_Customize_Image_Control(
+        $wp_customizer,
+        'sf_our_impact_numbers_slide', 
+        [
+            'label' => 'Numbers slide',
+            'setting' => 'sf_our_impact_numbers_slide',
+            'section' => OUR_IMPACT_IMAGES_ID,
+        ]
+    ) );
+
+    // Add photo field
     $wp_customizer->add_setting( 'sf_our_impact_community_photo' );
     $wp_customizer->add_control( new WP_Customize_Image_Control(
         $wp_customizer,
@@ -157,6 +169,9 @@ function sf_register_our_impact_page_options( WP_Customize_Manager $wp_customize
 
     $wp_customizer->selective_refresh->add_partial( 'sf_our_impact_community_photo', [
         'selector' => '#ourCommunityImg',
+    ]);
+    $wp_customizer->selective_refresh->add_partial( 'sf_our_impact_numbers_slide', [
+        'selector' => '#numbersSlide',
     ]);
 }
 

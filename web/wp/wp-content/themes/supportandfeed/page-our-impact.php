@@ -8,7 +8,7 @@
 
 <?php get_header() ?>
 
-<?php sf_page_cover() ?>
+<img src='<?= wp_get_attachment_image_url( get_post_thumbnail_id(), 'full' ) ?>'>
 
 <div class='container py-20 md:flex'>
 
@@ -31,18 +31,8 @@
     <div class='md:w-1/2'>
         <h1 class='mb-16'>Our Numbers</h1>
         
-        <div class='statistic mb-8'>
-            <div class='colored-container' id='cc1'>
-                <div class='number mb-5'><?= format_number( get_option( 'meals_served' )); ?></div>
-                <div class='number-subtitle'>Meals served</div>
-            </div>
-        </div>
-
-        <div class='statistic text-right'>
-            <div class='colored-container' id='cc2'>
-                <div class='number mb-5'><?= format_number( get_option( 'meals_served' )); ?></div>
-                <div class='number-subtitle'>Something else served</div>
-            </div>
+        <div id='numbersSlide'>
+            <img id='numbersSlide' src='<?= get_theme_mod( 'sf_our_impact_numbers_slide' )?>'>
         </div>
     </div>
 

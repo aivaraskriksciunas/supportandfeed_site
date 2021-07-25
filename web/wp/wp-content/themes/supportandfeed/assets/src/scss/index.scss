@@ -205,3 +205,18 @@ body {
     
     background-position: center;
 }
+
+.faq-container {
+
+    border-bottom: 3px solid black;
+    background-color: white;
+
+    .faq-question {
+        @apply py-4 px-4;
+        cursor: pointer;
+    }
+
+    .faq-paragraph {
+        @apply px-4;
+    }
+}
