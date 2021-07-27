@@ -92,3 +92,17 @@ function sf_page_cover()
     </div>
     <?php
 }
+
+/**
+ * Retrieves url of asset placed in assets folder
+ *
+ * @param string $asset location of asset in assets folder
+ * @return string
+ */
+function sf_get_asset( string $asset ) : string 
+{
+    $dir = get_stylesheet_directory_uri();
+    if ( $asset[0] !== '/' ) $asset = '/' . $asset;
+
+    return $dir . '/assets' . $asset;
+}

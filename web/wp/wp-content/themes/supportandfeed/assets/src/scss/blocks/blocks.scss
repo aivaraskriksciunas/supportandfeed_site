@@ -35,13 +35,13 @@
     }
 
     .staff-block-name {
-        @apply px-4 pt-4 mb-2 cursor-pointer underline font-light;
+        @apply px-4 pt-4 mb-2 cursor-pointer underline font-bold;
         font-size: 1.4em;
         line-height: 1.2;
     }
 
-    .staff-block-name:hover {
-        @apply font-bold;
+    .staff-block-name:hover {  
+        @apply italic;
     }
 
     .staff-block-position {

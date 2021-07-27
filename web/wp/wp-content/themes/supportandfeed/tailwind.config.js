@@ -23,6 +23,9 @@ module.exports = {
         DEFAULT: '#1CD05A',
         darkened: '#04A50C',
       },
+      blue: {
+        500: '#173aec'
+      },
 
       black: colors.black,
       white: colors.white,

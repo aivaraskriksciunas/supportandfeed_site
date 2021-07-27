@@ -10,7 +10,7 @@
 
 <img src='<?= wp_get_attachment_image_url( get_post_thumbnail_id(), 'full' ) ?>'>
 
-<div class='container py-20 md:flex'>
+<!-- <div class='container py-20 md:flex'>
 
     <div class='md:w-1/2'>
         <h1 class='mb-16'>Our cities</h1>
@@ -36,9 +36,9 @@
         </div>
     </div>
 
-</div>
+</div> -->
 
-<img id='ourCommunityImg' src='<?= get_theme_mod( 'sf_our_impact_community_photo' )?>'>
+<!-- <img id='ourCommunityImg' src='<?= get_theme_mod( 'sf_our_impact_community_photo' )?>'> -->
 
 <div class='container my-20'>
     <?php the_content() ?>

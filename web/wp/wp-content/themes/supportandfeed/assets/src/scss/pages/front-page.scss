@@ -61,6 +61,22 @@
     }
 }
 
+#our-mission-section {
+    min-height: 90vh;
+    background-size: cover;
+    background-color: #173aec;
+    color: white;
+    font-family: 'Druk';
+
+
+    p { 
+        line-height: 1.2;
+        font-size: 2.5em;
+        font-family: 'Druk';
+
+    }
+}
+
 .customize-partial-edit-shortcut button {
     left: 0;
 }
