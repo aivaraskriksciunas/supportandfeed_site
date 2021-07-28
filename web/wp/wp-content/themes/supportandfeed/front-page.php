@@ -7,16 +7,14 @@
     require_once "template-parts/front-page/slideshow.php";
 ?>
 
-<div class='w-full bg-white md:flex px-12 md:px-32 py-20 items-center justify-center' id='our-mission-section'>
+<div class='w-full bg-white md:flex px-12 md:px-32 py-20 items-center justify-center' id='our-mission-section'
+    style='background-image: url("<?= sf_get_asset( 'images/park-bg.png' ) ?>")'>
     <div class='md:w-2/3 mb-6 md:mb-0 md:text-left md:pr-8 text-center'>
         <h1 class='mb-10 italic uppercase text-center'>Our mission</h1>
         <p class=' leading-loose text-2xl lg:text-3xl font-medium text-center'>
             <?= get_option( 'our_mission_text' ) ?>
         </p>
     </div>
-    <!-- <div class='md:w-1/3' id='ourMissionImg'>
-        <img src="<?= get_theme_mod( 'sf_our_mission_img' ) ?>">
-    </div> -->
 </div>
 
 
