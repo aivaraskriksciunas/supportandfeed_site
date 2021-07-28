@@ -8,12 +8,12 @@
     </div>
 
     <div class='lg:w-1/2 '>
-        <!-- <div class="plg-donate" data-widget-id="FHRLMdJM57DxKa-Ey1ZsdQ"></div>  -->
-        <iframe src='https://supportandfeed.kindful.com' class='w-full h-full'></iframe>
+        <div class="plg-donate" data-widget-id="FHRLMdJM57DxKa-Ey1ZsdQ"></div> 
+        <!-- <iframe src='https://supportandfeed.kindful.com' class='w-full min-h-screen'></iframe> -->
     </div>
 
 </div>
 
-<!-- <script src="https://hello.pledge.to/assets/widget.js" id="plg-widget" async="async"></script> -->
+<script src="https://hello.pledge.to/assets/widget.js" id="plg-widget" async="async"></script>
 
 <?php get_footer(); ?>

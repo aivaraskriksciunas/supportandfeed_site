@@ -10,7 +10,7 @@
     </div>
 
     <div class='lg:w-1/2'>
-        <img src='http://localhost:8000/app/uploads/2021/07/sfphoto6.jpg'>
+        <img src='<?= wp_get_attachment_image_url( get_post_thumbnail_id(), 'full' ) ?>'>
     </div>
 
 </div>
@@ -27,6 +27,8 @@
         ]
     ]);
 ?>
+
+<?php if ( $q->have_posts() ): ?>
 
 <h1 class='text-center mb-20'>Frequently asked questions</h1>
 
@@ -51,11 +53,10 @@
 ?>
 </div>
 
-    
-
+<?php endif ?>
 
 </div>
 
-<?php the_content() ?>
+<img src='<?= get_theme_mod( 'sf_volunteer_community_photo' ) ?>' class='w-full'>
 
 <?php get_footer() ?>
