@@ -1,6 +1,12 @@
 <?php get_header() ?>
 
-<?php sf_page_cover() ?>
+<div id='pageCover' class='flex items-center bg-yellow-200'>
+    <div class='my-20 container text-center'>
+        <h1 class='text-black inline-block p-1 mb-8 text-8xl'>
+            Support + Feed Leadership Team 
+        </h1>
+    </div>
+</div>
 
 <div class='bg-gray-100 inline-block w-full'>
     <div class='container'>

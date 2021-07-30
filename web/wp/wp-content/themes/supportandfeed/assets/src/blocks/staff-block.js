@@ -35,6 +35,7 @@ registerBlockType( 'sf/staff-block', {
         const props = useBlockProps();
 
         const onChangeProfile = ( media ) => {
+            console.log( media )
             try {
                 setAttributes({ profileUrl: media.sizes.medium.url })
             } catch {
@@ -141,7 +142,7 @@ registerBlockType( 'sf/staff-block', {
         const socialIcon = ( url, iconName ) => {
             if ( !url ) return;
 
-            return <a href={url} target='_blank' className='font-semibold text-gray-700 hover:text-gray-400 mr-4'>
+            return <a href={url} target='_blank' rel='noopener' className='font-semibold text-gray-700 hover:text-gray-400 mr-4'>
                 <span className={'text-xl ' + iconName}></span>
             </a>
         }
@@ -149,7 +150,7 @@ registerBlockType( 'sf/staff-block', {
         const modalSocialIcon = ( url, iconName ) => {
             if ( !url ) return;
 
-            return <a href={url} target='_blank' className='font-semibold mr-10 text-gray-600 hover:text-green-darkened'>
+            return <a href={url} target='_blank' rel='noopener' className='font-semibold mr-10 text-gray-600 hover:text-green-darkened'>
                 <span className={'text-2xl ' + iconName}></span>
             </a>
         }

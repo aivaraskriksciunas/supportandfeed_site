@@ -26,7 +26,7 @@ function _add_slideshow_image( string $key ) {
     <?php if( get_theme_mod( 'sf_slider_text' ) ): ?>
         <div id='slideshow-text-container' class='container'>
             <div class='lg:w-1/2'>
-                <div id='slideshow-text-box'>
+                <div id='slideshow-text-box' class='px-6 py-3'>
                     <span id='slideshow-text'>
                         <?= get_theme_mod( 'sf_slider_text' ) ?>
                     </span>

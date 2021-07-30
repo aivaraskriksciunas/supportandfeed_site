@@ -1,7 +1,7 @@
 <?php get_header( args:[ 'body-class' => 'bg-gray-100' ]) ?>
 
 <div class='lg:flex'>
-    <div class='lg:w-1/2 px-20 py-20'>
+    <div class='lg:w-1/2 px-10 md:px-20 py-20'>
         <h1 class='uppercase text-8xl mb-16'><?= the_title() ?></h1>
 
         <p class='mb-20'><?= get_post_meta( get_the_ID(), 'page_subtitle', true ) ?></p>
