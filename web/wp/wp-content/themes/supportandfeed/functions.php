@@ -3,18 +3,20 @@
 // TODO: customize title 
 // TODO: load stylesheets depending on the environment
 
+const CURRENT_VERSION = '1.1.1';
+
 function load_assets() {
 
     $assets_dir = get_stylesheet_directory_uri() . '/assets/dist/';
 
     // Load core scripts and styles
-    wp_enqueue_script( 'main', $assets_dir . 'app.bundle.js', deps:[ 'jquery' ], ver:'1.1.0', in_footer:true );
-    wp_enqueue_style( 'main', $assets_dir . 'app.css', ver:'1.1.0' );
+    wp_enqueue_script( 'main', $assets_dir . 'app.bundle.js', deps:[ 'jquery' ], ver:CURRENT_VERSION, in_footer:true );
+    wp_enqueue_style( 'main', $assets_dir . 'app.css', ver:CURRENT_VERSION );
 
     // Load front page specific files 
     if ( is_front_page() )
     {
-        wp_enqueue_script( 'front-page', $assets_dir . 'frontPage.bundle.js', deps:[ 'jquery' ], ver:'1.1.0', in_footer:true );
+        wp_enqueue_script( 'front-page', $assets_dir . 'frontPage.bundle.js', deps:[ 'jquery' ], ver:CURRENT_VERSION, in_footer:true );
     }
 }
 
