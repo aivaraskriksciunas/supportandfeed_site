@@ -21,15 +21,17 @@ function init_slideshow() {
     }
 }
 
-setInterval( () => {
-    let prev = current_image
-    current_image ++
-    if ( current_image >= images.length )
-        current_image = 0
+if ( images.length ) {
+    setInterval( () => {
+        let prev = current_image
+        current_image ++
+        if ( current_image >= images.length )
+            current_image = 0
 
-    jQuery( images[current_image] ).fadeIn( TRANSITION_SPEED )
-    jQuery( images[prev] ).fadeOut( TRANSITION_SPEED )
+        jQuery( images[current_image] ).fadeIn( TRANSITION_SPEED )
+        jQuery( images[prev] ).fadeOut( TRANSITION_SPEED )
 
-}, SLIDESHOW_INTERVAL )
+    }, SLIDESHOW_INTERVAL )
+}
 
 init_slideshow()
