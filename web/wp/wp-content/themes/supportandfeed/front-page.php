@@ -60,10 +60,7 @@
         </div>
 
         <div class='section-content font-light mb-2 text-xs text-light-blue-400'>
-            All donations to our Covid-19 Crisis Response General Fund are tax deductible to the extent of the law.
-        </div>
-        <div class='section-content font-light text-xs text-light-blue-400'>
-            Fiscal sponsorship is provided by In the Family Way, a 501(c)(3) public charity.
+            Support and Feed is a CA nonprofit public benefit corporation with tax-exempt 501c3 IRS status pending.
         </div>
         
     </div>
