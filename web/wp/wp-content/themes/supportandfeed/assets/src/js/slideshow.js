@@ -21,7 +21,7 @@ function init_slideshow() {
     }
 }
 
-if ( images.length ) {
+if ( images.length > 1 ) {
     setInterval( () => {
         let prev = current_image
         current_image ++

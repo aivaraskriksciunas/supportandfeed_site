@@ -1,8 +1,8 @@
 <?php get_header() ?>
 
-<div id='pageCover' class='flex items-center bg-yellow-200'>
+<div id='pageCover' class='flex items-center bg-blue-500'>
     <div class='my-20 container text-center'>
-        <h1 class='text-black inline-block p-1 mb-8 text-8xl'>
+        <h1 class='text-white inline-block p-1 mb-8 text-8xl'>
             Support + Feed Leadership Team 
         </h1>
     </div>
