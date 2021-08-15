@@ -41,7 +41,8 @@
     "roots/wp-password-bcrypt": "1.0.0",
     "wpackagist-plugin/contact-form-7": "^5.4",
     "wpackagist-plugin/simple-custom-post-order": "^2.5",
-    "wpackagist-plugin/google-site-kit": "^1.37"
+    "wpackagist-plugin/google-site-kit": "^1.37",
+    "wpackagist-plugin/mail-subscribe-list": "^2.1"
   },
   "require-dev": {
     "squizlabs/php_codesniffer": "^3.5.8",
