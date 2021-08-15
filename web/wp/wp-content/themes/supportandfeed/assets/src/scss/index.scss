@@ -198,6 +198,27 @@ body {
         }
     }
 
+    .sml_subscribe {
+        display: flex;
+        align-items: center;
+        
+        .sml_emaillabel, .sml_name {
+            display: none;
+        }
+
+        .sml_email {
+            margin-bottom: 0;
+            margin-right: 10px;
+            color: black;
+        }
+
+        .sml_submit {
+            margin-bottom: 0;
+        }
+    }
+
+    
+
 }
 
 #pageCover {

@@ -28,9 +28,26 @@
                 <div id='footer-signup' class='mt-8 md:mt-0 flex-1 flex justify-center'>
                     <div id='footer-signup-constraint' class='md:px-4'>
                         <div class=' text-white'>A newsletter with impact, sign up:</div>
-                        <div class='flex mt-2' id='signup-field-container'>
-                            <input type='email' class='flex-1 mr-4 p-2 w-full text-sm text-black' placeholder='Enter your email here'/>
-                            <button type='button' class='text-sm py-3'>Subscribe</button>
+                        <div class='flex mt-4' id='signup-field-container'>
+
+                            <?php
+                                if ( function_exists( 'smlsubform' ) ) {
+                                    $args = array(
+                                        'prepend' => '', 
+                                        'showname' => true,
+                                        // 'nametxt' => 'Name:', 
+                                        // 'nameholder' => 'Name...', 
+                                        // 'emailtxt' => 'Email:',
+                                        'emailholder' => 'Enter your email', 
+                                        'showsubmit' => true, 
+                                        'submittxt' => 'Subscribe', 
+                                        'jsthanks' => true,
+                                        'thankyou' => 'Thank you for subscribing to our mailing list'
+                                        );
+                                    echo smlsubform($args);
+                                }
+                            ?>
+
                         </div>
                     </div>
                 </div>
