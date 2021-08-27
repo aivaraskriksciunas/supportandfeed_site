@@ -2,6 +2,7 @@
 
 require_once( 'admin/FrontPageSettings.php' );
 require_once( 'admin/StatsSettings.php' );
+require_once( 'admin/GeneralSettings.php' );
 
 class SF_AdminMenuItems {
 
@@ -9,10 +10,12 @@ class SF_AdminMenuItems {
 
     private SF_AdminFrontPage $frontPageSettings;
     private SF_AdminStatsPage $statsPageSettings;
+    private SF_GeneralSettingsPage $generalSettingsPage;
 
     public function register() {
         $this->frontPageSettings = new SF_AdminFrontPage();
         $this->statsPageSettings = new SF_AdminStatsPage();
+        $this->generalSettingsPage = new SF_GeneralSettingsPage();
 
         add_action( 'admin_menu', [ $this, 'create_menu' ] );
         add_action( 'admin_init', [ $this, 'register_settings' ] );
@@ -24,6 +27,7 @@ class SF_AdminMenuItems {
      * @return void
      */
     public function register_settings() {
+        $this->generalSettingsPage->register_settings();
         $this->frontPageSettings->register_settings();
         $this->statsPageSettings->register_settings();
     }
@@ -47,6 +51,7 @@ class SF_AdminMenuItems {
             position:62
         );
 
+        $this->generalSettingsPage->register_menu_item( self::PAGE_ID );
         $this->frontPageSettings->register_menu_item( self::PAGE_ID );
         $this->statsPageSettings->register_menu_item( self::PAGE_ID );
 

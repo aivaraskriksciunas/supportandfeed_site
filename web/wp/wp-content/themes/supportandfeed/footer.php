@@ -35,9 +35,6 @@
                                     $args = array(
                                         'prepend' => '', 
                                         'showname' => true,
-                                        // 'nametxt' => 'Name:', 
-                                        // 'nameholder' => 'Name...', 
-                                        // 'emailtxt' => 'Email:',
                                         'emailholder' => 'Enter your email', 
                                         'showsubmit' => true, 
                                         'submittxt' => 'Subscribe', 
@@ -71,11 +68,24 @@
         <?php endif ?>
     </div>
     <div class='container mt-12'>
-        <div id='footer-menus-container' class='w-1/4'>
-            <?php wp_nav_menu([
-                'menu' => 'footer',
-                ''
-            ]); ?>
+        <div class='md:flex'>
+            <div id='footer-menus-container' class='md:w-1/2 lg:w-1/4'>
+                <?php wp_nav_menu([
+                    'menu' => 'footer',
+                ]); ?>
+            </div>
+
+            <div class='md:w-1/2 lg:w-1/4 mt-5 md:mt-0'>
+                <div class='text-base text-gray-300'>Enquiries:</div>
+                <div class='text-sm mt-2 text-gray-400'>
+                    General: 
+                    <a href='mailto: <?= get_option( 'general_email' ) ?>' class='font-light text-gray-100'><?= get_option( 'general_email' ) ?></a>
+                </div>
+                <div class='text-sm mt-2 text-gray-400'>
+                    Press: 
+                    <a href='mailto: <?= get_option( 'press_email' ) ?>' class='font-light text-gray-100'><?= get_option( 'press_email' ) ?></a>
+                </div>
+            </div>
         </div>
 
         <div class='text-xs font-light text-gray-600 italic my-8'>
