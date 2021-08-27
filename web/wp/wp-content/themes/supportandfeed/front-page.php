@@ -7,7 +7,7 @@
     require_once "template-parts/front-page/slideshow.php";
 ?>
 
-<div class='w-full bg-white md:flex px-12 md:px-32 py-20 items-center justify-center' id='our-mission-section'
+<div class='w-full bg-white md:flex px-10 md:px-32 py-20 items-center justify-center' id='our-mission-section'
     style='background-image: url("<?= sf_get_asset( 'images/park-bg.png' ) ?>")'>
     <div id='our-mission-box' class='lg:w-3/4 mb-6 pt-20 pb-10 px-5 md:mb-0 md:text-left md:pr-8 text-center'>
         <h1 class='mb-10 uppercase text-center text-7xl'>Our mission</h1>
@@ -21,7 +21,7 @@
     
     <img src='<?= get_theme_mod( 'sf_plant_based_img' ) ?>' class='md:hidden'>
 
-    <div class='md:w-1/2 px-24 py-16 text-white'>
+    <div class='md:w-1/2 px-10 md:px-24 py-16 text-white'>
         <h1 class='section-header text-druk-bold mb-16'>
             Why Plant Based Matters
         </h1>
@@ -43,7 +43,7 @@
 
     <img src='<?= get_theme_mod( 'sf_donate_now_img' ) ?>' class='md:hidden'>
 
-    <div class='md:w-1/2 px-16 md:px-24 py-16 flex flex-col justify-items-start'>
+    <div class='md:w-1/2 px-10 md:px-24 py-16 flex flex-col justify-items-start'>
         <h1 class='section-header uppercase text-druk-bold mb-16'>
             DONATE NOW!
         </h1>
