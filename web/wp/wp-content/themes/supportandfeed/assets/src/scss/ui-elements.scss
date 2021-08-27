@@ -28,16 +28,32 @@ h3 {
     font-family: 'Druk Wide';
 }
 
-button, input[type=submit], .button {
-    @apply py-3 px-6 bg-black text-white text-lg cursor-pointer;
+.button, input[type=submit] {
+    @apply py-3 px-6 text-lg cursor-pointer;
 }
 
-button:hover, input[type=submit]:hover {
+.button-secondary, input[type=submit] {
+    @apply bg-black text-white;
+}
+
+.button-secondary:hover, input[type=submit]:hover {
     @apply bg-gray-700;
 }
 
-button:active, input[type=submit]:active {
+.button-secondary:active, input[type=submit]:hover {
     @apply bg-gray-600;
+}
+
+.button-primary {
+    @apply bg-green-darkened text-white;
+}
+
+.button-primary:hover {
+    @apply bg-green;
+}
+
+.button-primary:active {
+    @apply bg-lime-500;
 }
 
 p {

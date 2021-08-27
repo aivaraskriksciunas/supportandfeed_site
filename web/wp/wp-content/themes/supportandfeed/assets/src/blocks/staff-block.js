@@ -159,10 +159,10 @@ registerBlockType( 'sf/staff-block', {
         <div {...useBlockProps.save()}>
             
             <div className='staff-block-container flex sm:block lg:flex'>
-                <div className='w-1/2 sm:w-full lg:w-1/2 staff-block-profile'>
+                <div className='w-full lg:w-1/2 staff-block-profile'>
                     <img src={attributes.profileUrl}></img>
                 </div>
-                <div className='w-1/2 sm:w-full lg:w-1/2 flex flex-col'>
+                <div className='w-full lg:w-1/2 flex flex-col'>
                     <div className='staff-block-name'>
                         {attributes.name}
                     </div>

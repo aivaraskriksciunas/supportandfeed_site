@@ -11,7 +11,7 @@ function sf_register_front_page_slideshow_options( WP_Customize_Manager $wp_cust
     
     // Register slider section
     $wp_customizer->add_section( HOMEPAGE_SLIDER_ID, [
-        'title' => 'Homepage Slider',
+        'title' => 'Homepage Video',
         'description' => 'Customize how the main slideshow will look like',
         'active_callback' => 'is_front_page'
     ] );
@@ -22,56 +22,9 @@ function sf_register_front_page_slideshow_options( WP_Customize_Manager $wp_cust
         'type' => 'text',
         'setting' => 'sf_slider_text',
         'section' => HOMEPAGE_SLIDER_ID,
-        'label' => 'Slider text'
+        'label' => 'Video text'
     ] );
 
-    // Add photo field
-    $wp_customizer->add_setting( 'sf_slide1' );
-    $wp_customizer->add_control( new WP_Customize_Image_Control(
-        $wp_customizer,
-        'sf_slide1', 
-        [
-            'label' => 'First slide',
-            'setting' => 'sf_slide1',
-            'section' => HOMEPAGE_SLIDER_ID,
-        ]
-    ) );
-
-    // Add photo field
-    $wp_customizer->add_setting( 'sf_slide2' );
-    $wp_customizer->add_control( new WP_Customize_Image_Control(
-        $wp_customizer,
-        'sf_slide2', 
-        [
-            'label' => 'Second slide',
-            'setting' => 'sf_slide2',
-            'section' => HOMEPAGE_SLIDER_ID,
-        ]
-    ) );
-
-    // Add photo field
-    $wp_customizer->add_setting( 'sf_slide3' );
-    $wp_customizer->add_control( new WP_Customize_Image_Control(
-        $wp_customizer,
-        'sf_slide3', 
-        [
-            'label' => 'Third slide',
-            'setting' => 'sf_slide3',
-            'section' => HOMEPAGE_SLIDER_ID,
-        ]
-    ) );
-
-    // Add photo field
-    $wp_customizer->add_setting( 'sf_slide4' );
-    $wp_customizer->add_control( new WP_Customize_Image_Control(
-        $wp_customizer,
-        'sf_slide4', 
-        [
-            'label' => 'Fourth slide',
-            'setting' => 'sf_slide4',
-            'section' => HOMEPAGE_SLIDER_ID,
-        ]
-    ) );
 }
 
 function sf_register_front_page_image_options( WP_Customize_Manager $wp_customizer ) {

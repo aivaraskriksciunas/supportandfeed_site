@@ -6,7 +6,7 @@
 
         <p class='mb-20'><?= get_post_meta( get_the_ID(), 'page_subtitle', true ) ?></p>
 
-        <a target='_blank' href='https://docs.google.com/forms/d/1TLlDbew2YUd7R8ViUoPql9G-IYAS2SxgrhbOypvTnR0/prefill' class='button'>Volunteer</a>
+        <a target='_blank' href='https://docs.google.com/forms/d/1TLlDbew2YUd7R8ViUoPql9G-IYAS2SxgrhbOypvTnR0/prefill' class='button button-secondary'>Volunteer</a>
     </div>
 
     <div class='lg:w-1/2'>

@@ -3,40 +3,56 @@
 
 // Home page slideshow
 #main-slideshow {
+    @apply bg-black;
     height: 90vh;
     min-height: 500px;
     position: relative;
 
-    #image-container{
-        .slideshow-image {
-            position: absolute;
-            display: inline-block;
-            background-size: cover;
-            
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            z-index: 1;
-        }
+    #sf-video-container {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
     }
 
-    #slideshow-text-container {
-        @apply text-white;
+    #sf-video {
+        min-height: 100%;
+        min-width: 100%;
+        z-index: 1;
+        object-fit: cover;
+    }
+    
+    #sf-text-overlay {
+        width: 100%;
+        height: 100%;
+        position: relative;
         z-index: 2;
 
-        #slideshow-text-box {
-            background-color: rgba( 0, 0, 0, 0.8 );
+        #sf-text-container {
+            width: 100%;
         }
 
-        #slideshow-text {
-            // background-color: black;
+        #sf-video-text {
+            padding: 8px 16px;
             font-family: 'Druk';
-            font-size: 3em;
-            line-height: 1.2em;
+            font-size: 3.5em;
+            color: white;
+            background-color: #333;
+            box-shadow: 5px 5px 0 black;
+            max-width: 50%;
+            line-height: 1.1;
+        }
+
+        @media (max-width: 1023px) {
+            #sf-video-text {
+                font-size: 2.5em;
+                max-width: 100%;
+            }
         }
     }
-
 }
 
 #contacts-section {
@@ -68,23 +84,23 @@
     color: white;
     font-family: 'Druk';
 
+    #our-mission-box {
+        background-color: #061877;
+    }
 
     p { 
-        line-height: 1.4;
-        font-family: 'Druk';
         font-family: 'Noto Sans JP';
-        font-weight: 700;
-
+        line-height: 1.6;
     }
 
     @media (min-width: 1024px) {
         p {
-            font-size: 1.5em;
+            font-size: 1.8rem;
         }
     }
     @media (max-width: 1023px) {
         p {
-            font-size: 1.3em;
+            font-size: 1.3rem;
         }
     }
 }

@@ -3,7 +3,7 @@
 // TODO: customize title 
 // TODO: load stylesheets depending on the environment
 
-const CURRENT_VERSION = '1.1.2';
+const CURRENT_VERSION = '1.2.1';
 
 function load_assets() {
 
@@ -107,4 +107,16 @@ function sf_get_asset( string $asset ) : string
     if ( $asset[0] !== '/' ) $asset = '/' . $asset;
 
     return $dir . '/assets' . $asset;
+}
+
+/**
+ * Generates a link for a page given it's slug
+ *
+ * @param string $slug
+ * @return string
+ */
+function sf_get_link_by_slug( string $slug ) : string 
+{
+    $post = get_page_by_path( $slug, post_type:'page' );
+    return get_page_link( $post );
 }

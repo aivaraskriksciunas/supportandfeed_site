@@ -1,38 +1,18 @@
 
-<?php 
-
-// Reads a url from theme mod $key, if it is set, places an img element
-function _add_slideshow_image( string $key ) {
-    if ( get_theme_mod( $key ) ):
-    ?>
-        <div class='slideshow-image' src='<?= get_theme_mod( $key ) ?>'></div>
-    <?php 
-    endif;
-}
-
-?>
-
-<div id='main-slideshow' class='overflow-hidden flex items-center'>
-
-    <div id="image-container">
-        <?php 
-            _add_slideshow_image( 'sf_slide1' );
-            _add_slideshow_image( 'sf_slide2' );
-            _add_slideshow_image( 'sf_slide3' );
-            _add_slideshow_image( 'sf_slide4' );
-        ?>
+<div id='main-slideshow'>
+    <div id='sf-video-container'>
+        <video id='sf-video' src='<?= sf_get_asset( 'videos/s+f_website.mov' ) ?>' autoplay muted loop style='opacity: 0'>
+        </video>
     </div>
-
-    <?php if( get_theme_mod( 'sf_slider_text' ) ): ?>
-        <div id='slideshow-text-container' class='container'>
-            <div class='lg:w-1/2'>
-                <div id='slideshow-text-box' class='px-6 py-3'>
-                    <span id='slideshow-text'>
-                        <?= get_theme_mod( 'sf_slider_text' ) ?>
-                    </span>
-                </div>
+    <div id='sf-text-overlay' class='container flex items-end pb-10 md:pb-20'>
+        <div id='sf-text-container'>
+            <div id='sf-video-text' class='mb-6'>
+                <?= get_theme_mod( 'sf_slider_text' ) ?>
+            </div>
+            <div id='flex'>
+                <a href='<?= sf_get_link_by_slug( 'donate' ) ?>' class='button button-primary mr-4'>Donate</a>
+                <a href='<?= sf_get_link_by_slug( 'about' ) ?>' class='button button-secondary'>About us</a>
             </div>
         </div>
-    <?php endif ?>
-
+    </div>
 </div>
