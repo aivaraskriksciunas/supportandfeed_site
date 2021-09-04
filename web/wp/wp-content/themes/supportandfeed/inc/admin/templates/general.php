@@ -9,6 +9,3 @@
 
     <?php submit_button( 'Save changes' ) ?>
 </form>
-
-
-

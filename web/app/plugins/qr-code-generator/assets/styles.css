@@ -1,0 +1,24 @@
+#createQrCodeBtn {
+    margin-top: 20px;
+}
+
+.qrCodeStyleChoice {
+    margin-top: 10px;
+}
+
+#qrCodeResultContainer {
+    display: inline-block;
+    background-color: white;
+    padding: 20px;
+    margin-top: 40px;
+    border: 1px solid #eee;
+    border-radius: 2px;
+}
+
+#qrCodeResult {
+    box-shadow: 0 3px 15px rgba( 80, 80, 80, 0.2 );
+}
+
+#imageDownload {
+    margin-top: 10px;
+}
