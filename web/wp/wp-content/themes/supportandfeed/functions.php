@@ -59,6 +59,7 @@ require_once 'inc/register-blocks.php';
 require_once 'inc/create-admin-pages.php';
 require_once 'inc/sponsors-post-type.php';
 require_once 'inc/faq-post-type.php';
+require_once 'inc/recipe-post-type.php';
 
 /*
  * Helper functions
