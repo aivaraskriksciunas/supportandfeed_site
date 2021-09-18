@@ -1,7 +1,7 @@
 
 <div id='main-slideshow'>
     <div id='sf-video-container'>
-        <video id='sf-video' src='<?= sf_get_asset( 'videos/s+f_website.mov' ) ?>' autoplay muted loop style='opacity: 0'>
+        <video id='sf-video' src='<?= sf_get_asset( 'videos/s+f_website.mov' ) ?>' autoplay playsinline defaultMuted muted loop style='opacity: 0'>
         </video>
     </div>
     <div id='sf-text-overlay' class='container flex items-end pb-10 md:pb-20'>
