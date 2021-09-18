@@ -1,10 +1,12 @@
 
-const video = jQuery( '#sf-video' );
+const video = jQuery( '#sf-video' )
 const text = jQuery( '#sf-video-text' )
 
 video.animate({
     opacity: 1
 }, 2000)
+
+video.trigger('play')
 
 text.css({
     opacity: 0,
