@@ -21,6 +21,11 @@
     ]);
 ?>
 
+<div class='w-full text-center bg-orange py-20' >
+    <h1 class='text-8xl uppercase text-white mb-4'>Anyone can cook</h1> 
+    <p class='text-white text-lg'>From matcha latte, tofu scramble and chocolate pudding we can all make delicious meals.</p>
+</div>
+
 <div class='bg-gray-100 px-4 py-20'>
     <div id='recipe-post-list' class='bg-white container py-20 md:w-2/3 '>
         <div class='sm:flex flex-wrap'>
@@ -34,8 +39,8 @@
                     
                     <div class='px-2 w-full sm:w-1/2 lg:w-1/3 mb-6'>
                         <div class='recipe-container w-full'>
-                            <div class='h-32 overflow-hidden'>
-                                <div class='recipe-featured-image h-32 bg-gray-300' 
+                            <div class='h-64 overflow-hidden'>
+                                <div class='recipe-featured-image h-64 bg-gray-300' 
                                     style='background-image: url("<?= $thumbnail ?>")'>
                                 </div>
                             </div>
