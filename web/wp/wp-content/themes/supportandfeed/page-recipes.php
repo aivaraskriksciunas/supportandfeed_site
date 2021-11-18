@@ -34,10 +34,10 @@
                 <?php while ( $query->have_posts() ): ?>
                     <?php 
                         $query->the_post(); 
-                        $thumbnail = get_the_post_thumbnail_url();
+                        $thumbnail = get_the_post_thumbnail_url( size:'medium_large' );
                     ?>
                     
-                    <div class='px-2 w-full sm:w-1/2 lg:w-1/3 mb-6'>
+                    <a class='px-2 w-full sm:w-1/2 lg:w-1/3 mb-6' href='<?= get_post_permalink() ?>'>
                         <div class='recipe-container w-full'>
                             <div class='h-64 overflow-hidden'>
                                 <div class='recipe-featured-image h-64 bg-gray-300' 
@@ -46,20 +46,15 @@
                             </div>
 
                             <div class='recipe-content px-3 py-4'>
-                                <div class='recipe-title text-2xl font-bold mb-1'>
-                                    <a href='<?= get_post_permalink() ?>'>
-                                        <?= the_title() ?>
-                                    </a>
-                                </div>
-                                <div class='recipe-date text-xs italic text-gray-400 font-light mb-4'>
-                                    <?= get_the_date( 'M j, Y' ) ?>
+                                <div class='recipe-title text-2xl font-bold mb-4'>
+                                    <?= the_title() ?>
                                 </div>
                                 <div class='text-sm text-gray-600 font-light'>
                                     <?= get_the_excerpt() ?>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 <?php endwhile ?>
 
             <?php else: ?>
