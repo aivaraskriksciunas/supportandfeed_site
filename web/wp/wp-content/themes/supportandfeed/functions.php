@@ -3,7 +3,7 @@
 // TODO: customize title 
 // TODO: load stylesheets depending on the environment
 
-const CURRENT_VERSION = '1.3.2';
+const CURRENT_VERSION = '1.3.3';
 
 function load_assets() {
 
@@ -60,6 +60,7 @@ require_once 'inc/create-admin-pages.php';
 require_once 'inc/sponsors-post-type.php';
 require_once 'inc/faq-post-type.php';
 require_once 'inc/recipe-post-type.php';
+require_once 'inc/gifts-post-type.php';
 
 /*
  * Helper functions
