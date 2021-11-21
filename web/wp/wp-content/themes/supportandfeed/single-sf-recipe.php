@@ -2,7 +2,6 @@
 
 <div id='recipe-post-type' class='container mt-10 mb-20 md:w-2/3'>
 
-    
     <?php 
         $thumbnail = get_the_post_thumbnail_url( size:'large' );
     ?>

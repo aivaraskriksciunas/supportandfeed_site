@@ -22,7 +22,7 @@
 ?>
 
 <div class='w-full text-center bg-orange py-20' >
-    <h1 class='text-8xl uppercase text-white mb-4'>Anyone can cook</h1> 
+    <h1 class='text-8xl uppercase text-white mb-4'>Anyone can cook!</h1> 
     <p class='text-white text-lg'>From matcha latte, tofu scramble and chocolate pudding we can all make delicious meals.</p>
 </div>
 

@@ -23,7 +23,7 @@
 
     <div class='md:w-1/2 px-10 md:px-24 py-16 text-white'>
         <h1 class='section-header text-druk-bold mb-16'>
-            Why Plant Based Matters
+            Why Plant-Based Matters
         </h1>
 
         <div class='section-content mb-16 text-justify'>

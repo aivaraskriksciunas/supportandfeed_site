@@ -22,8 +22,8 @@
 ?>
 
 <div class='w-full text-center bg-orange py-20' >
-    <h1 class='text-8xl uppercase text-white mb-4'>Maggie's Sustainable gifts</h1> 
-    <p class='text-white text-lg'></p>
+    <h1 class='text-8xl uppercase text-white mb-4'>Maggie's Favorite gifts</h1> 
+    <p class='text-white text-lg'>Lasagnas, recyclable phone cases, chocolates... These are some of Maggie’s favorite things.</p>
 </div>
 
 <div class='bg-gray-100 px-4 py-20'>
