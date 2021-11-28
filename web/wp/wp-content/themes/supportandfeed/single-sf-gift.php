@@ -8,7 +8,7 @@
 
     <div class='md:flex mb-8 items-end'>
         <div class='mb-8 md:mb-0 md:w-2/3'>
-            <a class='text-xs uppercase text-gray-700 hover:text-gray-500 rounded-sm mb-6 inline-block' href='<?= get_permalink( get_page_by_path( 'gifts' ) ) ?>'>Back to recipes</a>
+            <a class='text-xs uppercase text-gray-700 hover:text-gray-500 rounded-sm mb-6 inline-block' href='<?= get_permalink( get_page_by_path( 'gifts' ) ) ?>'>Back to all gifts</a>
             <h1 id='page-title'><?= the_title() ?></h1>
         </div>
         <div class='md:w-1/2 md:pl-4'>

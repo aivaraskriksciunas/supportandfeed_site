@@ -8,14 +8,9 @@
 
     add_filter( 'get_the_excerpt', 'sf_custom_gift_excerpt' );
 
-    // Get the current page
-    $page = isset( $_GET['paged'] ) && is_numeric( $_GET['paged'] ) ? $_GET['paged'] : 1;
-
     // Query all posts
     $query = new WP_Query([
         'post_type' => 'sf-gift',
-        'posts_per_page' => 6,
-        'paged' => $page,
         'orderby' => 'date',
         'order' => 'DESC',
     ]);
