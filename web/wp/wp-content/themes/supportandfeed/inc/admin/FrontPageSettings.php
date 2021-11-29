@@ -8,6 +8,11 @@ class SF_AdminFrontPage extends SF_SettingsPageBase {
     
     public function register_settings() {
 
+        $this->register_setting( 'banner_text', [ 
+            'type' => 'string',
+            'default' => '' 
+        ] );
+
         $this->register_setting( 'our_mission_text', [ 
             'type' => 'string',
             'default' => '<b>SUPPORT+FEED</b> positively impacts the climate crisis and combats food insecurity by providing plant based meals prepared by local restaurants and education on its benefits to underserved communities.' 
@@ -40,6 +45,14 @@ class SF_AdminFrontPage extends SF_SettingsPageBase {
         );
         
         // Add settings fields for front page section
+
+        add_settings_field( 'front-page-banner-text', 'Optional banner text (separate messages into their own lines)', function() {
+            wp_editor( get_option( 'banner_text' ), 'banner_text', [
+                'textarea_name' => 'banner_text',
+                'textarea_rows' => 4,
+                'media_buttons' => false
+            ] );
+        }, $this->PAGE_ID, $front_page_section_id );
 
         add_settings_field( 'front-page-our-mission-text', 'Our Mission Text', function() {
             wp_editor( get_option( 'our_mission_text' ), 'our_mission_text', [
