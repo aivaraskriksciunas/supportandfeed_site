@@ -17,5 +17,5 @@ if ( banner ) {
         if ( currElement >= elements.size() ) currElement = 0;
 
         jQuery( elements[currElement] ).slideDown( 300 )
-    }, 7000 )
+    }, 5000 )
 }
