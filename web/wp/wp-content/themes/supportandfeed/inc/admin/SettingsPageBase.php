@@ -55,4 +55,23 @@ abstract class SF_SettingsPageBase {
             <?php
         }, $this->PAGE_ID, $section_id );
     }
+
+    /**
+     * Helper for creating simple text input
+     *
+     * @param string $id
+     * @param string $title
+     * @param string $option_id
+     * @param string $section_id
+     * @return void
+     */
+    protected function create_textarea_input( string $id, string $title, string $option_id, string $section_id ) {
+
+        // Register the field
+        add_settings_field( $id, $title, function() use ( $option_id ) {
+            ?>
+                <textarea name='<?= $option_id ?>' style='width: 100%'><?= get_option( $option_id ) ?></textarea>
+            <?php
+        }, $this->PAGE_ID, $section_id );
+    }
 }

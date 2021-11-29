@@ -46,13 +46,7 @@ class SF_AdminFrontPage extends SF_SettingsPageBase {
         
         // Add settings fields for front page section
 
-        add_settings_field( 'front-page-banner-text', 'Optional banner text (separate messages into their own lines)', function() {
-            wp_editor( get_option( 'banner_text' ), 'banner_text', [
-                'textarea_name' => 'banner_text',
-                'textarea_rows' => 4,
-                'media_buttons' => false
-            ] );
-        }, $this->PAGE_ID, $front_page_section_id );
+        $this->create_textarea_input( 'front-page-banner-text', 'Optional banner text (separate messages into their own lines)', 'banner_text', $front_page_section_id );
 
         add_settings_field( 'front-page-our-mission-text', 'Our Mission Text', function() {
             wp_editor( get_option( 'our_mission_text' ), 'our_mission_text', [

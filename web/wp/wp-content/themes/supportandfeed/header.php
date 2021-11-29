@@ -10,18 +10,40 @@
 </head>
 <body>
 
-<?php if ( is_front_page() ): ?>
+<?php 
+function sf_banner() {
+    $banner_text = explode( "\n", get_option( 'banner_text' ) );
 
+    $banner_text = array_filter( $banner_text, function( $val ) {
+        return trim( $val ) !== '';
+    });
+
+    if ( count( $banner_text ) == 0 ) return;
+    ?>
+    
     <div id='banner' style='background-color: #e47b00; line-height: 1.05;' class='bg-orange uppercase text-center text-white text-base font-bold h-12 flex items-center justify-center'>
-        <div>Text Us  323-622-7171</div>
-        <div>
-            30 Days of Gratitude and Giving Back • 
-            Nov. 29 - Dec. 31st • 
-            #GiveInspireTranform
-        </div>
+        
+        <?php foreach ( $banner_text as $t ): ?>
+            <div><?= $t ?></div>
+        <?php endforeach; ?>
+
     </div>
 
-<?php endif ?>
+    <?php 
+}
+?>
+
+
+<?php if ( is_front_page() ) { sf_banner(); }
+    // <div id='banner' style='background-color: #e47b00; line-height: 1.05;' class='bg-orange uppercase text-center text-white text-base font-bold h-12 flex items-center justify-center'>
+    //     <div>Text Us  323-622-7171</div>
+    //     <div>
+    //         30 Days of Gratitude and Giving Back • 
+    //         Nov. 29 - Dec. 31st • 
+    //         #GiveInspireTranform
+    //     </div>
+    // </div>
+?>
 
 <?php 
     $slug = get_post_field( 'post_name', get_post() );
