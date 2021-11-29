@@ -12,9 +12,13 @@
 
 <?php if ( is_front_page() ): ?>
 
-    <div id='banner' style='background-color: #eb1e4b; line-height: 1.05;' class='uppercase text-center text-white text-base font-bold h-12 flex items-center justify-center'>
+    <div id='banner' style='background-color: #e47b00; line-height: 1.05;' class='bg-orange uppercase text-center text-white text-base font-bold h-12 flex items-center justify-center'>
         <div>Text Us  323-622-7171</div>
-        <div>30 Days of Gratitude and Giving Back Nov. 29 - Dec 31st.</div>
+        <div>
+            30 Days of Gratitude and Giving Back • 
+            Nov. 29 - Dec. 31st • 
+            #GiveInspireTranform
+        </div>
     </div>
 
 <?php endif ?>
