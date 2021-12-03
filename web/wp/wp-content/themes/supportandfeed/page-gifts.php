@@ -56,14 +56,6 @@
                 <p>No posts found</p>
             <?php endif ?>
         </div>
-
-        <div class='pagination'>
-            <?php echo paginate_links([
-                'total' => $query->max_num_pages,
-                'next_text' => 'Next',
-                'prev_text' => 'Prev',
-            ]) ?>
-        </div>
     </div>
 
 </div>
