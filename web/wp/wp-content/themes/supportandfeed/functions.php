@@ -61,6 +61,7 @@ require_once 'inc/sponsors-post-type.php';
 require_once 'inc/faq-post-type.php';
 require_once 'inc/recipe-post-type.php';
 require_once 'inc/gifts-post-type.php';
+require_once 'inc/careers-post-type.php';
 
 /*
  * Helper functions
