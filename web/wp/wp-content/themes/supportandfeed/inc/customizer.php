@@ -5,6 +5,7 @@ const HOMEPAGE_IMAGES_ID = 'sf_images_section';
 const OUR_IMPACT_IMAGES_ID = 'sf_our_impact_section';
 const DONATE_IMAGES_ID = 'sf_donate_page_section';
 const VOLUNTEER_PAGE_ID = 'sf_volunteer_page_section';
+const ABOUT_PAGE_ID = 'sf_about_page_section';
 
 // Register options used for customizing
 function sf_register_front_page_slideshow_options( WP_Customize_Manager $wp_customizer ) {
@@ -12,9 +13,21 @@ function sf_register_front_page_slideshow_options( WP_Customize_Manager $wp_cust
     // Register slider section
     $wp_customizer->add_section( HOMEPAGE_SLIDER_ID, [
         'title' => 'Homepage Video',
-        'description' => 'Customize how the main slideshow will look like',
+        'description' => 'Customize what the main video will look like',
         'active_callback' => 'is_front_page'
     ] );
+
+    $wp_customizer->add_setting( 'sf_video_url' );
+    $wp_customizer->add_control( new WP_Customize_Media_Control(
+        $wp_customizer,
+        'sf_video_url', 
+        [
+            'mime_type' => 'video',
+            'label' => 'Video',
+            'setting' => 'sf_video_url',
+            'section' => HOMEPAGE_SLIDER_ID,
+        ]
+    ) );
 
     // Create control for setting the slideshow text
     $wp_customizer->add_setting( 'sf_slider_text' );
@@ -170,9 +183,39 @@ function sf_register_volunteer_page_options( WP_Customize_Manager $wp_customizer
     ]);
 }
 
+function sf_register_about_page_options( WP_Customize_Manager $wp_customizer ) 
+{
+    // Register slider section
+    $wp_customizer->add_section( ABOUT_PAGE_ID, [
+        'title' => 'Page options',
+        'description' => 'Customize the page',
+        'active_callback' => function () {
+            return is_page( 'about' );
+        }
+    ] );
+
+    // Add photo field
+    $wp_customizer->add_setting( 'sf_about_cover_photo' );
+    $wp_customizer->add_control( new WP_Customize_Image_Control(
+        $wp_customizer,
+        'sf_about_cover_photo', 
+        [
+            'label' => '\'About us\' cover photo',
+            'setting' => 'sf_about_cover_photo',
+            'section' => ABOUT_PAGE_ID,
+        ]
+    ) );
+
+    $wp_customizer->selective_refresh->add_partial( 'sf_about_cover_photo', [
+        'selector' => '#cover',
+    ]);
+}
+
+
 // Register front page specific options
 add_action( 'customize_register', 'sf_register_front_page_slideshow_options' );
 add_action( 'customize_register', 'sf_register_front_page_image_options' );
 add_action( 'customize_register', 'sf_register_our_impact_page_options' );
 add_action( 'customize_register', 'sf_register_donate_page_settings' );
 add_action( 'customize_register', 'sf_register_volunteer_page_options' );
+add_action( 'customize_register', 'sf_register_about_page_options' );
