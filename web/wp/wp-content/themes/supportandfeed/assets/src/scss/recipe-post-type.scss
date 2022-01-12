@@ -12,6 +12,16 @@
         }
     }
 
+    ol {
+        list-style: decimal;
+        margin-left: 1em;
+
+        li {
+            margin-bottom: 0.5em;
+            font-weight: 300;
+        }
+    }
+
     p {
         @apply leading-relaxed;
         font-size: 1em;
