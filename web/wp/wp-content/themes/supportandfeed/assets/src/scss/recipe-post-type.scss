@@ -1,27 +1,6 @@
 #recipe-post-type {
 
-    font-size: 1.1rem;
-
-    ul {
-        list-style: disc inside;
-        margin-bottom: 2em;
-
-        li {
-            font-size: 1em;
-            margin-bottom: 0.5em;
-        }
-    }
-
-    ol {
-        list-style: decimal;
-        margin-left: 1em;
-
-        li {
-            margin-bottom: 0.5em;
-            font-weight: 300;
-        }
-    }
-
+    
     p {
         @apply leading-relaxed;
         font-size: 1em;

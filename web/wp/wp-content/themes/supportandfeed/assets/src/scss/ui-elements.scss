@@ -24,7 +24,10 @@ h2 {
 
 h3 {
     @apply text-3xl;
-    font-family: 'Druk Wide';
+}
+
+h4 {
+    @apply text-2xl mb-4;
 }
 
 .button,
@@ -87,4 +90,35 @@ form {
     textarea:focus {
         @apply border-gray-500 bg-gray-100;
     }
+}
+
+.page {
+    font-size: 1.1rem;
+
+    ul {
+        list-style: circle inside;
+        margin-bottom: 2em;
+    
+        li {
+            font-size: 0.8em;
+            margin-bottom: 0.2em;
+            font-weight: 300;
+        }
+    }
+    
+    ol {
+        list-style: decimal;
+        margin-left: 1em;
+    
+        li {
+            font-size: 0.8em;
+            margin-bottom: 0.5em;
+            font-weight: 300;
+        }
+    }
+
+    p a {
+        @apply text-green-darkened;
+    }
+    
 }

@@ -40,9 +40,15 @@
                     <a class='px-2 w-full sm:w-1/2 lg:w-1/3 mb-6' href='<?= get_post_permalink() ?>'>
                         <div class='recipe-container w-full'>
                             <div class='h-64 overflow-hidden'>
-                                <div class='recipe-featured-image h-64 bg-gray-300' 
-                                    style='background-image: url("<?= $thumbnail ?>")'>
-                                </div>
+                                <?php if ( $thumbnail ): ?>
+                                    <div class='recipe-featured-image h-64 bg-gray-300' 
+                                        style='background-image: url("<?= $thumbnail ?>")'>
+                                    </div>
+                                <?php else: ?>
+                                    <div class='recipe-featured-image h-64' 
+                                        style='background-image: url( <?= sf_get_asset( 'images/missingbg.png' ) ?> ); background-repeat: repeat; background-size: 80px 80px'>
+                                    </div>
+                                <?php endif ?>
                             </div>
 
                             <div class='recipe-content px-3 py-4'>
