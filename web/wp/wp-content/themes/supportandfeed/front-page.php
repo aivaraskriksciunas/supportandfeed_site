@@ -59,7 +59,7 @@
         </div>
 
         <div class='section-content font-light mb-2 text-xs text-light-blue-400'>
-            Support and Feed is a CA nonprofit public benefit corporation with tax-exempt 501c3 IRS status pending.
+            SUPPORT + FEED is a federally recognized 501c3 Public Charity. EIN: 85-4223098
         </div>
         
     </div>
