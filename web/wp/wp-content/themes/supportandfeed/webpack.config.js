@@ -9,6 +9,7 @@ module.exports = {
         frontPage: './front-page.js', 
         blocks: './blocks.js',
         gutenbergBase: './scss/gutenberg-base.scss',
+        pledge: './pledge.js',
     },
 
     output: {

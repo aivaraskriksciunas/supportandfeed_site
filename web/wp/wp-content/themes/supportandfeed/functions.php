@@ -3,7 +3,7 @@
 // TODO: customize title 
 // TODO: load stylesheets depending on the environment
 
-const CURRENT_VERSION = '1.4.0';
+const CURRENT_VERSION = '1.5.0';
 
 function load_assets() {
 
@@ -17,6 +17,12 @@ function load_assets() {
     if ( is_front_page() )
     {
         wp_enqueue_script( 'front-page', $assets_dir . 'frontPage.bundle.js', deps:[ 'jquery' ], ver:CURRENT_VERSION, in_footer:true );
+    }
+    if ( is_page( 'pledge' ) )
+    {
+        // Load styles related to the pledge page
+        wp_enqueue_script( 'pledge', $assets_dir . 'pledge.bundle.js', deps:[ 'jquery' ], ver: CURRENT_VERSION, in_footer:true );
+        wp_enqueue_style( 'pledge', $assets_dir . 'pledge.css', ver:CURRENT_VERSION );
     }
 }
 

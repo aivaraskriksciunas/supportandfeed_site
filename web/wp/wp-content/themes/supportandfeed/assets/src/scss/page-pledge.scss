@@ -1,0 +1,43 @@
+@font-face {
+    font-family: 'GOBOLD';
+    src: url( '../../pledge/Gobold Regular.otf' );
+}
+
+.font-gobold {
+    font-family: 'GOBOLD', sans-serif;
+}
+
+body {
+    background-color: black;
+    color: white;
+}
+
+
+#we-got-you {
+    margin-top: -50px;
+    clip-path: polygon(0 0, 100% 150px, 100% 100%, 0 100%);
+    @apply bg-primary;
+}
+
+
+@media (min-width: 769px) {
+    #thank-you {
+        font-size: 11rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #thank-you {
+        font-size: 6rem;
+    }
+}
+
+#section-images {
+    #stats {
+        align-self: flex-end;
+    }
+
+    #hand {
+        z-index: 100;
+    }
+}
