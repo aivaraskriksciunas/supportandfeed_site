@@ -10,18 +10,38 @@
 </head>
 <body>
 
-<div id='section-thank-you' class='px-10 py-2'>
+<div id='section-thank-you' class='px-6 py-2'>
 
     <div class='flex items-center justify-center md:justify-end mb-20'>
         <img class='h-8 mr-8' src='<?= sf_get_asset( 'pledge/sf-logo-white.png' ) ?>'>
         <img class='h-8' src='<?= sf_get_asset( 'pledge/wicked-kitchen-white.png' ) ?>'>
     </div>
 
-    <div id='thank-you' class='text-center text-8xl uppercase font-gobold mb-6'>Thank you!</div>
-    <div id='for-taking-pledge' class='text-center text-5xl leading-snug uppercase font-gobold'>
+    <div id='thank-you' class='text-center uppercase font-gobold'>Thank you!</div>
+    <div id='for-taking-pledge' class='text-center text-4xl md:text-5xl mb-16 leading-snug uppercase font-gobold'>
         For taking the <span class='text-primary'>plant-based pledge</span>
     </div>
 
+    <div id='links' class='lg:flex justify-center font-gobold uppercase'>
+        <a href='#we-got-you'>
+            <div class='relative'>
+                <div class='text'>"We got you" recipes</div>
+                <div class='fill'>"We got you" recipes</div>
+            </div>
+        </a>
+        <a href='#bracelet'>
+            <div class='relative'>
+                <div class='text py-2 px-4'>Change starts here bracelet</div>
+                <div class='fill py-2 px-4'>Change starts here bracelet</div>
+            </div>
+        </a>
+        <a href='#resources'>
+            <div class='relative'>
+                <div class='text'>101 resources</div>
+                <div class='fill'>101 resources</div>
+            </div>
+        </a>
+    </div>
 
 </div>
 
@@ -40,7 +60,7 @@
 <div id='we-got-you' class='pb-16 pt-32 text-black'>
     <div class='container'>
         <div class='text-6xl font-gobold uppercase mb-6'>"We got you"</div>
-        <div class='text-2xl text-center md:text-left md:w-1/3 mb-12 font-semibold'>Here are a few quick and simple, but crazy good recipes to get you started!</div>
+        <div class='text-2xl text-center md:text-left md:w-1/2 lg:w-1/3 mb-12 font-semibold'>Here are a few quick and simple, but crazy good recipes to get you started!</div>
     
         <div class='md:flex'>
             <iframe width="100%" height="315" src="https://www.youtube.com/embed/Q6YAGJnHk34" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -95,7 +115,10 @@
             ACCESS TO NOURISHING FOOD IS A <span class='text-primary'>HUMAN RIGHT</span>
         </div>
 
-        <img class='m-auto' src='<?= sf_get_asset( 'pledge/AlbaParis-SnF-SF-Concert-5.png' ) ?>'>
+        <img class='m-auto mb-20' src='<?= sf_get_asset( 'pledge/AlbaParis-SnF-SF-Concert-5.png' ) ?>'>
+                
+        <div id='disclaimer' class='text-sm font-light text-center text-gray-400'>SUPPORT + FEED is a federally recognized 501c3 public charity. EIN: 85-4223098</div>
+    
     </div>
 </div>
 
