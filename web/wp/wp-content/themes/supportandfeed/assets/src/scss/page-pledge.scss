@@ -5,6 +5,7 @@
 
 .font-gobold {
     font-family: 'GOBOLD', sans-serif;
+    text-transform: uppercase;
 }
 
 body {
@@ -101,4 +102,30 @@ body {
         }
     }
 
+}
+
+.hover-box {
+    @apply px-2 mx-2 py-8 block;
+    border: 1px solid transparent;
+}
+
+.hover-box:hover {
+    border: 1px solid white;
+    box-shadow: 5px 5px 0 white;
+}
+
+.embed-container { 
+    position: relative; 
+    padding-bottom: 56.25%; 
+    height: 0; 
+    overflow: hidden; 
+    max-width: 100%; 
+    
+    iframe { 
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        width: 100%; 
+        height: 100%; 
+    }
 }
