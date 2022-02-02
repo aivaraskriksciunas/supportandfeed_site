@@ -3,7 +3,7 @@
 // TODO: customize title 
 // TODO: load stylesheets depending on the environment
 
-const CURRENT_VERSION = '1.5.1';
+const CURRENT_VERSION = '1.5.2';
 
 function load_assets() {
 

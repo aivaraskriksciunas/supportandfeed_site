@@ -69,7 +69,7 @@
             <iframe width='100%' height='300px' src="https://www.youtube.com/embed/Q6YAGJnHk34" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
         </div>
 
-        <div class='text-center text-3xl lg:w-2/3 mx-auto mb-10'>
+        <div class='text-center text-3xl lg:w-2/3 mx-auto mb-16'>
             <div class='font-gobold mb-8'>
                 Wicked Kitchen&trade; is on a mission to change the food system by inspiring the world to eat more plants. 
             </div>
@@ -81,8 +81,8 @@
             </div>
         </div>
 
-        <div class='text-center font-gobold'>
-            <a href=''>Step into the wicked kitchen&trade;</a>
+        <div class='text-center'>  
+            <a class='link font-gobold text-4xl border-gray-800' target='_blank' href='https://citizen-t.com'>Step into the wicked kitchen&trade;</a>
         </div>
 
     </div>
@@ -106,7 +106,7 @@
     <div class='container'>
         <h1 class='font-gobold uppercase mb-20'>"Change starts here" bracelet</h1>
         
-        <div class='md:flex justify-around items-center'>
+        <div class='md:flex justify-around items-center mb-10'>
             <div class='md:w-1/3 mb-10 md:mb-0'>
                 <img src='<?= sf_get_asset( 'pledge/bracelet.gif' ) ?>'>
             </div>
@@ -114,6 +114,8 @@
             Together we can change the world and by wearing this diy bracelet we see in each other a community of optimists that will work towards saving our planet. 
             </div>
         </div>
+
+        <a class='link font-gobold text-4xl border-gray-300' target='_blank' href='https://citizen-t.com'>Link</a>
     
     </div>
 </div>
@@ -136,19 +138,19 @@
         <h1 class='font-gobold uppercase mb-12'>101 resources</h1>
 
         <div class='md:flex justify-around'>
-            <a href='#' class='hover-box md:w-1/3 mb-8'>
+            <a href='https://www.farmsanctuary.org/education/' target='_blank' class='hover-box md:w-1/3 mb-8'>
                 <img class='mx-auto mb-4' src='<?= sf_get_asset( 'pledge/resource1.png' ) ?>'>
                 <div class=''>
                     A climate justice community and resource hub centering around people of color and historically excluded voices.
                 </div>
             </a>
-            <a href='#' class='hover-box md:w-1/3 mb-8'>
+            <a href='https://www.farmsanctuary.org/education/' target='_blank' class='hover-box md:w-1/3 mb-8'>
                 <img class='mx-auto mb-4' src='<?= sf_get_asset( 'pledge/resource2.png' ) ?>'>
                 <div class=''>
                     Fighting the disastrous effects of animal agriculture on animals, the environment, social justice, and public health through rescue, education, and advocacy.
                 </div>
             </a>
-            <a href='#' class='hover-box md:w-1/3 mb-8'>
+            <a href='https://www.instagram.com/queerbrownvegan/' target='_blank' class='hover-box md:w-1/3 mb-8'>
                 <img class='mx-auto mb-4' src='<?= sf_get_asset( 'pledge/resource3.png' ) ?>'>
                 <div class=''>
                     Environmental educator (un/re) learning environmental justice & sustainability.
@@ -158,13 +160,13 @@
     </div>
 </div>
 
-<div id='maggie-quote' class='py-24'>
-    <div class='container'>
-        <div class='md:flex items-center'>
+<div id='maggie-quote' class=''>
+    <div class='container '>
+        <div class='md:flex items-center border-b border-gray-400 border-dashed py-24'>
             <div id='maggie' class='mb-8 md:mb-0 md:mr-10 md:w-1/3 text-center flex justify-center'>
                 <img class='w-32 md:w-auto' src='<?= sf_get_asset( 'pledge/livestock.png' ) ?>'>
             </div>
-            <div id='quote' class='text-center md:text-left text-4xl md:text-5xl font-gobold leading-tight md:w-2/3'>
+            <div id='quote' class='text-center md:text-left text-4xl md:text-5xl font-gobold md:leading-tight md:w-2/3'>
                 “75% of agricultural land is used for raising and feeding livestock.”
             </div>
         </div>
@@ -173,14 +175,14 @@
 
 <div id='footer' class='py-24'>
     <div class='container md:w-2/3'>
-        <div id='quote' class='text-4xl md:text-6xl text-center uppercase'>
+        <div id='quote' class='text-4xl md:text-6xl text-center font-gobold uppercase md:leading-tight'>
             ACCESS TO NOURISHING FOOD IS A <span class='text-primary'>HUMAN RIGHT</span>
         </div>
 
-        <img class='m-auto mb-20' src='<?= sf_get_asset( 'pledge/eat-plants.gif' ) ?>'>
+        <img class='m-auto my-10' src='<?= sf_get_asset( 'pledge/eat-plants.gif' ) ?>'>
                 
-        <div id='disclaimer' class='text-sm font-light text-center text-gray-400 mb-2'>SUPPORT + FEED is a federally recognized 501c3 public charity. EIN: 85-4223098</div>
-        <div id='disclaimer' class='text-sm font-light text-center text-gray-400'>
+        <div id='disclaimer' class='text-sm font-light text-center text-white mb-2'>SUPPORT + FEED is a federally recognized 501c3 public charity. EIN: 85-4223098</div>
+        <div id='disclaimer' class='text-sm font-light text-center text-white'>
             <a class='underline' href='<?= get_permalink( get_page_by_path( 'privacy-policy' ) ) ?>'>
                 Privacy policy
             </a>
