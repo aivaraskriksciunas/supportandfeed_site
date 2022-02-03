@@ -59,13 +59,13 @@
 <!-- <div id='diagonal-box'></div> -->
 <div id='we-got-you' class='pb-16 pt-32 text-black'>
     <div class='container'>
-        <img class='mb-8' width='128px' src='<?= sf_get_asset( 'pledge/wicked-kitchen-black.png' ) ?>'>
-        <div class='text-6xl font-gobold uppercase mb-6'>"We got you"</div>
-        <div class='text-2xl text-center md:text-left md:w-1/2 lg:w-1/3 mb-12 font-semibold'>Here are a few quick and simple, but crazy good recipes to get you started!</div>
+        <img class='mb-8 mx-auto md:mx-0' width='128px' src='<?= sf_get_asset( 'pledge/wicked-kitchen-black.png' ) ?>'>
+        <div class='text-4xl md:text-6xl text-center md:text-left font-gobold uppercase mb-6'>"We got you"</div>
+        <div class='text-xl md:text-2xl text-center md:text-left md:w-1/2 lg:w-1/3 mb-12 font-semibold'>Here are a few quick and simple, but crazy good recipes to get you started!</div>
     
         <div class='md:flex mb-10'>
             <iframe width='100%' height='300px' src="https://www.youtube.com/embed/0ZqBCF6dXyA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            <iframe class='md:mx-8 my-8 md:my-0' width='100%' height='300px' src="https://www.youtube.com/embed/jSXA2LYQud4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe class='md:mx-8 my-8 md:my-0' width='100%' height='300px' src="https://www.youtube.com/embed/pHwgN66x9Bk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             <iframe width='100%' height='300px' src="https://www.youtube.com/embed/Q6YAGJnHk34" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>        
         </div>
 
