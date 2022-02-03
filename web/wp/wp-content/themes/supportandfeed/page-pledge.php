@@ -82,7 +82,7 @@
         </div>
 
         <div class='text-center'>  
-            <a class='link font-gobold text-4xl border-gray-800' target='_blank' href='https://citizen-t.com'>Step into the wicked kitchen&trade;</a>
+            <a class='link font-gobold text-2xl border-gray-800' target='_blank' href='https://citizen-t.com'>Step into the wicked kitchen&trade;</a>
         </div>
 
     </div>
@@ -104,7 +104,7 @@
 
 <div id='bracelet' class='bg-pink py-20 text-white text-center'>
     <div class='container'>
-        <h1 class='font-gobold uppercase mb-20'>"Change starts here" bracelet</h1>
+        <h1 class='font-gobold uppercase mb-20 text-4xl md:text-6xl md:leading-tight'>"Change starts here" bracelet</h1>
         
         <div class='md:flex justify-around items-center mb-10'>
             <div class='md:w-1/3 mb-10 md:mb-0'>
@@ -140,21 +140,24 @@
         <div class='md:flex justify-around'>
             <a href='https://www.farmsanctuary.org/education/' target='_blank' class='hover-box md:w-1/3 mb-8'>
                 <img class='mx-auto mb-4' src='<?= sf_get_asset( 'pledge/resource1.png' ) ?>'>
-                <div class=''>
+                <div class='mb-8'>
                     A climate justice community and resource hub centering around people of color and historically excluded voices.
                 </div>
+                <div class='inline-block link'>Link</div>
             </a>
             <a href='https://www.farmsanctuary.org/education/' target='_blank' class='hover-box md:w-1/3 mb-8'>
                 <img class='mx-auto mb-4' src='<?= sf_get_asset( 'pledge/resource2.png' ) ?>'>
-                <div class=''>
+                <div class='mb-8'>
                     Fighting the disastrous effects of animal agriculture on animals, the environment, social justice, and public health through rescue, education, and advocacy.
                 </div>
+                <div class='inline-block link'>Link</div>
             </a>
             <a href='https://www.instagram.com/queerbrownvegan/' target='_blank' class='hover-box md:w-1/3 mb-8'>
                 <img class='mx-auto mb-4' src='<?= sf_get_asset( 'pledge/resource3.png' ) ?>'>
-                <div class=''>
+                <div class='mb-8'>
                     Environmental educator (un/re) learning environmental justice & sustainability.
                 </div>
+                <div class='inline-block link'>Link</div>
             </a>
         </div>
     </div>
