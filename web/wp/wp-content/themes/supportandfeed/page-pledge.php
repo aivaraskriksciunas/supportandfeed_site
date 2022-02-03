@@ -13,8 +13,8 @@
 <div id='section-thank-you' class='px-6 py-2'>
 
     <div class='flex items-center justify-center md:justify-end mb-20'>
-        <img class='h-8 mr-8' src='<?= sf_get_asset( 'pledge/sf-logo-white.png' ) ?>'>
-        <img class='h-8' src='<?= sf_get_asset( 'pledge/wicked-kitchen-white.png' ) ?>'>
+        <a href='/'><img class='h-10 mr-8' src='<?= sf_get_asset( 'pledge/sf-logo-white.png' ) ?>'></a>
+        <a href='https://wickedkitchen.com/'><img class='h-10' src='<?= sf_get_asset( 'pledge/wicked-kitchen-white.png' ) ?>'></a>
     </div>
 
     <div id='thank-you' class='text-center uppercase font-gobold'>Thank you!</div>

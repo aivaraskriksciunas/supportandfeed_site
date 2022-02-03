@@ -86,7 +86,7 @@ body {
     }
 
     .menu-item:last-child a {
-        @apply bg-green-darkened;
+        @apply bg-green-darkened ml-1;
     }
 
     .menu-item:last-child a:hover {
