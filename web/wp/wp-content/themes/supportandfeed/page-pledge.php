@@ -82,7 +82,7 @@
         </div>
 
         <div class='text-center'>  
-            <a class='link font-gobold text-2xl border-gray-800' target='_blank' href='https://citizen-t.com'>Step into the wicked kitchen&trade;</a>
+            <a class='link font-gobold text-2xl border-gray-800' target='_blank' href='https://wickedkitchen.com/us/'>Step into the wicked kitchen&trade;</a>
         </div>
 
     </div>

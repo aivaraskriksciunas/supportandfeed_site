@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Aivaras Kriksciunas">
+    <meta name="title" content="Support and Feed">
+    <meta name="description" content="Support and Feed takes action for a global shift to an equitable, plant-based food system to combat food insecurity and the climate crisis.">
 
     <?php wp_head() ?>
 </head>
