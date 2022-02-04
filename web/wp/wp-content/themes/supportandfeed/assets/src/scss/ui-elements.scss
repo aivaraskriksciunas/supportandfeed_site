@@ -122,3 +122,49 @@ form {
     }
     
 }
+
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    z-index: 100;
+    background-color: rgba( 0, 0, 0, 0.5 );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .popup {
+        background-color: black;
+        color: white;
+        background-repeat: no-repeat;
+        background-size: contain;
+
+        #text {
+            margin-left: auto;
+        }
+        
+        @media (min-width: 769px) {
+            #pledge-text {
+                font-size: 8em;
+                margin-bottom: -60px;
+            }
+
+            #pledge-subtitle {
+                font-size: 3em;
+            }
+        }
+
+        @media (max-width: 768px) {
+            #pledge-text {
+                font-size: 5em;
+                margin-bottom: -25px;
+            }
+
+            #pledge-subtitle {
+                font-size: 1.9em;
+            }
+        }
+    }
+}

@@ -1,5 +1,6 @@
 import './js/slideshow'
 
+const $ = jQuery
 const banner = jQuery( '#banner' )
 
 if ( banner ) {
@@ -19,3 +20,22 @@ if ( banner ) {
         jQuery( elements[currElement] ).slideDown( 300 )
     }, 5000 )
 }
+
+$( document ).ready( () => {
+    const popup = $( '#main-popup' )
+    popup.hide();
+    
+    setTimeout(() => popup.fadeIn( 1000 ), 1000 )
+    
+    $( '#main-popup' ).click( () => {
+        popup.hide()
+    })
+
+    $( '#popup-close-btn' ).click( () => {
+        popup.hide()
+    })
+
+    $( '.popup' ).click( ( ev ) => {
+        ev.stopPropagation()
+    })
+})
