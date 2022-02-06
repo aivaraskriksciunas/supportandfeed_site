@@ -3,7 +3,7 @@
 <div id='front-page'>
 
 <div id='main-popup' class='popup-container' style='display: none'>
-    <div class='popup fixed w-full sm:w-2/3 lg:w-1/2 py-12 px-12 md:px-20' style='background-image: url(<?= sf_get_asset( 'pledge/pledge-hand.png' ) ?>)'>
+    <div class='popup fixed w-full sm:w-2/3 lg:w-1/2 py-12 px-12' style='background-image: url(<?= sf_get_asset( 'pledge/pledge-hand.png' ) ?>)'>
 
         <div id='text' class='text-right'>
             <div id='popup-close-btn' class='flex justify-end'>
