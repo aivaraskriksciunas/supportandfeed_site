@@ -138,14 +138,14 @@
         <h1 class='font-gobold uppercase mb-12'>101 resources</h1>
 
         <div class='md:flex justify-around'>
-            <a href='https://www.farmsanctuary.org/education/' target='_blank' class='hover-box md:w-1/3 mb-8'>
+            <a href='https://www.instagram.com/intersectionalenvironmentalist/?utm_medium=copy_link' target='_blank' class='hover-box md:w-1/3 mb-8'>
                 <img class='mx-auto mb-4' src='<?= sf_get_asset( 'pledge/resource1.png' ) ?>'>
                 <div class='mb-8'>
                     A climate justice community and resource hub centering around people of color and historically excluded voices.
                 </div>
                 <div class='inline-block link'>Link</div>
             </a>
-            <a href='https://www.farmsanctuary.org/education/' target='_blank' class='hover-box md:w-1/3 mb-8'>
+            <a href='https://www.farmsanctuary.org/handy-guide-to-plant-based-diet/' target='_blank' class='hover-box md:w-1/3 mb-8'>
                 <img class='mx-auto mb-4' src='<?= sf_get_asset( 'pledge/resource2.png' ) ?>'>
                 <div class='mb-8'>
                     Fighting the disastrous effects of animal agriculture on animals, the environment, social justice, and public health through rescue, education, and advocacy.
