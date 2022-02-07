@@ -7,6 +7,8 @@
     <meta name="author" content="Aivaras Kriksciunas">
     <meta name="title" content="Support and Feed">
     <meta name="description" content="Support and Feed takes action for a global shift to an equitable, plant-based food system to combat food insecurity and the climate crisis.">
+    <link rel="preload" as="font" href="<?= sf_get_asset( 'dist/fonts/Druk-Bold.otf' ) ?>" type="application/x-font-opentype" crossorigin="anonymous">
+    <link rel="preload" as="font" href="<?= sf_get_asset( 'dist/fonts/Druk-BoldItalic.otf' ) ?>" type="application/x-font-opentype" crossorigin="anonymous">
 
     <?php wp_head() ?>
 </head>
