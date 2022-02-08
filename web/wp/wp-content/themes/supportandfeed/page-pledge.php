@@ -18,8 +18,11 @@
     </div>
 
     <div id='thank-you' class='text-center uppercase font-gobold'>Thank you!</div>
-    <div id='for-taking-pledge' class='text-center text-4xl md:text-5xl mb-16 leading-snug uppercase font-gobold'>
+    <div id='for-taking-pledge' class='text-center text-4xl md:text-5xl mb-4 leading-snug uppercase font-gobold'>
         For taking the <span class='text-primary'>plant-based pledge</span>
+    </div>
+    <div id='subtitle' class='text-center mb-16 text-2xl font-light text-gray-300'>
+        If you still haven't taken the pledge, text PLANET to <a class='underline' href='https://my.community.com/supportfeed?t=planet'>323-622-7171</a>
     </div>
 
     <div id='links' class='lg:flex justify-center font-gobold uppercase'>
