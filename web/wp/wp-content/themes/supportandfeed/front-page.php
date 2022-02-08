@@ -19,7 +19,7 @@
                 <span class='text-blue-500'>to eat </span><span class='text-primary'>plant based</span>
             </div>
 
-            <a href='<?php get_permalink( get_page_by_path( 'pledge' ) ) ?>' id='signup' class='border border-gray-200 hover:bg-white hover:text-black px-8 py-4'>
+            <a href='<?= get_permalink( get_page_by_path( 'pledge' ) ) ?>' id='signup' class='border border-gray-200 hover:bg-white hover:text-black px-8 py-4'>
                 Take the pledge
             </a>
         </div>
