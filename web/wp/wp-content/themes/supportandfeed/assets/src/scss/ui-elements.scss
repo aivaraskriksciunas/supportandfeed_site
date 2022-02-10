@@ -2,6 +2,11 @@ b {
     font-weight: 700;
 }
 
+.font-gobold {
+    font-family: 'GOBOLD', sans-serif;
+    text-transform: uppercase;
+}
+
 .text-druk-bold {
     font-family: 'Druk';
 }
@@ -152,7 +157,7 @@ form {
             }
 
             #pledge-subtitle {
-                font-size: 2.9em;
+                font-size: 1.8em;
             }
         }
 
@@ -163,7 +168,7 @@ form {
             }
 
             #pledge-subtitle {
-                font-size: 1.9em;
+                font-size: 1.2em;
             }
         }
     }

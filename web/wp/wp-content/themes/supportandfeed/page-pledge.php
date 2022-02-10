@@ -22,7 +22,7 @@
         For taking the <span class='text-primary'>plant-based pledge</span>
     </div>
     <div id='subtitle' class='text-center mb-16 text-lg md:text-xl font-light text-gray-300'>
-        If you still haven’t taken the 1 plant-based meal a day for 30 days pledge, text PLANET to <a class='underline' style='white-space: nowrap' href='https://my.community.com/supportfeed?t=planet'>323-622-7171</a>
+        If you still haven’t taken the 1 plant-based meal a day for 30 days pledge, text <a class='underline' style='white-space: nowrap' href='https://my.community.com/supportfeed?t=planet'>323-622-7171</a> to sign up!
     </div>
 
     <div id='links' class='lg:flex justify-center font-gobold uppercase'>
