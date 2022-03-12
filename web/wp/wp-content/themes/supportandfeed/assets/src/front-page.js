@@ -38,4 +38,10 @@ $( document ).ready( () => {
     $( '.popup' ).click( ( ev ) => {
         ev.stopPropagation()
     })
+
+    $( document ).on( 'keydown', ( event ) => {
+        if ( event.key === 'Escape' ) {
+            popup.hide()
+        }
+    })
 })

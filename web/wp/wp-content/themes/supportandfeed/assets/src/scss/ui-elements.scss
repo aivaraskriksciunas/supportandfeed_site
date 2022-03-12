@@ -173,3 +173,55 @@ form {
         }
     }
 }
+
+.bubble-fill-link {
+    a:focus {
+        outline: 1px solid white;
+    }
+
+    a {
+        text-align: center;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+
+        .fill {
+            @apply bg-primary py-2 px-4;
+            color: black;
+            position: absolute;
+            top: 0;
+            clip-path: circle(0);
+        }
+
+        .text { 
+            @apply py-2 px-4;
+        }
+    }
+
+    a::before {
+        width: 100%;
+        content: '\00A0';
+        position: absolute;
+        max-width: 120px;
+        margin: 0 auto;
+        text-align: center;
+        bottom: 6px;
+    }
+
+    a:hover, a:active {
+        .fill {
+            clip-path: circle(100%);
+            animation: bubble-link-hover 0.4s ease-out alternate;
+        }
+    }
+
+    @keyframes bubble-link-hover {
+        0% {
+            clip-path: circle( 0 );
+        }
+        100% {
+            clip-path: circle( 100% );
+        }
+    }
+}

@@ -22,6 +22,11 @@
 }
 
 @font-face {
+    font-family: 'Druk Wide';
+    src: url( '../../fonts/DrukTextWide-Medium.otf' );
+}
+
+@font-face {
     font-family: 'GOBOLD';
     src: url( '../../pledge/Gobold Regular.otf' );
 }
@@ -57,15 +62,14 @@ body {
     color: black;
 }
 
-// Top horizontal avbar
-
+// Top horizontal navbar
 .main-navbar {
     .navbar-logo-img {
         height: 50px;
     }
     
     .menu-item a {
-        @apply px-5 py-2 uppercase;
+        @apply uppercase;
         
         display: block;
         font-family: 'Druk';
@@ -75,8 +79,6 @@ body {
     }
 
     .menu-item a:hover {
-        @apply bg-green-darkened;
-
         cursor: pointer;
     }
 
@@ -84,12 +86,19 @@ body {
         display: block;
     }
 
-    .menu-item:last-child a {
-        @apply bg-green-darkened ml-1;
-    }
+    .menu-item:last-child {
+        a {
+            @apply bg-primary ml-1 text-black;
 
-    .menu-item:last-child a:hover {
-        @apply bg-green;
+            .fill {
+                @apply bg-green-darkened text-white;
+            }
+            
+        }
+        a:hover {
+            @apply bg-primary;
+        }
+        
     }
 
     .sub-menu {
@@ -99,21 +108,16 @@ body {
         position: absolute;
         z-index: 10;
 
-        .menu-item a {
+        .submenu-item a {
+            @apply px-4 py-3;
             font-style: normal;
             font-size: 1.5rem;
         }
 
-        // Cancel styles for the last element;
-        .menu-item:last-child a {
-            @apply bg-black;
-        }
-    
-        .menu-item:last-child a:hover {
-            @apply bg-green-darkened;
+        .submenu-item a:hover {
+            @apply bg-primary text-black;
         }
     }
-
 
     #menu-expand-btn {
         svg {
@@ -129,6 +133,8 @@ body {
         }
     }
 }
+
+
 
 #menu-mobile-full {
     .menu-item {
@@ -152,6 +158,32 @@ body {
         font-size: 1.5rem;
         font-style: normal;
     }
+}
+
+.navbar-sticky { 
+    top: 0;
+    position: fixed;
+    z-index: 9000; 
+
+    .navbar-logo-img {
+        animation: navbar-icon-shrink 0.3s ease-out alternate;
+        height: 30px;
+    }
+
+    .menu-item a {
+        animation: navbar-links-shrink 0.3s ease-out alternate;
+        font-size: 1.5rem;
+    }
+}
+
+@keyframes navbar-icon-shrink {
+    0% { height: 50px; }
+    100% { height: 30px; }
+}
+
+@keyframes navbar-links-shrink {
+    0% { font-size: 1.8rem; }
+    100% { font-size: 1.5rem; }
 }
 
 .text-image-section {

@@ -21,7 +21,7 @@ function show_logo() {
 
 <?php if( has_nav_menu( 'navbar' ) ): ?>
 
-    <nav class='bg-black w-full main-navbar text-white hidden md:block'>
+    <nav id='mainNavbar' class='bg-black w-full main-navbar text-white hidden md:block'>
         <div class='container flex'>
 
             <div class='py-4 mr-auto'>
@@ -29,16 +29,71 @@ function show_logo() {
             </div>
             
             <div class='self-end'>
-                <?php wp_nav_menu([
+                <ul id='menu-navbar' class='flex'>
+                    <?php 
+                        $menu_locations = get_nav_menu_locations();
+                        $items = wp_get_nav_menu_items( $menu_locations['navbar'] );
+                        
+
+                        foreach ( $items as $item ):
+                            if ( $item->menu_item_parent != 0 ) continue;
+
+                            ?>
+
+                            <li class='menu-item'>
+                                <div class='bubble-fill-link'>
+                                    <a href='<?= $item->url ?>'>
+                                        <div class='relative'>
+                                            <div class='text'><?= $item->title ?></div>
+                                            <div class='fill'><?= $item->title ?></div>
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <?php 
+                                    // Display all subitems for this item
+                                    $subitems = array_filter( $items, function( $i ) use ( $item ) {
+                                        return $i->menu_item_parent == $item->db_id;
+                                    } );
+
+                                    if ( count( $subitems ) > 0 ):
+
+                                        // Start subitem menu
+                                        ?><ul class='sub-menu'><?php
+                                        
+                                        foreach ( $subitems as $subitem ):
+                                            ?>
+                                                <li class='submenu-item'>
+                                                    <a href='<?= $subitem->url ?>'>
+                                                        <?= $subitem->title ?>
+                                                    </a>
+                                                </li>
+                                            <?php
+                                        endforeach;
+
+                                        ?></ul><?php
+                                    endif;
+                                ?>
+                            </li>
+
+                            <?php
+
+
+                        endforeach
+
+                    ?>
+                </ul>
+
+                <!-- <?php wp_nav_menu([
                     'menu' => 'navbar',
                     'menu_class' => 'flex',
-                ]); ?>
+                ]); ?> -->
             </div>
 
         </div>
     </nav>
 
-    <nav class='bg-black w-full main-navbar text-white md:hidden'>
+    <nav id='mobileNavbar' class='bg-black w-full main-navbar text-white md:hidden'>
         <div class='container flex items-center'>
             <div class='w-full py-4'>
                 <?php show_logo() ?>

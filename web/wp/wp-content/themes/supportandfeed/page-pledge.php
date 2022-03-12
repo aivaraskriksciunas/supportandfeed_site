@@ -26,24 +26,32 @@
     </div>
 
     <div id='links' class='lg:flex justify-center font-gobold uppercase'>
-        <a href='#we-got-you'>
-            <div class='relative'>
-                <div class='text'>"We got you" recipes</div>
-                <div class='fill'>"We got you" recipes</div>
-            </div>
-        </a>
-        <a href='#bracelet'>
-            <div class='relative'>
-                <div class='text py-2 px-4'>"Change starts here" bracelet</div>
-                <div class='fill py-2 px-4'>"Change starts here" bracelet</div>
-            </div>
-        </a>
-        <a href='#resources'>
-            <div class='relative'>
-                <div class='text'>101 resources</div>
-                <div class='fill'>101 resources</div>
-            </div>
-        </a>
+        <div class='bubble-fill-link'>
+            <a href='#we-got-you'>
+                <div class='relative'>
+                    <div class='text'>"We got you" recipes</div>
+                    <div class='fill'>"We got you" recipes</div>
+                </div>
+            </a>
+        </div>
+
+        <div class='bubble-fill-link'>
+            <a href='#bracelet'>
+                <div class='relative'>
+                    <div class='text py-2 px-4'>"Change starts here" bracelet</div>
+                    <div class='fill py-2 px-4'>"Change starts here" bracelet</div>
+                </div>
+            </a>
+        </div>
+
+        <div class='bubble-fill-link'>
+            <a href='#resources'>
+                <div class='relative'>
+                    <div class='text'>101 resources</div>
+                    <div class='fill'>101 resources</div>
+                </div>
+            </a>
+        </div>
     </div>
 
 </div>
