@@ -13,17 +13,18 @@
         color: white;
 
         #missionStatementTitle {
-            font-size: 6rem;
+            font-size: 5.5rem;
         }
 
         #missionStatement {
             line-height: 1.5 !important;
-            font-size: 2.1rem; 
+            font-size: 1.8rem; 
+            font-weight: 300;
         }
 
         @media ( max-width: 768px ) {
             #missionStatement {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
             }
         }
     }

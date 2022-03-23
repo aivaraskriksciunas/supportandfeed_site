@@ -3,7 +3,7 @@
 
 <div class='bg-gray-100'>
 
-    <div class='py-12 md:py-20 text-center bg-blue-500 mb-8'>
+    <div class='py-12 md:pb-24 md:pt-20 text-center bg-blue-500 mb-8'>
         <div id='missionStatementBox' class='container px-6'>
             <div id='missionStatementTitle' class='uppercase text-druk-bold mb-4'>our mission</div>    
             <div id='missionStatement' class='md:w-2/3 mx-auto leading-normal'>Support and Feed takes action for a global shift to an equitable, plant-based food system to combat food insecurity and the climate crisis.</div>

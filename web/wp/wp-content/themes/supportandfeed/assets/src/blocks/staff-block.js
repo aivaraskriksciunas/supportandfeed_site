@@ -178,7 +178,7 @@ registerBlockType( 'sf/staff-block', {
                 </div>
             </div>
 
-            <div className='staff-block-modal hidden'>
+            <div className='staff-block-modal hidden' style={{display: 'hidden'}}>
                 <div className='modal-container'>
                     <div className='flex modal-header'>
                         <div className='modal-header-image'>

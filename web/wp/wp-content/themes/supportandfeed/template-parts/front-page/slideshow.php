@@ -6,7 +6,7 @@
     </div>
     <div id='sf-text-overlay' class='container flex items-end pb-10 md:pb-20'>
         <div id='sf-text-container'>
-            <div id='sf-video-text' class='mb-6'>
+            <div id='sf-video-text' class='mb-6 uppercase'>
                 <?= get_theme_mod( 'sf_slider_text' ) ?>
             </div>
             <div id='flex'>
