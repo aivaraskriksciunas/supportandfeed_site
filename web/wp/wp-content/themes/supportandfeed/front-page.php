@@ -52,7 +52,7 @@
             Why Plant-Based Matters
         </h1>
 
-        <div class='section-content mb-16 text-justify'>
+        <div class='section-content mb-16'>
             <?= get_option( 'plant_based_text' ) ?>
         </div>
     </div>
@@ -74,7 +74,7 @@
             DONATE NOW!
         </h1>
 
-        <div class='section-content mb-16 md:text-justify flex-1'>
+        <div class='section-content mb-16 flex-1'>
             <?= get_option( 'donate_now_text' ) ?>
         </div>
 

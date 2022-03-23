@@ -1,28 +1,60 @@
+
 <?php get_header() ?>
 
-<div id='cover' class='px-10 sm:px-20 py-20 flex items-end w-full min-h-screen' 
-    style='background-image: url("<?= get_theme_mod( 'sf_about_cover_photo' ) ?>")'>
-    <div>
-        <div id='cover-quote' class='lg:w-2/3'>
-            "I don't want your hope. I don't want you to be hopeful. <span class='text-primary'>I want you to <span class="text-yellow-500">panic and act</span> as if the house is on fire.</span>"
-        </div>
-        <div id='cover-author'>
-            - Greta Thunberg
+<div class='bg-gray-100'>
+
+    <div class='py-12 md:py-20 text-center bg-blue-500 mb-8'>
+        <div id='missionStatementBox' class='container px-6'>
+            <div id='missionStatementTitle' class='uppercase text-druk-bold mb-4'>our mission</div>    
+            <div id='missionStatement' class='md:w-2/3 mx-auto leading-normal'>Support and Feed takes action for a global shift to an equitable, plant-based food system to combat food insecurity and the climate crisis.</div>
         </div>
     </div>
-</div>
 
-<div class='bg-gray-100 w-full inline-block'>
+    <?php 
+        // Embed the content of 'our founder' page
+        $loop = new WP_Query([  
+            'post_type' => 'page',
+            'posts_per_page' => 1, 
+            'pagename' => 'our-founder'
+        ]); 
+
+        if ( $loop->have_posts() ): $loop->the_post(); ?>
+
+            <?php $image_url = wp_get_attachment_image_url( get_post_thumbnail_id(), 'full' ); ?>
+
+            <div class='md:flex'>
+                <div id='founderImage' class='md:absolute md:w-2/3 w-full overflow-hidden z-0'>
+                    <img src='<?= $image_url ?>'>
+                </div>
+
+                <div id='founderLetter' class='bg-white w-full md:w-2/3 lg:w-1/2 px-12 md:px-20 pt-14 pb-7 md:my-10 ml-auto text-justify'>
+                    
+                    <h1 class='mb-8'>Hi Friends,</h1>
+                    <?php the_content() ?>
+                </div>
+            </div>
+
+    <?php endif ?>
+    <?php wp_reset_postdata() ?>
+
     
-    <h1 class='mt-20 mb-10 text-center text-7xl'>
-        Why plant based matters
-    </h1>
 
-    <div class='container py-10'>
-        <div class="bg-white">
-            <?php the_content() ?>
-        </div>
-    </div>
+    <?php 
+        // Embed the content of 'our team' page
+        $loop = new WP_Query([  
+            'post_type' => 'page',
+            'posts_per_page' => 1, 
+            'pagename' => 'our-team'
+        ]); 
+
+        if ( $loop->have_posts() ): $loop->the_post(); ?>
+
+            <div class='container pb-5'>
+                <?php the_content() ?>
+            </div>
+
+    <?php endif ?>
+    <?php wp_reset_postdata() ?>
 </div>
 
 <?php get_footer() ?>

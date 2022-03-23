@@ -12,7 +12,7 @@
 
     <div class='container lg:w-2/3'>
         <div id='cover-quote'>
-            "Access to nourishing plant based food is a <span class='text-black'>human right</span>"
+            "Access to nourishing plant-based food is a <span class='text-black'>human right</span>."
         </div>
 
         <div id='cover-author'>
