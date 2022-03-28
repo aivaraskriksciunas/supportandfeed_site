@@ -36,12 +36,12 @@
         }
 
         #sf-video-text {
-            padding: 8px 16px;
+            padding: 12px 18px;
             font-family: 'Druk';
             font-size: 3.5em;
             color: white;
-            background-color: #333;
-            box-shadow: 5px 5px 0 black;
+            background-color: black;
+            box-shadow: 5px 5px 0 rgba( 0, 0, 0, 0.23 );
             max-width: 50%;
             line-height: 1.1;
         }

@@ -25,7 +25,7 @@ function sf_banner() {
     if ( count( $banner_text ) == 0 ) return;
     ?>
     
-    <div id='banner' style='background-color: #e47b00; line-height: 1.05;' class='bg-orange uppercase text-center text-white text-base font-bold h-12 flex items-center justify-center'>
+    <div id='banner' style='line-height: 1.05;' class='bg-pink uppercase text-center text-white text-base font-bold h-12 flex items-center justify-center'>
         
         <?php foreach ( $banner_text as $t ): ?>
             <div><?= $t ?></div>
