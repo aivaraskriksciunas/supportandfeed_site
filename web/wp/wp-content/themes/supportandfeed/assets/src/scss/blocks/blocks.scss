@@ -106,3 +106,22 @@
         }
     }
 }
+
+#recipeBlock {
+    .wp-block-column:first-child {
+        flex: 1;
+        font-size: 0.9em;
+    }
+
+    .wp-block-column:nth-child( 2 ) {
+        flex: 2;
+    }
+
+    li {
+        font-size: 1em;
+    }
+
+    p {
+        margin-top: 24px;
+    }
+}

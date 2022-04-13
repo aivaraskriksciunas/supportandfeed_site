@@ -1,23 +1,59 @@
 <?php get_header(); ?>
 
-<div id='recipe-post-type' class='container mt-10 mb-20 md:w-2/3'>
+<?php 
+
+    function show_recipe_meta_field( string $title, string $field_name ) {
+
+        $val = get_post_meta( get_the_ID(), $field_name );
+
+        if ( !$val || $val == '' ) return;
+        
+        ?>
+            <div class='w-full md:w-1/2 text-xl md:text-2xl uppercase p-2 md:p-4'>
+                <span class='font-bold'><?= $title ?>:</span>
+                <?= htmlentities( $val[0] ) ?>
+            </div>
+        <?php 
+    }
+
+?>
+
+<div id='recipe-post-type'>
 
     <?php 
         $thumbnail = get_the_post_thumbnail_url( size:'large' );
     ?>
 
-    <div class='md:flex mb-8 items-end'>
-        <div class='mb-8 md:mb-0 md:w-2/3'>
-            <a class='text-xs uppercase text-gray-700 hover:text-gray-500 rounded-sm mb-6 inline-block' href='<?= get_permalink( get_page_by_path( 'recipes' ) ) ?>'>Back to recipes</a>
-            <h1 id='page-title'><?= the_title() ?></h1>
-        </div>
-        <div class='md:w-1/2 md:pl-4'>
-            <img class='z-0' src='<?= $thumbnail ?>'>
+    <div class='recipe-header' style='background-image: url("<?= $thumbnail ?>")'>
+        <div class='recipe-title-container' >
+            <div class='recipe-title'>
+                <?php the_title() ?>
+            </div>
+
+            <div class='recipe-author'>
+                <?php 
+                    $val = get_post_meta( get_the_ID(), 'recipe_author' );
+
+                    if ( !$val || $val == '' ) return;
+                    echo $val[0];
+                ?>
+            </div>
         </div>
     </div>
 
-    <div class='text-justify'>
-        <?= the_content() ?>
+    <div class='container mb-20'>
+
+        <div class='border border-blue-500 flex flex-wrap p-4 mb-8'>
+            <?php show_recipe_meta_field( 'Cook Time', 'cook_time' ) ?>
+            <?php show_recipe_meta_field( 'Yields', 'yields' ) ?>
+            <?php show_recipe_meta_field( 'Prep Time', 'prep_time' ) ?>
+            <?php show_recipe_meta_field( 'Optionals', 'optionals' ) ?>
+        </div>
+
+        <div class='text-justify'>
+            <?= the_content() ?>
+        </div>
+
     </div>
 
 </div>
