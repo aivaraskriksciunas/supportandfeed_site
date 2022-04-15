@@ -5,7 +5,7 @@ import {
     useBlockProps, 
     InnerBlocks
 } from '@wordpress/block-editor';
-import { TextControl } from '@wordpress/components';
+import { TextControl, SelectControl } from '@wordpress/components';
 import { useSelect } from '@wordpress/data';
 import { useEntityProp } from '@wordpress/core-data';
  
@@ -76,6 +76,20 @@ registerBlockType( 'sf/recipe-meta-block', {
                     onChange={( val ) => { setMeta({ ...meta, optionals: val })}}
                     placeholder='basil, cheese'
                 ></TextControl>
+
+                <div className='text-gray-800 mt-3'>Recipe category: </div>
+                <SelectControl
+                    className='w-full bg-white'
+                    selected={meta['category']}
+                    options={[
+                        { label: 'Appetizers', value: 'appetizers' },
+                        { label: 'Mains', value: 'mains' },
+                        { label: 'Sides', value: 'sides' },
+                        { label: 'Desserts', value: 'desserts' },
+                        { label: 'Drinks', value: 'drinks' },
+                    ]}
+                    onChange={( val ) => { setMeta({ ...meta, category: val })}}
+                ></SelectControl>
 
                 <InnerBlocks
                     template={TEMPLATE}
