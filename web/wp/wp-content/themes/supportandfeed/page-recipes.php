@@ -34,17 +34,21 @@
 <?php if ( isset( $_GET['category'] ) && in_array( $_GET['category'], ALLOWED_CATEGORIES ) ): ?>
 
     <div class='relative'>
-        <div id='recipe-list-identifier'>
+        <a id='recipe-list-identifier'>
             <?php $cat_name = strtoupper( $_GET['category'] ); ?>
             <div id='recipe-letter'><?= $cat_name[0] ?></div>
             <div id='recipe-category'><?= $cat_name ?></div>
-        </div>
+        </a>
     </div>
 
 <?php endif ?>
 
 <div class='px-4 py-20'>
     <div id='recipe-post-list' class='container py-20'>
+        <a href='<?= sf_get_link_by_slug( 'recipe-landing' ) ?>' class='p-2 text-gray-400 text-xs hover:bg-gray-200 inline-block mb-8 rounded' >
+            <i class='icon-left mr-1'></i>
+            Back to categories
+        </a>
         <div class='text-4xl font-gobold font-bold uppercase pl-2 mb-8 '>Recipes: </div>
 
         <div class='sm:flex flex-wrap'>
@@ -59,13 +63,13 @@
                     
                     <a class='px-2 w-full sm:w-1/2 lg:w-1/4 mb-6' href='<?= get_post_permalink() ?>'>
                         <div class='recipe-container w-full'>
-                            <div class='h-64 overflow-hidden'>
+                            <div class='h-48 overflow-hidden'>
                                 <?php if ( $thumbnail ): ?>
-                                    <div class='recipe-featured-image h-64 bg-gray-300' 
+                                    <div class='recipe-featured-image h-48 bg-gray-300' 
                                         style='background-image: url("<?= $thumbnail ?>")'>
                                     </div>
                                 <?php else: ?>
-                                    <div class='recipe-featured-image h-64' 
+                                    <div class='recipe-featured-image h-48' 
                                         style='background-image: url( <?= sf_get_asset( 'images/missingbg.png' ) ?> ); background-repeat: repeat; background-size: 80px 80px'>
                                     </div>
                                 <?php endif ?>

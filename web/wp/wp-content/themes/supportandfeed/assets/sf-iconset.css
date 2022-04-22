@@ -37,6 +37,7 @@
 }
 
 .icon-mail:before { content: '\e800'; } /* '' */
+.icon-left:before { content: '\e802'; } /* '' */
 .icon-bars:before { content: '\e900'; } /* '' */
 .icon-tiktok:before { content: '\e901'; } /* '' */
 .icon-facebook:before { content: '\ea90'; } /* '' */

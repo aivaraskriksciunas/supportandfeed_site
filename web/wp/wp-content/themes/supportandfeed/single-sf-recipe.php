@@ -6,7 +6,7 @@
 
         $val = get_post_meta( get_the_ID(), $field_name );
 
-        if ( !$val || $val == '' ) return;
+        if ( count( $val ) == 0 || !$val[0] || $val[0] == '' ) return;
         
         ?>
             <div class='recipe-meta-field w-full md:w-1/2 text-xl md:text-2xl uppercase p-2 md:p-4'>
@@ -70,7 +70,7 @@
             <?php show_recipe_meta_field( 'Optionals', 'optionals' ) ?>
         </div>
 
-        <div class='text-justify'>
+        <div class=''>
             <?= the_content() ?>
         </div>
 
