@@ -1,0 +1,145 @@
+#recipe-post-type {
+
+    #social-media-links {
+        display: flex;
+        margin: 20px 0;
+        justify-content: flex-end;
+    } 
+
+    #download-recipe-button {
+        border-radius: 4px;
+        padding: 4px 5px;
+        font-size: 0.9em;
+        font-weight: 300;
+        cursor: pointer;
+        display: inline-block;
+        color: #222;
+    }
+
+    #download-recipe-button:hover {
+        background-color: #dfdfdf;
+    }
+
+    @media (max-width: 768px) {
+        #social-media-links {
+            margin-top: 60px;
+        } 
+    }
+
+    .recipe-header {
+        min-height: 60vh;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        align-items: flex-end;
+
+        .recipe-title-container {
+            @apply bg-blue-500 text-primary;
+    
+            padding: 40px 60px;   
+            text-transform: uppercase;
+            margin-bottom: -30px;
+            max-width: 50vw;
+        }
+
+        .recipe-title {
+            @apply text-druk-bold;
+            font-size: 6rem;
+            line-height: 1;
+        }
+
+        .recipe-author {
+            font-size: 1.2em;
+        }
+
+        @media (max-width: 768px) {
+            .recipe-title-container {
+                padding: 30px 50px;   
+                max-width: 100vh;
+                text-transform: uppercase;
+            }
+
+            .recipe-title {
+                font-size: 5em;
+            }
+
+            .recipe-author {
+                font-size: 1em;
+            }
+        }
+    }
+
+}
+
+@media print {
+    #recipe-post-type {
+        #social-media-links {
+            display: none;
+        } 
+
+        .recipe-header {
+            min-height: 0vh;
+
+            .recipe-title-container {
+                color: black;
+            }
+
+            .recipe-title {
+                font-size: 4rem;
+                line-height: 1;
+            }
+
+            .recipe-author {
+                font-size: 1.2em;
+            }
+        }
+
+        #recipe-info {
+            border-color: #555;
+
+            .recipe-meta-field {
+                font-size: 1rem;
+                padding: 0 8px;
+            }
+        }
+
+        #download-recipe-button {
+            display: none;
+        }
+
+        #back-to-recipes-button {
+            display: none;
+        }
+
+        #recipeBlock {
+
+            .wp-block-sf-recipe-ingredients-block li {
+                font-size: 0.9rem;
+            }
+
+            .wp-block-column {
+                margin-left: 0;
+            }
+
+            .wp-block-sf-recipe-ingredients-block div:first-child,
+            .wp-block-sf-recipe-content-block div:first-child {
+                font-size: 2em;
+            }
+
+            .wp-block-sf-recipe-content-block * {
+                font-size: 0.9em;
+            }
+
+            .wp-block-sf-recipe-ingredients-block,
+            .wp-block-sf-recipe-content-block {
+                padding: 0;
+                margin: 0;
+                border: none;
+
+                * {
+                    color: black;
+                }
+            }
+        }
+    }
+}

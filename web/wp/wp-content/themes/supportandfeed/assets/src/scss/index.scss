@@ -51,7 +51,7 @@ body {
 @import './pages/page-our-impact.scss';
 @import './pages/page-donate.scss';
 @import './pages/page-why-plantbased.scss';
-@import './recipe-post-type.scss';
+@import './pages/recipe-post-type.scss';
 @import './gift-post-type.scss';
 @import './pages/error-pages.scss';
 @import './pages/page-recipes.scss';
@@ -136,7 +136,11 @@ body {
     }
 }
 
-
+@media print {
+    .main-navbar {
+        display: none;
+    }
+}
 
 #menu-mobile-full {
     .menu-item {
@@ -252,8 +256,12 @@ body {
         }
     }
 
-    
+}
 
+@media print {
+    #footer {
+        display: none;
+    }
 }
 
 #pageCover {
