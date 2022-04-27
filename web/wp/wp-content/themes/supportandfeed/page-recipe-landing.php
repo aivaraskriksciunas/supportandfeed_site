@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<?php $thumbnail = get_the_post_thumbnail_url( size:'large' ); ?>
+<?php $thumbnail = get_the_post_thumbnail_url( size:'full' ); ?>
 
 <?php 
 
