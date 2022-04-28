@@ -27,7 +27,7 @@
         <?php 
     }
 
-    do_action( 'wp_head', 'add_social_preview_meta' );
+    add_action( 'wp_head', 'add_social_preview_meta' );
 
 ?>
 
