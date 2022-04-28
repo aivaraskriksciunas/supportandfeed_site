@@ -49,7 +49,7 @@
             <i class='icon-left mr-1'></i>
             Back to categories
         </a>
-        <div class='text-4xl font-gobold font-bold uppercase pl-2 mb-8 '>Recipes: </div>
+        <div class='text-4xl font-gobold font-bold uppercase pl-8 mb-8 '>Recipes: </div>
 
         <div class='sm:flex flex-wrap'>
 
@@ -58,10 +58,10 @@
                 <?php while ( $query->have_posts() ): ?>
                     <?php 
                         $query->the_post(); 
-                        $thumbnail = get_the_post_thumbnail_url( size:'medium_large' );
+                        $thumbnail = get_the_post_thumbnail_url( size:'post-thumbnail' );
                     ?>
                     
-                    <a class='px-2 w-full sm:w-1/2 lg:w-1/4 mb-6' href='<?= get_post_permalink() ?>'>
+                    <a class='px-8 w-full sm:w-1/2 lg:w-1/4 mb-6' href='<?= get_post_permalink() ?>'>
                         <div class='recipe-container w-full'>
                             <div class='h-48 overflow-hidden'>
                                 <?php if ( $thumbnail ): ?>

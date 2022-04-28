@@ -3,9 +3,11 @@ import {
     InspectorControls, 
     RichText, 
     useBlockProps, 
-    InnerBlocks
+    InnerBlocks,
+    MediaUploadCheck,
+    MediaUpload,
 } from '@wordpress/block-editor';
-import { TextControl, SelectControl } from '@wordpress/components';
+import { TextControl, SelectControl, Button } from '@wordpress/components';
 import { useSelect } from '@wordpress/data';
 import { useEntityProp } from '@wordpress/core-data';
  
@@ -34,6 +36,29 @@ registerBlockType( 'sf/recipe-meta-block', {
         const [ meta, setMeta ] = useEntityProp( 'postType', postType, 'meta' );
  
         return ([
+            <InspectorControls key="setting">
+                <div className='px-4'>
+                    <fieldset>
+                        <div className='mb-3'>Recipe full quality image: </div>
+                        <div className='mb-4 p-6 border-dashed border-gray-400 border-2'>
+                            <img className='' src={ meta['recipe_image'] } ></img>
+                        </div>
+
+                        {/* Give option to select new image */}
+                        <MediaUploadCheck>
+                            <MediaUpload
+                                onSelect={( val ) => { setMeta({ ...meta, recipe_image: val.url }) }}  // Save image
+                                allowedTypes={[ 'image' ]}   // Only allow images to be selected
+                                value={ meta['recipe_image'] }
+                                render={ ( { open } ) => (
+                                    <Button isSecondary onClick={ open } className='mb-4'>Select Image</Button>
+                                ) }
+                            />
+                        </MediaUploadCheck>
+                    </fieldset>
+                </div>
+            </InspectorControls>,
+
             <div { ...blockProps } key='block' className='border border-gray-300 shadow-md py-8 px-16 rounded-md'>
                 <div className='text-gray-500 text-center mb-8 text-lg'>Recipe block</div>
                 <p className='text-gray-500 text-center mb-8 text-lg'>Use this block to write the recipe</p>

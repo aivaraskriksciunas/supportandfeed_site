@@ -1,7 +1,10 @@
-<?php get_header(); ?>
-
 <?php 
 
+    $thumbnail = get_post_meta( get_the_ID(), 'recipe_image', true );
+    if ( !$thumbnail ) {
+        $thumbnail = get_the_post_thumbnail_url( size:'full' );
+    }
+    
     function show_recipe_meta_field( string $title, string $field_name ) {
 
         $val = get_post_meta( get_the_ID(), $field_name );
@@ -16,13 +19,21 @@
         <?php 
     }
 
+    function add_social_preview_meta() {
+        ?>
+            <meta name='og:title' content='<?= the_title( echo:false ) ?>'>
+            <meta name='og:image' content='<?= get_the_post_thumbnail_url( size:'post-thumbnail' ) ?>'>
+            <meta name='twitter:image' content='<?= get_the_post_thumbnail_url( size:'post-thumbnail' ) ?>'>
+        <?php 
+    }
+
+    do_action( 'wp_head', 'add_social_preview_meta' );
+
 ?>
 
-<div id='recipe-post-type'>
+<?php get_header(); ?>
 
-    <?php 
-        $thumbnail = get_the_post_thumbnail_url( size:'large' );
-    ?>
+<div id='recipe-post-type'>
 
     <div class='recipe-header' style='background-image: url("<?= $thumbnail ?>")'>
         <div class='recipe-title-container' >

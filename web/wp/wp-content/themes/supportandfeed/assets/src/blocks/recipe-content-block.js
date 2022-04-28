@@ -3,8 +3,6 @@ import {
     InnerBlocks,
     useBlockProps, 
 } from '@wordpress/block-editor';
-import { useSelect } from '@wordpress/data';
-import { useEntityProp } from '@wordpress/core-data';
 
 const DEFAULT_BLOCK_CONTENTS = [
     [ 'core/paragraph', { placeholder: 'Instructions' } ],
@@ -28,8 +26,6 @@ registerBlockType( 'sf/recipe-content-block', {
         ]);
     },
  
-    // No information saved to the block
-    // Data is saved to post meta via the hook
     save() {
         return (
             <div className='border border-blue-500 p-8'>

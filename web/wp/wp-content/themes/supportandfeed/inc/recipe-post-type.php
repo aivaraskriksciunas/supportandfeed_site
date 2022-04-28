@@ -62,6 +62,13 @@ function sf_recipe_post_register_meta() {
         'type' => 'string',
     ] );
 
+    // Full size image for the recipe
+    register_post_meta( 'sf-recipe', 'recipe_image', [
+        'show_in_rest' => true,
+        'single' => true,
+        'type' => 'string',
+    ] );
+
 }
 
 add_action( 'init', 'sf_register_recipe_post_type' );
