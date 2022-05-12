@@ -20,7 +20,7 @@
             </div>
 
             <div class='border border-gray-200 bg-black hover:bg-white hover:text-black inline-block text-center'  id='signup' >
-                <a href='<?= get_permalink( get_page_by_path( 'pledge' ) ) ?>' class='px-4 md:px-8 py-2 md:py-4 inline-block'>
+                <a href='<?= add_query_arg( 'ref', 'popup', get_permalink( get_page_by_path( 'pledge' ))) ?>' class='px-4 md:px-8 py-2 md:py-4 inline-block'>
                     Take the pledge
                 </a>
             </div>
