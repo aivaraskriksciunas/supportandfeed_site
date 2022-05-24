@@ -22,8 +22,8 @@
     function add_social_preview_meta() {
         ?>
             <meta property='og:title' content='<?= the_title( echo:false ) ?>'>
-            <meta property='og:image' content='<?= get_the_post_thumbnail_url( size:'post-thumbnail' ) ?>'>
-            <meta property='twitter:image' content='<?= get_the_post_thumbnail_url( size:'post-thumbnail' ) ?>'>
+            <meta property='og:image' content='<?= get_the_post_thumbnail_url( size:'medium_large' ) ?>'>
+            <meta property='twitter:image' content='<?= get_the_post_thumbnail_url( size:'medium_large' ) ?>'>
         <?php 
     }
 

@@ -58,7 +58,7 @@
                 <?php while ( $query->have_posts() ): ?>
                     <?php 
                         $query->the_post(); 
-                        $thumbnail = get_the_post_thumbnail_url( size:'post-thumbnail' );
+                        $thumbnail = get_the_post_thumbnail_url( size:'medium_large' );
                     ?>
                     
                     <a class='px-8 w-full sm:w-1/2 lg:w-1/4 mb-6' href='<?= get_post_permalink() ?>'>
