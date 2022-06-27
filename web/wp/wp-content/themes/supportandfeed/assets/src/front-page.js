@@ -21,27 +21,28 @@ if ( banner ) {
     }, 5000 )
 }
 
-$( document ).ready( () => {
-    const popup = $( '#main-popup' )
-    popup.hide();
+// Old popup code
+// $( document ).ready( () => {
+//     const popup = $( '#main-popup' )
+//     popup.hide();
     
-    setTimeout(() => popup.fadeIn( 1000 ), 1000 )
+//     setTimeout(() => popup.fadeIn( 1000 ), 1000 )
     
-    $( '#main-popup' ).click( () => {
-        popup.hide()
-    })
+//     $( '#main-popup' ).click( () => {
+//         popup.hide()
+//     })
 
-    $( '#popup-close-btn' ).click( () => {
-        popup.hide()
-    })
+//     $( '#popup-close-btn' ).click( () => {
+//         popup.hide()
+//     })
 
-    $( '.popup' ).click( ( ev ) => {
-        ev.stopPropagation()
-    })
+//     $( '.popup' ).click( ( ev ) => {
+//         ev.stopPropagation()
+//     })
 
-    $( document ).on( 'keydown', ( event ) => {
-        if ( event.key === 'Escape' ) {
-            popup.hide()
-        }
-    })
-})
+//     $( document ).on( 'keydown', ( event ) => {
+//         if ( event.key === 'Escape' ) {
+//             popup.hide()
+//         }
+//     })
+// })

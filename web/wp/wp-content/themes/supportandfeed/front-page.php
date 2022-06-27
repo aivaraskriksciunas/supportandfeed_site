@@ -2,32 +2,6 @@
 
 <div id='front-page'>
 
-<div id='main-popup' class='popup-container' style='display: none'>
-    <div class='popup fixed w-full sm:w-2/3 lg:w-1/2 py-12 px-12' style='background-image: url(<?= sf_get_asset( 'pledge/pledge-hand.png' ) ?>)'>
-
-        <div id='text' class='text-right'>
-            <div id='popup-close-btn' class='flex justify-end'>
-                <svg xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24" width="36px" fill="#fff">
-                    <path d="M0 0h24v24H0z" fill="none"/><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
-                </svg>
-            </div>
-
-            <div id='pledge-text' class='text-druk-bold italic uppercase'>
-                Pledge
-            </div>
-            <div id='pledge-subtitle' class='font-gobold uppercase pt-5 mb-10 text-pink leading-tight w-1/2 ml-auto'>
-                To eat 1 plant based meal a day for 30 days
-            </div>
-
-            <div class='border border-gray-200 bg-black hover:bg-white hover:text-black inline-block text-center'  id='signup' >
-                <a href='<?= add_query_arg( 'ref', 'popup', get_permalink( get_page_by_path( 'pledge' ))) ?>' class='px-4 md:px-8 py-2 md:py-4 inline-block'>
-                    Take the pledge
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
-
 <?php 
     // Include main slideshow
     require_once "template-parts/front-page/slideshow.php";
